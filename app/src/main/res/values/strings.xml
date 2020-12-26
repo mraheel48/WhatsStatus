@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="file_provider">com.risetech.whatsstatus.fileProvider</string>
+
+    <string name="app_name">WhatsStatus</string>
+    <string name="loading_ads">Loading Ad..</string>
+    <string name="share_file">Share File</string>
+    <string name="images">Images</string>
+    <string name="videos">Videos</string>
+    <string name="media">Media</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="do_yor_love_our_app">Do you Love our App?</string>
+    <string name="give_us_a_quick_rating">Give us a quick rating so we know if you like it</string>
+    <string name="done">Done</string>
+    <string name="about">About</string>
+    <string name="guide">Guide</string>
+    <string name="preview">Preview</string>
+
+</resources>
