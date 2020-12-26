@@ -1,9 +1,11 @@
 package com.risetech.whatsstatus.utils
 
 import android.os.Environment
+import com.risetech.whatsstatus.dataModel.ItemModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import java.io.File
+import java.util.ArrayList
 
 
 object Constants {
@@ -11,6 +13,10 @@ object Constants {
     const val REQUEST_CAPTURE_IMAGE = 10101
     const val REQUEST_GALLERY_IMAGE = 20202
     var fragmentVisible = 0
+
+    var passList: ArrayList<ItemModel> = ArrayList()
+
+    var itemPositionSelect = -1
 
     val filePathWhatApp =
         File(Environment.getExternalStorageDirectory().absoluteFile, "/WhatsApp/Media/.Statuses")

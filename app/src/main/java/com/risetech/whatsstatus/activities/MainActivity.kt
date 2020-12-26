@@ -5,9 +5,9 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -31,12 +31,10 @@ import com.karumi.dexter.listener.single.PermissionListener
 import com.risetech.whatsstatus.R
 import com.risetech.whatsstatus.dataModel.ItemModel
 import com.risetech.whatsstatus.dialogs.*
-import com.risetech.whatsstatus.fragments.CategoryFragment
 import com.risetech.whatsstatus.fragments.HomeFragment
 import com.risetech.whatsstatus.utils.Constants
 import com.risetech.whatsstatus.utils.FeedbackUtils
 import com.risetech.whatsstatus.utils.Utils
-import com.risetech.whatsstatus.viewPagerAdapter.MySaveWorkAdapter
 import com.risetech.whatsstatus.viewPagerAdapter.MyWorkAdapter
 import com.yarolegovich.slidingrootnav.SlidingRootNav
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
@@ -49,7 +47,7 @@ import kotlin.system.measureTimeMillis
 
 @Suppress("UNNECESSARY_SAFE_CALL")
 class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.ItemClick,
-    MySaveWorkAdapter.ItemClick, WorkPreView.DownloadFile {
+     WorkPreView.DownloadFile {
 
     lateinit var navBtn: ImageView
     lateinit var drawer: DrawerLayout
@@ -86,6 +84,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     var imgPathWhatApp: ArrayList<ItemModel> = ArrayList()
     var videosPathWhatApp: ArrayList<ItemModel> = ArrayList()
     var savedPathWhatApp: ArrayList<ItemModel> = ArrayList()
+    var passList: ArrayList<ItemModel> = ArrayList()
 
     private lateinit var dialog: Dialog
     var fileCount = 0
@@ -96,10 +95,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     var saveListFile: Array<File>? = null
     var myWorkAdapter: MyWorkAdapter? = null
 
-    var categoryFragment: CategoryFragment = CategoryFragment()
-
     lateinit var localDownloadPath: File
-    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -123,14 +119,13 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         dialog?.setCancelable(false)
 
         localDownloadPath = Utils.fileDownloadPath(this@MainActivity)
-        Log.e(TAG,"${localDownloadPath}")
+        Log.e(TAG, "${localDownloadPath}")
 
         //set nav_Draw
         navDrawMethod()
 
         fragmentManager = supportFragmentManager
         fragmentTransaction = fragmentManager.beginTransaction()
-
 
         /*try {
          navDrawMethod()
@@ -174,7 +169,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                     if (fileCount < pathListSelect.size) {
                         copyFileBG()
                     } else {
-                        updateUiProgress(fileCopyTime)
+                        updateUiProgress()
                         //Log.e(TAG, "else ${fileCopyTime
                     }
 
@@ -189,7 +184,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         }
     }
 
-    suspend fun updateUiProgress(timeStay: Long) {
+    suspend fun updateUiProgress() {
 
         withContext(Dispatchers.Main) {
             updateFragmentUI()
@@ -606,13 +601,31 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         Log.e("myTag", "${pathListSelect.size}")
     }
 
-    override fun itemClick(filePath: ItemModel) {
+    override fun itemClick(filePath: ItemModel,position:Int) {
 
-        WorkPreView(this@MainActivity, File(filePath.text), this)
+        //passList.clear()
+        Constants.passList.clear()
+
+        if (Constants.fragmentVisible == 0) {
+            Constants.passList.addAll(imgPathWhatApp)
+        } else if (Constants.fragmentVisible == 1) {
+            Constants.passList.addAll(videosPathWhatApp)
+        } else {
+            Constants.passList.addAll(savedPathWhatApp)
+        }
+
+        if (Constants.passList.isNotEmpty()) {
+            nextActivity(position)
+        }
 
     }
 
-    override fun itemSelectSave(filePath: ItemModel) {}
+    private fun nextActivity(position: Int) {
+        val intent = Intent(this@MainActivity, PreView::class.java)
+        intent.putExtra("itemPosition", position.toString())
+        startActivity(intent)
+    }
+
 
     override fun downloadPreFile(uri: File) {
 

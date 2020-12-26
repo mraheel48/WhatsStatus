@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -41,25 +40,6 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
             holder.selectImage.visibility = View.GONE
         }
 
-
-        /*  holder.thumbNail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                path.get(position).setSelected(!path.get(position).isSelected());
-                notifyDataSetChanged();
-
-            }
-        });*/
-
-        /*holder.thumbNail.setOnLongClickListener {
-
-            path[position].isSelected = !path[position].isSelected
-            onClickItem.itemSelect(path[position])
-            notifyItemChanged(position)
-
-        }*/
-
         if (path[position].text.contains(".jpg")) {
             holder.vidThumbNail.visibility = View.GONE
         }
@@ -79,7 +59,6 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
 
     override fun getItemCount(): Int {
         return path.size
-        //return 10;
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -97,7 +76,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
                 if (Constants.fragmentVisible == 2) {
 
                     //Toast.makeText(mContext, "calling save", Toast.LENGTH_SHORT).show()
-                    onClickItem.itemClick(path[adapterPosition])
+                    onClickItem.itemClick(path[adapterPosition],adapterPosition)
 
                 } else {
 
@@ -115,7 +94,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
                     } else {
 
                         //Toast.makeText(mContext, "Simple Click", Toast.LENGTH_SHORT).show()
-                        onClickItem.itemClick(path[adapterPosition])
+                        onClickItem.itemClick(path[adapterPosition],adapterPosition)
                     }
 
                 }
@@ -129,7 +108,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
                 if (Constants.fragmentVisible == 2) {
 
                     //Toast.makeText(mContext, "calling save", Toast.LENGTH_SHORT).show()
-                    onClickItem.itemClick(path[adapterPosition])
+                    onClickItem.itemClick(path[adapterPosition],adapterPosition)
 
                 } else {
 
@@ -154,6 +133,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
 
     interface ItemClick {
         fun itemSelectLong(filePath: ItemModel)
-        fun itemClick(filePath: ItemModel)
+        fun itemClick(filePath: ItemModel,position:Int)
     }
+
 }

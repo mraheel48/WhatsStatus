@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.risetech.whatsstatus.R
@@ -57,7 +56,6 @@ class HomeFragment : Fragment() {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 Log.e("myTabSelect", "${fragmentArray[tab.position]}")
                 Constants.fragmentVisible = tab.position
-
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {}
@@ -73,7 +71,7 @@ class HomeFragment : Fragment() {
         viewPager.adapter = customViewPagerAdapter
         customViewPagerAdapter.notifyDataSetChanged()
         viewPager.invalidate()
-        tabLayout.getTabAt(position)?.select();
+        tabLayout.getTabAt(position)?.select()
 
     }
 

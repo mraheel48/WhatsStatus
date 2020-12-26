@@ -12,7 +12,6 @@ import com.risetech.whatsstatus.activities.MainActivity
 import com.risetech.whatsstatus.dataModel.ItemModel
 import com.risetech.whatsstatus.utils.Constants
 import com.risetech.whatsstatus.utils.Utils
-import com.risetech.whatsstatus.viewPagerAdapter.MySaveWorkAdapter
 import com.risetech.whatsstatus.viewPagerAdapter.MyWorkAdapter
 import org.apache.commons.io.comparator.LastModifiedFileComparator
 import java.io.File
@@ -24,8 +23,6 @@ class CategoryFragment : Fragment() {
     lateinit var mContext: Context
     var categoryName: String? = ""
 
-    //var imgPath: Array<ItemModel> = ArrayList()
-
     var imgPath: ArrayList<ItemModel> = ArrayList()
 
     var savePathFile: ArrayList<ItemModel> = ArrayList()
@@ -33,7 +30,6 @@ class CategoryFragment : Fragment() {
     var listFile: Array<File>? = null
 
     var myWorkAdapter: MyWorkAdapter? = null
-    var mySaveWorkAdapter: MySaveWorkAdapter? = null
 
     lateinit var localDownloadPath: File
 
@@ -43,8 +39,6 @@ class CategoryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_category, container, false)
 
         val view = inflater.inflate(R.layout.fragment_category, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
@@ -130,7 +124,6 @@ class CategoryFragment : Fragment() {
 
         }
 
-
     val videoFromSdcard: Unit
         get() {
             imgPath.clear()
@@ -166,47 +159,6 @@ class CategoryFragment : Fragment() {
             } else {
                 Utils.showToast(mContext, "Path not found")
 
-            }
-
-        }
-
-    val saveSDcard: Unit
-        get() {
-            savePathFile.clear()
-
-            val file = localDownloadPath
-
-            if (file.isDirectory) {
-
-                listFile = file.listFiles()
-
-                if (listFile != null) {
-
-                    Arrays.sort(listFile!!, LastModifiedFileComparator.LASTMODIFIED_REVERSE)
-
-                    for (value in listFile!!) {
-
-                        if (value.absoluteFile.toString()
-                                .contains(".mp4") || value.absoluteFile.toString().contains(".jpg")
-                        ) {
-
-                            savePathFile.add(ItemModel(value.absolutePath))
-
-                            if (savePathFile.isNotEmpty()) {
-
-                                mySaveWorkAdapter = MySaveWorkAdapter(savePathFile)
-                                recyclerView.adapter = mySaveWorkAdapter
-
-                            }
-                        }
-
-
-                    }
-
-                }
-
-            } else {
-                Utils.showToast(mContext, "Path not found")
             }
 
         }
