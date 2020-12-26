@@ -99,6 +99,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     var categoryFragment: CategoryFragment = CategoryFragment()
 
     lateinit var localDownloadPath: File
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
