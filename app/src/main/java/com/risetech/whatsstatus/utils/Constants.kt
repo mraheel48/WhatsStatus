@@ -18,6 +18,14 @@ object Constants {
 
     var itemPositionSelect = -1
 
+    //Banner Ads
+    val bannerId = "ca-app-pub-5448910982838601/8154040198"
+    val bannerTestId = "ca-app-pub-3940256099942544/6300978111"
+
+    //Interstitial Ads
+    val interstitialId = "ca-app-pub-5448910982838601/5807912603"
+    val interstitialTestId = "ca-app-pub-3940256099942544/1033173712"
+
     val filePathWhatApp =
         File(Environment.getExternalStorageDirectory().absoluteFile, "/WhatsApp/Media/.Statuses")
     val fileDownloadPath =

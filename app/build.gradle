@@ -77,6 +77,9 @@ dependencies {
     // Lifecycles only (without ViewModel or LiveData)
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
+    //noinspection GradleDependency
+    implementation 'com.google.android.gms:play-services-ads:19.3.0'
+
 
 }
 

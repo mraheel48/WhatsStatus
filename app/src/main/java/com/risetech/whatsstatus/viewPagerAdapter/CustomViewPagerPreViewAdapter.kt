@@ -15,7 +15,7 @@ class CustomViewPagerPreViewAdapter(fragmentManager: FragmentManager?) : Fragmen
     //var fragmentArray = Constants.passList as (Array<ItemModel>)
 
     override fun getItem(position: Int): Fragment {
-        return newInstance(Constants.passList[position].text.toString())
+        return newInstance(Constants.passList[position].text)
     }
 
     override fun getCount(): Int {

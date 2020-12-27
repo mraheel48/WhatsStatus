@@ -8,11 +8,15 @@ import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
+import android.view.ViewTreeObserver
 import android.view.Window
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -22,13 +26,18 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
+import com.risetech.whatsstatus.BuildConfig
 import com.risetech.whatsstatus.R
+import com.risetech.whatsstatus.ads.AdManger
 import com.risetech.whatsstatus.dataModel.ItemModel
 import com.risetech.whatsstatus.dialogs.*
 import com.risetech.whatsstatus.fragments.HomeFragment
@@ -47,7 +56,7 @@ import kotlin.system.measureTimeMillis
 
 @Suppress("UNNECESSARY_SAFE_CALL")
 class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.ItemClick,
-     WorkPreView.DownloadFile {
+    WorkPreView.DownloadFile, AdManger.AdManagerListener {
 
     lateinit var navBtn: ImageView
     lateinit var drawer: DrawerLayout
@@ -97,9 +106,17 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
     lateinit var localDownloadPath: File
 
+    //google Ads
+    var adView: AdView? = null
+    var adLayout: FrameLayout? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        AdManger.init(this@MainActivity)
+
+        AdManger.loadIntersital(this)
 
         //init Id Layout
         navBtn = findViewById(R.id.nav_btn)
@@ -110,6 +127,10 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         downloadBtn = findViewById(R.id.nav_btn2)
         reFreshData = findViewById(R.id.refresh_data)
+
+        adLayout = findViewById(R.id.adLayout)
+
+        bannerAds()
 
         //windows dialog code
         dialog = Dialog(this@MainActivity)
@@ -373,6 +394,12 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                         dialog.dismiss()
 
                         homeF.updateTabPosition(Constants.fragmentVisible)
+
+                        if (AdManger.isInterstialLoaded()) {
+                            AdManger.showInterstial(this@MainActivity)
+                        } else {
+                            AdManger.loadIntersital(this@MainActivity)
+                        }
                     }
 
                 }.start()
@@ -438,25 +465,21 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         navProBtn.setOnClickListener {
             openCloseNavigationView()
-
             object : CountDownTimer(300, 300) {
                 override fun onTick(l: Long) {}
                 override fun onFinish() {
                     ProDialog(this@MainActivity, this@MainActivity)
                 }
-
             }.start()
         }
 
         navContactUs.setOnClickListener {
             openCloseNavigationView()
-
             object : CountDownTimer(300, 300) {
                 override fun onTick(l: Long) {}
                 override fun onFinish() {
                     FeedbackUtils.startFeedbackEmail(this@MainActivity)
                 }
-
             }.start()
 
         }
@@ -477,7 +500,13 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         navGuideApp.setOnClickListener {
             openCloseNavigationView()
-            GuideAppDiaLog(this@MainActivity)
+            object : CountDownTimer(300, 300) {
+                override fun onTick(l: Long) {}
+                override fun onFinish() {
+                    GuideAppDiaLog(this@MainActivity)
+                }
+            }.start()
+
             /*  val i = Intent(Intent.ACTION_SEND)
               i.type = "text/plain"
               i.putExtra(Intent.EXTRA_SUBJECT, "Label Maker")
@@ -489,8 +518,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
               startActivity(Intent.createChooser(i, "choose one"))*/
         }
 
-
-
         navPrivacyPolicy.setOnClickListener {
             openCloseNavigationView()
             object : CountDownTimer(300, 300) {
@@ -500,26 +527,16 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 }
 
             }.start()
-            /* try {
-                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("http://contentarcade.net/privacy-policy.php")))
-             } catch (e: Exception) {
-                 e.printStackTrace()
-             }*/
         }
 
         navRateUs.setOnClickListener {
             openCloseNavigationView()
-
             object : CountDownTimer(300, 300) {
                 override fun onTick(l: Long) {}
                 override fun onFinish() {
                     CustomRatingDialog(this@MainActivity)
                 }
-
             }.start()
-            //Utils.showToast(this, "under_dev")
-
-            //rateUS()
         }
 
     }
@@ -601,7 +618,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         Log.e("myTag", "${pathListSelect.size}")
     }
 
-    override fun itemClick(filePath: ItemModel,position:Int) {
+    override fun itemClick(filePath: ItemModel, position: Int) {
 
         //passList.clear()
         Constants.passList.clear()
@@ -629,8 +646,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
     override fun downloadPreFile(uri: File) {
 
-        var copyTime: Long? = null
-
         lifecycleScope.launch {
 
             Constants.scopeIO.launch {
@@ -648,7 +663,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
                 }
 
-                Log.e(TAG, "This is a time Job complete $copyTime ms..")
+                Log.e(TAG, "This is a time Job complete $executionTimeOut ms..")
 
 
             }
@@ -665,6 +680,85 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             }
         }
 
+    }
+
+
+    /**************************************Banner Ads **********************************************/
+    fun bannerAds() {
+
+        adLayout?.let {
+
+            val viewTreeObserver = it.viewTreeObserver
+
+            if (viewTreeObserver.isAlive) {
+
+                viewTreeObserver.addOnGlobalLayoutListener(object :
+                    ViewTreeObserver.OnGlobalLayoutListener {
+
+                    override fun onGlobalLayout() {
+                        it.viewTreeObserver.removeOnGlobalLayoutListener(this)
+
+                        if (Utils.isNetworkAvailable(this@MainActivity)) {
+                            loadBanner()
+                        }
+
+                    }
+                })
+            }
+
+        }
+
+    }
+
+    private fun loadBanner() {
+
+        adView = AdView(this)
+
+        if (BuildConfig.DEBUG) {
+            adView!!.adUnitId = Constants.bannerTestId
+        } else {
+            adView!!.adUnitId = Constants.bannerId
+        }
+
+        val adSize = adSize
+        adView!!.adSize = adSize
+        adLayout!!.addView(adView)
+        val adRequest = AdRequest.Builder().build()
+        try {
+            adView!!.loadAd(adRequest)
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+    }
+
+    // Determine the screen width (less decorations) to use for the ad width.
+    private val adSize: AdSize
+        get() {
+            // Determine the screen width (less decorations) to use for the ad width.
+            val display = windowManager.defaultDisplay
+            val outMetrics = DisplayMetrics()
+            display.getMetrics(outMetrics)
+            val density = outMetrics.density
+            var adWidthPixels = adLayout!!.width.toFloat()
+            // If the ad hasn't been laid out, default to the full screen width.
+            if (adWidthPixels == 0f) {
+                adWidthPixels = outMetrics.widthPixels.toFloat()
+            }
+            val adWidth = (adWidthPixels / density).toInt()
+            return AdSize.getCurrentOrientationBannerAdSizeWithWidth(this, adWidth)
+        }
+
+    override fun onAdClose(dataCopy: String, idPosition: Int) {
+        //TODO("Not yet implemented")
+    }
+
+    override fun onAdClose(pos: Int) {
+        //TODO("Not yet implemented")
+    }
+
+    override fun onAdCloseActivity() {
+        //TODO("Not yet implemented")
+        AdManger.loadIntersital(this)
     }
 
 }
