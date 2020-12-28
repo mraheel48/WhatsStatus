@@ -32,21 +32,6 @@ class PreViewFragment : Fragment() {
 
         viewPager.setCurrentItem(strtext!!.toInt(), true)
 
-        /*viewPager.setOnPageChangeListener(object : OnPageChangeListener {
-            override fun onPageSelected(pageNumber: Int) {
-                // Just define a callback method in your fragment and call it like this!
-                customViewPagerAdapter.getItem(pageNumber).isVisible
-            }
-
-            override fun onPageScrolled(arg0: Int, arg1: Float, arg2: Int) {
-
-            }
-
-            override fun onPageScrollStateChanged(arg0: Int) {
-
-            }
-        })*/
-
         return view
     }
 

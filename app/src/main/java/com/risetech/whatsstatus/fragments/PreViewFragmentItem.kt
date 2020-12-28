@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,12 +20,13 @@ import com.risetech.whatsstatus.R
 import java.io.File
 
 
+@Suppress("DEPRECATION")
 class PreViewFragmentItem : Fragment() {
 
     var itemName: String? = ""
     lateinit var imageView: ImageView
     lateinit var videoRoot: FrameLayout
-    lateinit var videoView: VideoView
+    var videoView: VideoView? = null
     var fileUri: Uri? = null
     lateinit var mContext: Context
     var viewLayout: View? = null
@@ -61,25 +63,27 @@ class PreViewFragmentItem : Fragment() {
                 .load(fileUri)
                 .into(imageView)
 
-            if (videoView.isPlaying) {
+           /* if (videoView!!.isPlaying) {
                 constraintLayout.visibility = View.GONE
-                videoView.stopPlayback()
+                videoView!!.stopPlayback()
             } else {
                 constraintLayout.visibility = View.VISIBLE
-            }
+            }*/
 
-            videoView.setVideoURI(fileUri)
+            videoView!!.setVideoURI(fileUri)
             val mediaController = MediaController(mContext)
-            videoView.setMediaController(mediaController)
+            videoView!!.setMediaController(mediaController)
             mediaController.setAnchorView(videoView)
 
             constraintLayout.setOnClickListener {
+
+                videoView!!.visibility = View.VISIBLE
+                videoView!!.start()
                 videoRoot.visibility = View.VISIBLE
-                videoView.start()
                 constraintLayout.visibility = View.GONE
             }
 
-            videoView.setOnCompletionListener {
+            videoView!!.setOnCompletionListener {
                 // Video Playing is completed
                 videoRoot.visibility = View.GONE
                 constraintLayout.visibility = View.VISIBLE
@@ -108,5 +112,26 @@ class PreViewFragmentItem : Fragment() {
         }
     }
 
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+
+        if (isVisibleToUser) {
+            // load data here      resumePlayer();
+            Log.e("myTag", "true")
+
+        } else {
+            // fragment is no longer visible    pausePlayer();
+            Log.e("myTag", "false")
+
+            if (videoView != null) {
+
+                videoView!!.pause()
+                videoRoot.visibility = View.GONE
+                videoView!!.visibility = View.GONE
+                constraintLayout.visibility = View.VISIBLE
+
+            }
+        }
+    }
 
 }

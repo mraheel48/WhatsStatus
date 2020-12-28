@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         AdManger.init(this@MainActivity)
 
-        AdManger.loadIntersital(this)
+        //AdManger.loadIntersital(this)
 
         //init Id Layout
         navBtn = findViewById(R.id.nav_btn)
@@ -130,7 +130,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         adLayout = findViewById(R.id.adLayout)
 
-        bannerAds()
+        adLayout?.visibility = View.GONE
+
+        //bannerAds()
 
         //windows dialog code
         dialog = Dialog(this@MainActivity)
@@ -395,11 +397,11 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
                         homeF.updateTabPosition(Constants.fragmentVisible)
 
-                        if (AdManger.isInterstialLoaded()) {
+                        /*if (AdManger.isInterstialLoaded()) {
                             AdManger.showInterstial(this@MainActivity)
                         } else {
                             AdManger.loadIntersital(this@MainActivity)
-                        }
+                        }*/
                     }
 
                 }.start()
