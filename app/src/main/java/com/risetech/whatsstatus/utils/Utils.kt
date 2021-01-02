@@ -47,10 +47,10 @@ object Utils {
         //val root = mContext.getExternalFilesDir(null)!!.absolutePath
         //val fileDownloadPath = File(mContext.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "/WhatsStatus/")
         // val fileDownloadPath = File(mContext.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "/")
-        val fileDownloadPath = File(
+       /* File(
             activity.getExternalFilesDir(Environment.DIRECTORY_DCIM),
             "/WhatsStatus"
-        )
+        )*/
         return newFolder
     }
 
