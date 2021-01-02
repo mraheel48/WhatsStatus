@@ -44,6 +44,7 @@ class PreViewFragmentItem : Fragment() {
         this.mContext = container!!.context
 
         val f = File(itemName!!)
+
         fileUri = if (Build.VERSION.SDK_INT >= 24) {
             FileProvider.getUriForFile(mContext, mContext.packageName + ".fileprovider", f)
         } else {
@@ -62,13 +63,6 @@ class PreViewFragmentItem : Fragment() {
             Glide.with(mContext)
                 .load(fileUri)
                 .into(imageView)
-
-           /* if (videoView!!.isPlaying) {
-                constraintLayout.visibility = View.GONE
-                videoView!!.stopPlayback()
-            } else {
-                constraintLayout.visibility = View.VISIBLE
-            }*/
 
             videoView!!.setVideoURI(fileUri)
             val mediaController = MediaController(mContext)
@@ -96,7 +90,6 @@ class PreViewFragmentItem : Fragment() {
             imageView.setImageURI(fileUri)
 
         }
-
 
         return viewLayout
     }

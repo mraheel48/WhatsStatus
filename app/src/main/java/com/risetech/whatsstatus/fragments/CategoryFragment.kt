@@ -47,7 +47,8 @@ class CategoryFragment : Fragment() {
 
         mContext = container!!.context
 
-        localDownloadPath = Utils.fileDownloadPath(mContext)
+        localDownloadPath = Constants.fileDownloadPath
+        //localDownloadPath = Utils.fileDownloadPath(mContext)
 
         val extras = arguments
         categoryName = extras!!.getString("cate_name")

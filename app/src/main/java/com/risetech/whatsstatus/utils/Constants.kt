@@ -5,7 +5,7 @@ import com.risetech.whatsstatus.dataModel.ItemModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import java.io.File
-import java.util.ArrayList
+import java.util.*
 
 
 object Constants {
@@ -16,7 +16,11 @@ object Constants {
 
     var passList: ArrayList<ItemModel> = ArrayList()
 
-    var itemPositionSelect = -1
+    var itemPositionSelect:Int = -1
+
+    var itemPreviewPosition:Int = 0
+
+    var fileStatus = false
 
     //Banner Ads
     val bannerId = "ca-app-pub-5448910982838601/8154040198"
@@ -26,10 +30,13 @@ object Constants {
     val interstitialId = "ca-app-pub-5448910982838601/5807912603"
     val interstitialTestId = "ca-app-pub-3940256099942544/1033173712"
 
+    @Suppress("DEPRECATION")
     val filePathWhatApp =
         File(Environment.getExternalStorageDirectory().absoluteFile, "/WhatsApp/Media/.Statuses")
+
+    @Suppress("DEPRECATION")
     val fileDownloadPath =
-        File(Environment.getExternalStorageDirectory().absoluteFile, "/WhatsStatus/")
+        File(Environment.getExternalStorageDirectory().absolutePath + "/WhatsStatus/")
 
     val scopeIO: CoroutineScope = CoroutineScope(Dispatchers.IO)
     val scopeMain: CoroutineScope = CoroutineScope(Dispatchers.Main)

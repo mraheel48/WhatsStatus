@@ -10,6 +10,7 @@
         android:id="@+id/cardView9"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:visibility="visible"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardElevation="@dimen/_2sdp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +59,6 @@
         android:background="#A8A8A8"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!--<androidx.recyclerview.widget.RecyclerView
@@ -76,6 +76,7 @@
         android:id="@+id/pagerViewRoot"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +88,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:background="#FFFFFF"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -134,7 +135,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/delete_icon"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/view5"
@@ -187,7 +188,7 @@
 
         <View
             android:id="@+id/view4"
-            android:layout_width="@dimen/_2sdp"
+            android:layout_width="@dimen/_1sdp"
             android:layout_height="0dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
@@ -199,7 +200,7 @@
 
         <View
             android:id="@+id/view5"
-            android:layout_width="@dimen/_2sdp"
+            android:layout_width="@dimen/_1sdp"
             android:layout_height="0dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"

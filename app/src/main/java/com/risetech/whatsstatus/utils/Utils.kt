@@ -19,6 +19,7 @@ import android.util.TypedValue
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.drawToBitmap
 import com.risetech.whatsstatus.R
@@ -26,13 +27,31 @@ import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 object Utils {
 
-    fun fileDownloadPath(mContext: Context):File{
+    fun fileDownloadPath(activity: Activity): File {
+
+        val aDirArray = ContextCompat.getExternalFilesDirs(activity, null)
+
+        // val aExtDcimDir = File(aDirArray[0], Environment.DIRECTORY_DCIM)
+
+        val newFolder = File(activity.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString())
+
+        if (!newFolder.exists()) {
+            newFolder.mkdir()
+        }
+
+        // Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
+
         //val root = mContext.getExternalFilesDir(null)!!.absolutePath
         //val fileDownloadPath = File(mContext.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "/WhatsStatus/")
-        val fileDownloadPath = File(mContext.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "/")
-        return fileDownloadPath
+        // val fileDownloadPath = File(mContext.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "/")
+        val fileDownloadPath = File(
+            activity.getExternalFilesDir(Environment.DIRECTORY_DCIM),
+            "/WhatsStatus"
+        )
+        return newFolder
     }
 
     fun showToast(context: Context, message: String) {

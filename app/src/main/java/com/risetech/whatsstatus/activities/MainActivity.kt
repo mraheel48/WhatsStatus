@@ -8,7 +8,7 @@ import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.os.Build
+import android.media.MediaScannerConnection
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.DisplayMetrics
@@ -141,7 +141,8 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         dialog?.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog?.setCancelable(false)
 
-        localDownloadPath = Utils.fileDownloadPath(this@MainActivity)
+        //localDownloadPath = Utils.fileDownloadPath(this@MainActivity)
+        localDownloadPath = Constants.fileDownloadPath
         Log.e(TAG, "${localDownloadPath}")
 
         //set nav_Draw
@@ -208,11 +209,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     suspend fun updateUiProgress() {
-
         withContext(Dispatchers.Main) {
             updateFragmentUI()
         }
-
     }
 
     suspend fun updateHomeFragment(timeStay: Long) {
@@ -248,7 +247,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         }
     }
 
-    private fun updateFragmentUI() {
+    public fun updateFragmentUI() {
 
         pathListSelect.clear()
         fileCount = 1500
@@ -269,12 +268,24 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     suspend fun copyFileResult(fileNumber: Int): Int {
-        File(pathListSelect[fileNumber].text).copyTo(
 
+        File(pathListSelect[fileNumber].text).copyTo(
             File(
                 localDownloadPath.toString() + pathListSelect[fileNumber].text
                     .replace(Constants.filePathWhatApp.toString(), "")
             ), true
+        )
+
+
+        val filePath = localDownloadPath.toString() + pathListSelect[fileNumber].text.replace(
+            Constants.filePathWhatApp.toString(),
+            ""
+        )
+        MediaScannerConnection.scanFile(
+            this@MainActivity,
+            arrayOf(filePath),
+            arrayOf("image/jpeg"),
+            null
         )
 
         return fileNumber + 1
@@ -417,9 +428,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             .withPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
             .withListener(object : PermissionListener {
                 override fun onPermissionGranted(response: PermissionGrantedResponse?) {
-
                     readLocalEndData(true)
-
                 }
 
                 override fun onPermissionDenied(response: PermissionDeniedResponse?) {
@@ -444,6 +453,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     fun navDrawMethod() {
+
         // new sliding navigation view
         //System.gc()
         /*slidingRootNav = SlidingRootNavBuilder(this@MainActivity).withMenuLayout(R.layout.newdrawer)
@@ -645,7 +655,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         startActivity(intent)
     }
 
-
     override fun downloadPreFile(uri: File) {
 
         lifecycleScope.launch {
@@ -684,6 +693,17 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        if (Constants.fileStatus){
+            Constants.fileStatus = false
+            Constants.scopeIO.launch {
+                updateFragmentUI()
+            }
+        }
+
+    }
 
     /**************************************Banner Ads **********************************************/
     fun bannerAds() {
@@ -734,6 +754,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     // Determine the screen width (less decorations) to use for the ad width.
+    @Suppress("DEPRECATION")
     private val adSize: AdSize
         get() {
             // Determine the screen width (less decorations) to use for the ad width.
@@ -750,16 +771,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             return AdSize.getCurrentOrientationBannerAdSizeWithWidth(this, adWidth)
         }
 
-    override fun onAdClose(dataCopy: String, idPosition: Int) {
-        //TODO("Not yet implemented")
-    }
-
-    override fun onAdClose(pos: Int) {
-        //TODO("Not yet implemented")
-    }
-
     override fun onAdCloseActivity() {
-        //TODO("Not yet implemented")
         AdManger.loadIntersital(this)
     }
 

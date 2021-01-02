@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
+import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.risetech.whatsstatus.R
+import com.risetech.whatsstatus.utils.Constants
 import com.risetech.whatsstatus.viewPagerAdapter.CustomViewPagerPreViewAdapter
-
 
 class PreViewFragment : Fragment() {
 
@@ -21,16 +22,26 @@ class PreViewFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_pre_view, container, false)
-
-        val strtext = arguments?.getString("itemPosition")
-
         viewPager = view.findViewById(R.id.view_pager)
-
         customViewPagerAdapter = CustomViewPagerPreViewAdapter(childFragmentManager)
-
         viewPager.adapter = customViewPagerAdapter
+        viewPager.setCurrentItem(Constants.itemPreviewPosition, true)
 
-        viewPager.setCurrentItem(strtext!!.toInt(), true)
+        viewPager.addOnPageChangeListener(object : OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+
+            }
+            override fun onPageSelected(position: Int) {
+                // Here's your instance
+                Constants.itemPreviewPosition = position
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {}
+        })
 
         return view
     }

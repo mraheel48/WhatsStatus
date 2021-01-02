@@ -39,18 +39,6 @@ class HomeFragment : Fragment() {
 
         tabLayout.setupWithViewPager(viewPager)
 
-        /*val root = tabLayout.getChildAt(0)
-
-      if (root is LinearLayout) {
-           root.showDividers = LinearLayout.SHOW_DIVIDER_MIDDLE
-           val drawable = GradientDrawable()
-           //drawable.setColor(resources.getColor(R.color.greyColor))
-           drawable.setColor(ContextCompat.getColor(container!!.context, R.color.greyColor))
-           drawable.setSize(2, 1)
-           root.dividerPadding = 20
-           root.dividerDrawable = drawable
-       }*/
-
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
             override fun onTabSelected(tab: TabLayout.Tab) {

@@ -71,6 +71,7 @@ class WorkPreView(
         }
 
         val f = File(fileUri.toString())
+
         fileUriNew = if (Build.VERSION.SDK_INT >= 24) {
             FileProvider.getUriForFile(activity, activity.packageName + ".fileprovider", f)
         } else {
@@ -218,7 +219,6 @@ class WorkPreView(
     }
 
     fun disableDialog() {
-
         if (dialog.isShowing) {
             dialog.dismiss()
         }
