@@ -281,10 +281,11 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             Constants.filePathWhatApp.toString(),
             ""
         )
+
         MediaScannerConnection.scanFile(
             this@MainActivity,
             arrayOf(filePath),
-            arrayOf("image/jpeg"),
+            arrayOf("image/jpeg/video/mp4"),
             null
         )
 
@@ -696,7 +697,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     override fun onResume() {
         super.onResume()
 
-        if (Constants.fileStatus){
+        if (Constants.fileStatus) {
             Constants.fileStatus = false
             Constants.scopeIO.launch {
                 updateFragmentUI()

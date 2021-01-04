@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#000000">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView9"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:visibility="visible"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardElevation="@dimen/_2sdp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,11 +76,13 @@
         android:id="@+id/pagerViewRoot"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView9">
+        app:layout_constraintTop_toTopOf="parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

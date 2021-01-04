@@ -1,6 +1,7 @@
 package com.risetech.whatsstatus.activities
 
 import android.app.Dialog
+import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -9,6 +10,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.provider.MediaStore
 import android.view.View
 import android.view.Window
 import android.widget.ImageView
@@ -26,7 +28,6 @@ import com.risetech.whatsstatus.utils.Constants
 import com.risetech.whatsstatus.utils.Utils
 import kotlinx.coroutines.*
 import java.io.File
-import java.lang.Exception
 import kotlin.system.measureTimeMillis
 
 
@@ -264,13 +265,22 @@ class PreView : AppCompatActivity() {
 
         val filePath = Constants.fileDownloadPath.toString() + fileUri.toString()
             .replace(Constants.filePathWhatApp.toString(), "")
+
         MediaScannerConnection.scanFile(
             this@PreView,
             arrayOf(filePath),
-            arrayOf("image/jpeg"),
+            arrayOf("image/jpeg/video/mp4"),
             null
         )
         return true
+    }
+
+    fun addVideo(videoFile: File): Uri? {
+        val values = ContentValues(3)
+        values.put(MediaStore.Video.Media.TITLE, "My video title")
+        values.put(MediaStore.Video.Media.MIME_TYPE, "video/mp4")
+        values.put(MediaStore.Video.Media.DATA, videoFile.absolutePath)
+        return contentResolver.insert(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, values)
     }
 
     suspend fun updateUiProgress() {
