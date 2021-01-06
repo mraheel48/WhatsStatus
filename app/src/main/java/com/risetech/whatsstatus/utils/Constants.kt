@@ -36,7 +36,7 @@ object Constants {
 
     @Suppress("DEPRECATION")
     val fileDownloadPath =
-        File(Environment.getExternalStorageDirectory().absolutePath + "/WhatsStatus/")
+        File(Environment.getExternalStorageDirectory().absolutePath + "/StatusSaver/")
 
     val scopeIO: CoroutineScope = CoroutineScope(Dispatchers.IO)
     val scopeMain: CoroutineScope = CoroutineScope(Dispatchers.Main)

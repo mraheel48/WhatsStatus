@@ -8,7 +8,6 @@ import android.os.Build
 import com.risetech.whatsstatus.R
 import java.util.*
 
-
 object FeedbackUtils {
 
     private fun getDeviceInfo(context: Context): String {

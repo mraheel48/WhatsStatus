@@ -114,10 +114,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        AdManger.init(this@MainActivity)
-
-        //AdManger.loadIntersital(this)
-
         //init Id Layout
         navBtn = findViewById(R.id.nav_btn)
         drawer = findViewById(R.id.drawer_layout)
@@ -129,10 +125,11 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         reFreshData = findViewById(R.id.refresh_data)
 
         adLayout = findViewById(R.id.adLayout)
-
         adLayout?.visibility = View.GONE
 
-        //bannerAds()
+        AdManger.init(this@MainActivity)
+        AdManger.loadInterstial(this, this)
+        bannerAds()
 
         //windows dialog code
         dialog = Dialog(this@MainActivity)
@@ -247,7 +244,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         }
     }
 
-    public fun updateFragmentUI() {
+    fun updateFragmentUI() {
 
         pathListSelect.clear()
         fileCount = 1500
@@ -409,10 +406,10 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
                         homeF.updateTabPosition(Constants.fragmentVisible)
 
-                        /*if (AdManger.isInterstialLoaded()) {
+                        /*if (AdManger.isInterstialLoaded(this@MainActivity)) {
                             AdManger.showInterstial(this@MainActivity)
                         } else {
-                            AdManger.loadIntersital(this@MainActivity)
+                            AdManger.loadInterstial(this@MainActivity,this@MainActivity)
                         }*/
                     }
 
@@ -709,6 +706,10 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     /**************************************Banner Ads **********************************************/
     fun bannerAds() {
 
+        if (adLayout?.visibility == View.GONE) {
+            adLayout?.visibility = View.VISIBLE
+        }
+
         adLayout?.let {
 
             val viewTreeObserver = it.viewTreeObserver
@@ -772,8 +773,8 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             return AdSize.getCurrentOrientationBannerAdSizeWithWidth(this, adWidth)
         }
 
-    override fun onAdCloseActivity() {
-        AdManger.loadIntersital(this)
+    override fun onAdClose() {
+        AdManger.loadInterstial(this, this)
     }
 
 }

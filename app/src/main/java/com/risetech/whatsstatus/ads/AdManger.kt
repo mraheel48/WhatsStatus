@@ -1,110 +1,116 @@
 package com.risetech.whatsstatus.ads
 
-
-import android.app.Activity
+import android.content.Context
 import android.util.Log
 import com.google.android.gms.ads.*
 import com.risetech.whatsstatus.BuildConfig
-import com.risetech.whatsstatus.utils.Constants
-import com.risetech.whatsstatus.utils.Utils
 
 object AdManger {
 
-    lateinit var mIntersital: InterstitialAd
+    var mIntersital: InterstitialAd? = null
+    private lateinit var mContext: Context
     var adCallbackInterstisial: AdManagerListener? = null
-    lateinit var mActivity: Activity
-    var TAG: String = "myAds"
+
+    //Interstitial Ads
+    val interstitialId = "ca-app-pub-5448910982838601/5807912603"
+    val interstitialTestId = "ca-app-pub-3940256099942544/1033173712"
 
     @JvmStatic
-    fun init(activity: Activity) {
-        this.mActivity = activity
-
+    fun init(context: Context) {
+        mContext = context
         // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(activity) {}
-        mIntersital = InterstitialAd(activity)
+        MobileAds.initialize(context)
+        mIntersital = InterstitialAd(context)
 
         if (BuildConfig.DEBUG) {
-            mIntersital.adUnitId = Constants.interstitialTestId
+            Log.d("AdManager", "new load request with Debug")
+            mIntersital?.adUnitId = interstitialTestId
         } else {
-            mIntersital.adUnitId = Constants.interstitialId
+            Log.d("AdManager", "new load request with release")
+            mIntersital?.adUnitId = interstitialId
         }
-
     }
 
     @JvmStatic
-    fun loadIntersital(adCallback: AdManagerListener?) {
-
+    fun loadInterstial(context: Context, adCallback: AdManagerListener) {
         adCallbackInterstisial = adCallback
-
-        if (!mIntersital.isLoaded) {
-
+        if (mIntersital == null) {
+            init(context)
+        } else {
             try {
-                if (Utils.isNetworkAvailable(mActivity)) {
-                    mIntersital.loadAd(AdRequest.Builder().build())
-                    adListenerInterface()
-                    Log.e(TAG, "Ads is load")
+                mIntersital?.let {
+                    it.loadAd(AdRequest.Builder().build())
+                    adListner()
                 }
-            } catch (ex: Exception) {
-                ex.printStackTrace()
+            } catch (e: UninitializedPropertyAccessException) {
+                e.printStackTrace()
+                init(context)
             }
         }
     }
 
     @JvmStatic
-    fun showInterstial() {
-        if (mIntersital.isLoaded) {
-            mIntersital.show()
-            Log.e(TAG, "Ads is show")
-        }
+    private fun adListner() {
 
-        /*this.mIntersital.adListener = object : AdListener() {
-            override fun onAdClosed() {
-                try {
-                    adCallbackInterstisial?.onAdCloseActivity()
-                } catch (ex: Exception) {
-                    ex.printStackTrace()
+        mIntersital?.let {
+
+            it.adListener = object : AdListener() {
+
+                override fun onAdLoaded() {
+                    Log.d("AdManager", "Ad Loaded")
                 }
-            }
-        }*/
 
-    }
+                override fun onAdFailedToLoad(errorCode: Int) {
+                    Log.d("AdManager", "Ad Failed To Load $errorCode")
+                }
 
-    private fun adListenerInterface() {
+                override fun onAdOpened() {
+                    Log.d("AdManager", "Ad Opened")
+                }
 
-        mIntersital.adListener = object : AdListener() {
+                override fun onAdClicked() {
+                    Log.d("AdManager", "Ad Clicked")
+                }
 
-            override fun onAdFailedToLoad(p0: Int) {
-                @Suppress("DEPRECATION")
-                super.onAdFailedToLoad(p0)
-                //Error code 0 not internet connect
-                Log.e("AdManager", "ad load failed , $p0")
-            }
+                override fun onAdLeftApplication() {
+                    Log.d("AdManager", "User Left Application")
+                }
 
-            override fun onAdLoaded() {
-                super.onAdLoaded()
-                Log.e("AdManager", "ad successfully loaded")
-            }
+                override fun onAdClosed() {
+                    Log.d("AdManager", "Ad Closed")
+                    if (adCallbackInterstisial != null) {
+                        loadInterstial(mContext, adCallbackInterstisial!!)
 
-            override fun onAdImpression() {
-                super.onAdImpression()
-                Log.e("AdManager", "onAdImpression")
-            }
+                        adCallbackInterstisial?.onAdClose()
+                    }
+                }
 
-            override fun onAdClosed() {
-                super.onAdClosed()
-                Log.e("AdManager", "onAdClosed")
-                adCallbackInterstisial?.onAdCloseActivity()
             }
         }
-
     }
 
-    fun isInterstialLoaded(): Boolean {
-        return mIntersital.isLoaded
+    @JvmStatic
+    fun showInterstial(context: Context) {
+        if (mIntersital == null) {
+            init(context)
+        } else {
+            mIntersital!!.show()
+        }
+    }
+
+    @JvmStatic
+    fun isInterstialLoaded(context: Context): Boolean {
+        var isLoad = false
+        if (mIntersital == null) {
+            init(context)
+        } else {
+            isLoad = mIntersital!!.isLoaded
+        }
+        return isLoad
     }
 
     interface AdManagerListener {
-        fun onAdCloseActivity()
+        fun onAdClose()
     }
 
 }

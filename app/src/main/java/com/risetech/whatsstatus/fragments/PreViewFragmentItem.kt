@@ -71,14 +71,15 @@ class PreViewFragmentItem : Fragment() {
 
             constraintLayout.setOnClickListener {
 
+                videoRoot.visibility = View.VISIBLE
                 videoView!!.visibility = View.VISIBLE
                 videoView!!.start()
-                videoRoot.visibility = View.VISIBLE
                 constraintLayout.visibility = View.GONE
             }
 
             videoView!!.setOnCompletionListener {
                 // Video Playing is completed
+
                 videoRoot.visibility = View.GONE
                 constraintLayout.visibility = View.VISIBLE
             }
@@ -117,8 +118,7 @@ class PreViewFragmentItem : Fragment() {
             Log.e("myTag", "false")
 
             if (videoView != null) {
-
-                videoView!!.pause()
+                videoView!!.stopPlayback()
                 videoRoot.visibility = View.GONE
                 videoView!!.visibility = View.GONE
                 constraintLayout.visibility = View.VISIBLE

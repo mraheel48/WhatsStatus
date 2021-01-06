@@ -2,7 +2,7 @@
 
     <string name="file_provider">com.risetech.whatsstatus.fileProvider</string>
 
-    <string name="app_name">WhatsStatus</string>
+    <string name="app_name">Status Saver</string>
     <string name="loading_ads">Loading Ad..</string>
     <string name="share_file">Share File</string>
     <string name="images">Images</string>
