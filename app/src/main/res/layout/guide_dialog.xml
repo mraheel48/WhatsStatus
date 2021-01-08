@@ -62,14 +62,13 @@
 
         <ImageView
             android:id="@+id/imageView53"
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
             app:layout_constraintBottom_toTopOf="@+id/textView349"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/app_icon_svg" />
+            app:srcCompat="@drawable/step1" />
 
         <TextView
             android:id="@+id/textView349"
