@@ -19,7 +19,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/launcher_new_round"
         android:supportsRtl="false"
-        android:theme="@style/AppTheme"
+        android:theme="@style/splashScreenTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
         tools:replace="android:supportsRtl">
 
@@ -28,15 +28,18 @@
         <activity
             android:name="com.risetech.status_saver_downloader.activities.SplashScreen"
             android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.risetech.status_saver_downloader.activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.risetech.status_saver_downloader.activities.MainActivity"
-            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
