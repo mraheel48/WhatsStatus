@@ -2,6 +2,7 @@
   <dictionary name="risetech">
     <words>
       <w>catname</w>
+      <w>checkmark</w>
       <w>cornsilk</w>
       <w>dcard</w>
       <w>fileprovider</w>
@@ -14,11 +15,14 @@
       <w>lateinit</w>
       <w>listner</w>
       <w>newdrawer</w>
+      <w>rateus</w>
       <w>repost</w>
       <w>risetech</w>
       <w>semibold</w>
+      <w>shareapp</w>
       <w>strtext</w>
       <w>videoshare</w>
+      <w>vidplace</w>
       <w>whatsapp</w>
       <w>whatsstatus</w>
     </words>

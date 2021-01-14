@@ -7,10 +7,8 @@
     <string name="share_file">Share File</string>
     <string name="images">Images</string>
     <string name="videos">Videos</string>
-    <string name="media">Media</string>
-
+    <string name="saved">Saved</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="do_yor_love_our_app">Do you Love our App?</string>
     <string name="give_us_a_quick_rating">Give us a quick rating so we know if you like it</string>
     <string name="done">Done</string>
@@ -18,5 +16,29 @@
     <string name="guide">Guide</string>
     <string name="preview">Preview</string>
     <string name="how_to_use">How to Use ?</string>
+    <string name="about_app">About App</string>
+    <string name="share_app">Share App</string>
+    <string name="give_feedback">Give Feedback</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">User Permission is Denied We can\'t save Status in Your Storage.</string>
+    <string name="refresh">Refresh</string>
+    <string name="version">Version</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Are you sure that you want to close this app?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Thanks for using WhatsApp status downloader.</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="step_1">Step 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Tap on Click to open WhatsApp icon</string>
+    <string name="step_2">Step 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">First you have to see Status from WhatsApp.</string>
+    <string name="step_3">Step 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Once you seen status in whatsapp then open status saver Application, your seen status will be here in this application.Now you can Download, Repost and Share.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">For a small one time Purchase you will get</string>
+    <string name="upgrade_to_pro_status_saver">Upgrade to Pro Status Saver</string>
+    <string name="ads_free_experience_for_lifetime">Ads Free Experience for Lifetime.</string>
+    <string name="dedicated_support">Dedicated Support.</string>
+    <string name="in_just_1_buy_now">In just $1 Buy Now</string>
 
 </resources>

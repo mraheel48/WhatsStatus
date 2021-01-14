@@ -27,7 +27,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/back_arrow" />
+                app:srcCompat="@drawable/back_arrow"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/title"
@@ -78,7 +79,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/step1" />
+                    app:srcCompat="@drawable/step1"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -86,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:gravity="center"
-                    android:text="Step 1"
+                    android:text="@string/step_1"
                     android:textAlignment="center"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_20sdp"
@@ -103,7 +105,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:gravity="center"
-                    android:text='Tap on "Click to open Whatapp" icon'
+                    android:text="@string/tap_on_click_to_open_whatsapp_icon"
                     android:textAlignment="center"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_14sdp"
@@ -120,7 +122,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView9"
-                    app:srcCompat="@drawable/step1" />
+                    app:srcCompat="@drawable/step1"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -128,7 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:gravity="center"
-                    android:text="Step 2"
+                    android:text="@string/step_2"
                     android:textAlignment="center"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_20sdp"
@@ -145,7 +148,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:gravity="center"
-                    android:text="First you have to see Status from WhatApp."
+                    android:text="@string/first_you_have_to_see_status_from_whatsapp"
                     android:textAlignment="center"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_14sdp"
@@ -162,7 +165,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView11"
-                    app:srcCompat="@drawable/step1" />
+                    app:srcCompat="@drawable/step1"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -170,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:gravity="center"
-                    android:text="Step 3"
+                    android:text="@string/step_3"
                     android:textAlignment="center"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_20sdp"
@@ -188,7 +192,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="32dp"
                     android:gravity="center"
-                    android:text="Once you seen status in whatsapp then open status saver Application, your seen status will be here in this application.Now you can Download, Repost and Share."
+                    android:text="@string/once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"
                     android:textAlignment="center"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_14sdp"

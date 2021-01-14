@@ -28,7 +28,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/back_arrow" />
+                app:srcCompat="@drawable/back_arrow"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/title"
@@ -112,14 +113,15 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline5"
-            app:srcCompat="@drawable/app_icon" />
+            app:srcCompat="@drawable/app_icon"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView349"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="For a small one time Purchase you will get"
+            android:text="@string/for_a_small_one_time_purchase_you_will_get"
             android:textColor="#789C9C"
             android:textSize="@dimen/_13sdp"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
@@ -133,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Upgrade to Pro Status Saver"
+            android:text="@string/upgrade_to_pro_status_saver"
             android:textColor="@color/white"
             android:textSize="@dimen/_15sdp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -150,7 +152,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView360"
             app:layout_constraintEnd_toStartOf="@+id/textView360"
             app:layout_constraintTop_toTopOf="@+id/textView360"
-            app:srcCompat="@drawable/checkmark" />
+            app:srcCompat="@drawable/checkmark"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -160,14 +163,15 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView7"
             app:layout_constraintEnd_toStartOf="@+id/textView7"
             app:layout_constraintTop_toTopOf="@+id/textView7"
-            app:srcCompat="@drawable/checkmark" />
+            app:srcCompat="@drawable/checkmark"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView360"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Ads Free Experience for Lifetime."
+            android:text="@string/ads_free_experience_for_lifetime"
             android:textColor="#789C9C"
             android:textSize="@dimen/_13sdp"
             app:layout_constraintBottom_toTopOf="@+id/guideline8"
@@ -181,7 +185,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Dadicated Support."
+            android:text="@string/dedicated_support"
             android:textColor="#789C9C"
             android:textSize="@dimen/_13sdp"
             app:layout_constraintBottom_toTopOf="@+id/guideline9"
@@ -190,8 +194,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout4"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -209,11 +212,17 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:gravity="center_horizontal"
                 android:padding="@dimen/_10sdp"
-                android:text="In just $1 Buy Now"
+                android:text="@string/in_just_1_buy_now"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

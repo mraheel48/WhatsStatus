@@ -30,7 +30,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/access_denied" />
+            app:srcCompat="@drawable/access_denied"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView"
@@ -40,12 +41,11 @@
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center"
-            android:text="User Permission is Denied We can't save Status in Your Storge."
+            android:text="@string/user_permission_is_denied_we_can_t_save_status_in_your_storage"
             android:textAlignment="center"
             android:textSize="@dimen/_15sdp"
             app:layout_constraintBottom_toTopOf="@+id/btnRefresh"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -53,7 +53,7 @@
             android:id="@+id/btnRefresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="refresh"
+            android:text="@string/refresh"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -20,7 +20,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/thank_you" />
+            app:srcCompat="@drawable/thank_you"
+            tools:ignore="ContentDescription" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline50"
@@ -33,7 +34,7 @@
             android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Are you sure that you want to close this app?"
+            android:text="@string/are_you_sure_that_you_want_to_close_this_app"
             android:textColor="#272727"
             android:textSize="@dimen/_13sdp"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -45,7 +46,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thanks for using WhatsApp status downloader."
+            android:text="@string/thanks_for_using_whatsapp_status_downloader"
             android:textColor="#272727"
             android:textSize="@dimen/_13sdp"
             app:layout_constraintBottom_toTopOf="@+id/textView21"
@@ -59,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:padding="@dimen/_5sdp"
-            android:text="YES"
+            android:text="@string/yes"
             android:textColor="#128C7C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:padding="@dimen/_5sdp"
-            android:text="NO"
+            android:text="@string/no"
             android:textColor="#128C7C"
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toStartOf="@+id/textView3"
