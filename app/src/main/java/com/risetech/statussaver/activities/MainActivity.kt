@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     var saveListFile: Array<File>? = null
     var myWorkAdapter: MyWorkAdapter? = null
 
-    lateinit var localDownloadPath: File  
+    lateinit var localDownloadPath: File
 
     //google Ads
     var adView: AdView? = null
