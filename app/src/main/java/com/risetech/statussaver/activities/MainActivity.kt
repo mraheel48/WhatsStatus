@@ -493,15 +493,15 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         navShareApp.setOnClickListener {
             openCloseNavigationView()
             Utils.showToast(this, "under_dev")
-            /*  val i = Intent(Intent.ACTION_SEND)
+              val i = Intent(Intent.ACTION_SEND)
               i.type = "text/plain"
-              i.putExtra(Intent.EXTRA_SUBJECT, "Label Maker")
+              i.putExtra(Intent.EXTRA_SUBJECT, "Status Saver")
               var sAux = "\nLet me recommend you this application\n\n"
               sAux = """
-                  ${sAux}https://play.google.com/store/apps/details?id=com.labelcreator.label.maker
+                  ${sAux}https://play.google.com/store/apps/details?id=com.risetech.status.downloader.saver.story
                   """.trimIndent()
               i.putExtra(Intent.EXTRA_TEXT, sAux)
-              startActivity(Intent.createChooser(i, "choose one"))*/
+              startActivity(Intent.createChooser(i, "choose one"))
         }
 
         navGuideApp.setOnClickListener {
@@ -513,15 +513,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 }
             }.start()
 
-            /*  val i = Intent(Intent.ACTION_SEND)
-              i.type = "text/plain"
-              i.putExtra(Intent.EXTRA_SUBJECT, "Label Maker")
-              var sAux = "\nLet me recommend you this application\n\n"
-              sAux = """
-                  ${sAux}https://play.google.com/store/apps/details?id=com.labelcreator.label.maker
-                  """.trimIndent()
-              i.putExtra(Intent.EXTRA_TEXT, sAux)
-              startActivity(Intent.createChooser(i, "choose one"))*/
         }
 
         navPrivacyPolicy.setOnClickListener {
