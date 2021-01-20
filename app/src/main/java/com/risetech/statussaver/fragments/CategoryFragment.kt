@@ -2,9 +2,7 @@ package com.risetech.statussaver.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.risetech.statussaver.R
@@ -17,7 +15,7 @@ import org.apache.commons.io.comparator.LastModifiedFileComparator
 import java.io.File
 import java.util.*
 
-class CategoryFragment : Fragment() {
+class CategoryFragment : Fragment(R.layout.fragment_category) {
 
     lateinit var recyclerView: RecyclerView
     lateinit var mContext: Context
@@ -34,13 +32,46 @@ class CategoryFragment : Fragment() {
     lateinit var localDownloadPath: File
 
 
-    override fun onCreateView(
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recyclerView = view.findViewById(R.id.recyclerView)
+
+        recyclerView.setHasFixedSize(true)
+
+        mContext = view.context
+
+        localDownloadPath = Constants.fileDownloadPath
+        //localDownloadPath = Utils.fileDownloadPath(mContext)
+
+        val extras = arguments
+        categoryName = extras!!.getString("cate_name")
+        //Log.e("myTag","${categoryName}")
+
+        if (categoryName == "images") {
+            myWorkAdapter = MyWorkAdapter((mContext as MainActivity).imgPathWhatApp)
+            recyclerView.adapter = myWorkAdapter
+        }
+
+        if (categoryName == "videos") {
+            myWorkAdapter = MyWorkAdapter((mContext as MainActivity).videosPathWhatApp)
+            recyclerView.adapter = myWorkAdapter
+        }
+
+        if (categoryName == "saved") {
+            myWorkAdapter = MyWorkAdapter((mContext as MainActivity).savedPathWhatApp)
+            recyclerView.adapter = myWorkAdapter
+        }
+
+    }
+
+    /*override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_category, container, false)
+
         recyclerView = view.findViewById(R.id.recyclerView)
 
         recyclerView.setHasFixedSize(true)
@@ -71,7 +102,7 @@ class CategoryFragment : Fragment() {
 
 
         return view
-    }
+    }*/
 
 
     companion object {
