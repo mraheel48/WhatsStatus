@@ -8,6 +8,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.media.MediaScannerConnection
+import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.DisplayMetrics
@@ -69,6 +70,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     lateinit var navShareApp: ConstraintLayout
     lateinit var navGuideApp: ConstraintLayout
     lateinit var navPrivacyPolicy: ConstraintLayout
+    lateinit var navAbout: ConstraintLayout
 
     lateinit var homeF: HomeFragment
     private lateinit var fragmentManager: FragmentManager
@@ -466,7 +468,8 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         navRateUs = findViewById(R.id.rateus)
         navContactUs = findViewById(R.id.contact_us)
         navShareApp = findViewById(R.id.shareapp)
-        navPrivacyPolicy = findViewById(R.id.privacy)
+        navPrivacyPolicy = findViewById(R.id.nav_policy)
+        navAbout = findViewById(R.id.privacy)
         navGuideApp = findViewById(R.id.nav_guide)
 
         navProBtn.setOnClickListener {
@@ -492,7 +495,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         navShareApp.setOnClickListener {
             openCloseNavigationView()
-            Utils.showToast(this, "under_dev")
               val i = Intent(Intent.ACTION_SEND)
               i.type = "text/plain"
               i.putExtra(Intent.EXTRA_SUBJECT, "Status Saver")
@@ -505,6 +507,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         }
 
         navGuideApp.setOnClickListener {
+
             openCloseNavigationView()
             object : CountDownTimer(300, 300) {
                 override fun onTick(l: Long) {}
@@ -513,9 +516,11 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 }
             }.start()
 
+
+
         }
 
-        navPrivacyPolicy.setOnClickListener {
+        navAbout.setOnClickListener {
             openCloseNavigationView()
             object : CountDownTimer(300, 300) {
                 override fun onTick(l: Long) {}
@@ -524,6 +529,24 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 }
 
             }.start()
+
+        }
+
+        navPrivacyPolicy.setOnClickListener {
+
+            openCloseNavigationView()
+            object : CountDownTimer(300, 300) {
+                override fun onTick(l: Long) {}
+                override fun onFinish() {
+                    try {
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://weberrorfinder.com/risetech-privacy-policy.html")))
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                }
+            }.start()
+
+
         }
 
         navRateUs.setOnClickListener {
