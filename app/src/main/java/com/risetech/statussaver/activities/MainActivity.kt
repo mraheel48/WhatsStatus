@@ -39,7 +39,7 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
 import com.risetech.statussaver.BuildConfig
 import com.risetech.statussaver.R
-import com.risetech.statussaver.ads.AdManger
+import com.risetech.statussaver.ads.AdManager
 import com.risetech.statussaver.billing.GoogleBilling
 import com.risetech.statussaver.dataModel.ItemModel
 import com.risetech.statussaver.dialogs.*
@@ -58,7 +58,7 @@ import kotlin.system.measureTimeMillis
 
 @Suppress("UNNECESSARY_SAFE_CALL")
 class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.ItemClick,
-    WorkPreView.DownloadFile, AdManger.AdManagerListener, GoogleBilling.GoogleBillingHandler {
+    WorkPreView.DownloadFile, AdManager.CallbackInterstial, GoogleBilling.GoogleBillingHandler {
 
     lateinit var navBtn: ImageView
     lateinit var drawer: DrawerLayout
@@ -112,11 +112,14 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     var adLayout: FrameLayout? = null
 
     lateinit var bp: GoogleBilling
+    lateinit var tvTitle: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.AppTheme)
         setContentView(R.layout.activity_main)
+
+        //AdManager.init(this@MainActivity)
 
         //init Id Layout
         navBtn = findViewById(R.id.nav_btn)
@@ -127,19 +130,12 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         downloadBtn = findViewById(R.id.nav_btn2)
         reFreshData = findViewById(R.id.refresh_data)
-
         adLayout = findViewById(R.id.adLayout)
-        //adLayout?.visibility = View.GONE
+        tvTitle = findViewById(R.id.title)
 
         //Billing init
         bp = GoogleBilling(this@MainActivity, this@MainActivity, this)
         bpInit()
-
-        /*AdManger.init(this@MainActivity)
-        AdManger.loadInterstial(this, this)
-        bannerAds()*/
-
-        //bannerAds()
 
         //windows dialog code
         dialog = Dialog(this@MainActivity)
@@ -177,6 +173,40 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             reFreshData.isClickable = false
             updateFragmentUI()
         }
+
+
+        if (BuildConfig.DEBUG) {
+
+            tvTitle?.let { it ->
+
+                it.setOnClickListener {
+
+                    it.isClickable = false
+
+                    if (bp.isConnected) {
+
+                        bp.consumePurchase(Constants.inAppKeyTest) { error: Int?, _: String? ->
+
+                            if (error == null) {
+                                it.isClickable = true
+                                Utils.showToast(this, "Billing Prossor is consume")
+
+                            } else {
+
+                                Log.e("myTag", "Error not billing Consume")
+                            }
+                        }
+
+                    } else {
+                        Utils.showToast(this, "Billing Prossor is not conntect")
+                        it.isClickable = true
+
+                    }
+
+                }
+            }
+        }
+
 
         openHomeFragment()
 
@@ -630,17 +660,23 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         if (bp.isConnected) {
 
-            if (!bp.isPurchased(Constants.inAppKey)) {
+            if (BuildConfig.DEBUG) {
 
-                if (BuildConfig.DEBUG) {
+                if (!bp.isPurchased(Constants.inAppKeyTest)) {
                     Log.e("myTag", "DEBUG")
                     bp.purchase(Constants.inAppKeyTest)
                 } else {
-                    bp.purchase(Constants.inAppKey)
+                    Utils.showToast(this, "Already Purchased")
                 }
 
             } else {
-                Utils.showToast(this, "Already Purchased")
+
+                if (!bp.isPurchased(Constants.inAppKey)) {
+                    Log.e("myTag", "DEBUG")
+                    bp.purchase(Constants.inAppKey)
+                } else {
+                    Utils.showToast(this, "Already Purchased")
+                }
             }
 
         } else {
@@ -827,49 +863,68 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             return AdSize.getCurrentOrientationBannerAdSizeWithWidth(this, adWidth)
         }
 
-    override fun onAdClose() {
-        AdManger.loadInterstial(this, this)
-    }
-
     override fun onBillingInitialized() {
 
-        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
-            adLayout?.visibility = View.GONE
-            Constants.inAppPrices = "Already Purchased"
+        if (BuildConfig.DEBUG) {
+
+            if (bp.isConnected && bp.isPurchased(Constants.inAppKeyTest)) {
+                adLayout?.visibility = View.GONE
+                Constants.inAppPrices = "Already Purchased"
+            } else {
+                adLayout?.visibility = View.VISIBLE
+                loadBanner()
+                AdManager.loadInterstial(this@MainActivity, this)
+            }
+
         } else {
-            adLayout?.visibility = View.VISIBLE
-            loadBanner()
-            AdManger.loadInterstial(this@MainActivity, this)
-        }
 
-        if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
+            if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+                adLayout?.visibility = View.GONE
+                Constants.inAppPrices = "Already Purchased"
+            } else {
+                adLayout?.visibility = View.VISIBLE
+                loadBanner()
+                AdManager.loadInterstial(this@MainActivity, this)
+            }
+            if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
 
-            try {
+                try {
 
-                val abc = ArrayList<String>()
-                abc.add(Constants.inAppKey)
+                    val abc = ArrayList<String>()
+                    abc.add(Constants.inAppKey)
 
-                bp.getInAppSkuDetails(abc) { error: Int?, skuList: List<SkuDetails>? ->
+                    bp.getInAppSkuDetails(abc) { error: Int?, skuList: List<SkuDetails>? ->
 
-                    if (skuList != null && skuList.isNotEmpty()) {
-                        Constants.inAppPrices = skuList[0].price
-                    } else {
-                        Log.e("error", error.toString())
+                        if (skuList != null && skuList.isNotEmpty()) {
+                            Constants.inAppPrices = skuList[0].price
+                        } else {
+                            Log.e("error", error.toString())
+                        }
+
                     }
 
+                } catch (e: Exception) {
+                    e.printStackTrace()
                 }
-
-            } catch (e: Exception) {
-                e.printStackTrace()
             }
+
         }
 
     }
 
     override fun onPurchased(purchase: Purchase) {
-        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
-            adLayout?.visibility = View.GONE
+
+        if (BuildConfig.DEBUG) {
+            if (bp.isConnected && bp.isPurchased(Constants.inAppKeyTest)) {
+                adLayout?.visibility = View.GONE
+
+            }
+        } else {
+            if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+                adLayout?.visibility = View.GONE
+            }
         }
+
     }
 
     override fun onBillingServiceDisconnected() {
@@ -882,8 +937,32 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             Log.e("myTag", "${errorCode}-- calling Banner")
             adLayout?.visibility = View.VISIBLE
             loadBanner()
-            AdManger.loadInterstial(this@MainActivity, this)
+            AdManager.loadInterstial(this@MainActivity, this)
         }
+
+    }
+
+    override fun onAdLoaded() {
+
+    }
+
+    override fun onAdFailedToLoad(errorCode: Int) {
+
+    }
+
+    override fun onAdOpened() {
+
+    }
+
+    override fun onAdClicked() {
+
+    }
+
+    override fun onAdLeftApplication() {
+
+    }
+
+    override fun onAdClosed() {
 
     }
 

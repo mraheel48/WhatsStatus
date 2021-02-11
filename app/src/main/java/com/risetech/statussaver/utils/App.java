@@ -1,8 +1,7 @@
 package com.risetech.statussaver.utils;
 
 import android.content.Context;
-
-import com.risetech.statussaver.ads.AdManger;
+import com.risetech.statussaver.ads.AdManager;
 
 public class App extends android.app.Application {
 
@@ -11,8 +10,12 @@ public class App extends android.app.Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         context = this;
-        AdManger.init(this);
+        AdManager.init(this);
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
     }
 }

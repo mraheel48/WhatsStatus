@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
 import com.risetech.statussaver.R
-import com.risetech.statussaver.ads.AdManger
 import java.util.*
 
 class SplashScreen : AppCompatActivity() {
@@ -16,7 +15,7 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        AdManger.init(this@SplashScreen)
+        //AdManger.init(this@SplashScreen)
 
         object : CountDownTimer(500, 1000) {
             override fun onTick(l: Long) {}
