@@ -85,7 +85,7 @@
         <FrameLayout
             android:id="@+id/adLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_60sdp"
             android:background="@color/colorPrimary"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -94,12 +94,12 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_52sdp"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/poppins_semibold"
                 android:gravity="center"
                 android:text="@string/loading_ads"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_23sdp" />
+                android:textSize="@dimen/_20sdp" />
 
         </FrameLayout>
 

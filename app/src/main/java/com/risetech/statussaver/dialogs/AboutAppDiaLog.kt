@@ -27,8 +27,7 @@ class AboutAppDiaLog(private val activity: Activity) {
             inflater.inflate(R.layout.about_dialog, null, false)
         Objects.requireNonNull(dialog.window)
             ?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        Objects.requireNonNull(dialog.window)
-            ?.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Objects.requireNonNull(dialog.window)?.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         dialog.window!!.statusBarColor = ContextCompat.getColor(activity, R.color.colorPrimaryDark)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE) //before
         dialog.setContentView(view)

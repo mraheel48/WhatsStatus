@@ -17,14 +17,11 @@ object Constants {
 
     var passList: ArrayList<ItemModel> = ArrayList()
 
-    var itemPositionSelect:Int = -1
+    var itemPositionSelect: Int = -1
 
-    var itemPreviewPosition:Int = 0
+    var itemPreviewPosition: Int = 0
 
     var fileStatus = false
-
-    val license_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgZ3VzZPFiXoJ49Ttpn2nuhbrnvyacS3WEIxZ+3l7cJbkay9/bIP3XBprQUIy1UnV1l1JRy647pYlKyK2/UewX4RI5o7/KnsSPUlaIOfP4g1bb/mhPyFML3To7Qh/j7Khorg5R0YYEJV7tja8CIh+NRVxKZGJmgJe7kLT6Mt01AKGOb4Ez/UoKi2mE7erZ8LUnDhJafDHvDQNArK88fhHDZ4u4PeBF4jVeXYsWGRVIRub/iwfKy7byeuMn000UvrpW82GTD5YWSqgbuIaiCEeFBe6fcGqqR+teXi/loEcHfljtwxNS+b9QP+ueoyOP3megBmtLWmbakRzHcUXimJ/TwIDAQAB"
-    val inapp_key = "status_saver_key"
 
     //Banner Ads
     val bannerId = "ca-app-pub-5448910982838601/8154040198"
@@ -33,6 +30,11 @@ object Constants {
     //Interstitial Ads
     val interstitialId = "ca-app-pub-5448910982838601/5807912603"
     val interstitialTestId = "ca-app-pub-3940256099942544/1033173712"
+
+    val inAppKey = "status_saver"
+    val inAppKeyTest = "android.test.purchased"
+
+    var inAppPrices: String = ""
 
     @Suppress("DEPRECATION")
     val filePathWhatApp =

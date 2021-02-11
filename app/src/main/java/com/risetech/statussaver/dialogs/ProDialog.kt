@@ -13,6 +13,7 @@ import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.risetech.statussaver.R
+import com.risetech.statussaver.utils.Constants
 import java.util.*
 
 @Suppress("UNNECESSARY_SAFE_CALL")
@@ -41,8 +42,12 @@ class ProDialog(private val activity: Activity, callback: BuyClick) {
             dialog.dismiss()
         }
 
+        if (Constants.inAppPrices != "") {
+            butBtn.text = Constants.inAppPrices
+        }
+
         butBtn.setOnClickListener {
-           onClickBuy.onClickBuy()
+            onClickBuy.onClickBuy()
         }
 
         dialog.show()
@@ -56,4 +61,5 @@ class ProDialog(private val activity: Activity, callback: BuyClick) {
     init {
         setDialog()
     }
+
 }

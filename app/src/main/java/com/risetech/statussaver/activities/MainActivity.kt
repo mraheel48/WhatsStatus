@@ -26,6 +26,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
+import com.android.billingclient.api.Purchase
+import com.android.billingclient.api.SkuDetails
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -38,6 +40,7 @@ import com.karumi.dexter.listener.single.PermissionListener
 import com.risetech.statussaver.BuildConfig
 import com.risetech.statussaver.R
 import com.risetech.statussaver.ads.AdManger
+import com.risetech.statussaver.billing.GoogleBilling
 import com.risetech.statussaver.dataModel.ItemModel
 import com.risetech.statussaver.dialogs.*
 import com.risetech.statussaver.fragments.HomeFragment
@@ -55,7 +58,7 @@ import kotlin.system.measureTimeMillis
 
 @Suppress("UNNECESSARY_SAFE_CALL")
 class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.ItemClick,
-    WorkPreView.DownloadFile, AdManger.AdManagerListener {
+    WorkPreView.DownloadFile, AdManger.AdManagerListener, GoogleBilling.GoogleBillingHandler {
 
     lateinit var navBtn: ImageView
     lateinit var drawer: DrawerLayout
@@ -108,6 +111,8 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     var adView: AdView? = null
     var adLayout: FrameLayout? = null
 
+    lateinit var bp: GoogleBilling
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.AppTheme)
@@ -124,11 +129,17 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         reFreshData = findViewById(R.id.refresh_data)
 
         adLayout = findViewById(R.id.adLayout)
-        adLayout?.visibility = View.GONE
+        //adLayout?.visibility = View.GONE
+
+        //Billing init
+        bp = GoogleBilling(this@MainActivity, this@MainActivity, this)
+        bpInit()
 
         /*AdManger.init(this@MainActivity)
         AdManger.loadInterstial(this, this)
         bannerAds()*/
+
+        //bannerAds()
 
         //windows dialog code
         dialog = Dialog(this@MainActivity)
@@ -171,6 +182,12 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
     }
 
+    private fun bpInit() {
+        if (!bp.isConnected) {
+            bp.startConnection()
+        }
+    }
+
     private fun copyFileBG() {
 
         lifecycleScope.launch {
@@ -197,7 +214,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 fileCopyTime += executionTimeOut
 
                 Log.e(TAG, "This is a time Job complete $fileCopyTime ms..")
-
 
             }
         }
@@ -495,15 +511,15 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         navShareApp.setOnClickListener {
             openCloseNavigationView()
-              val i = Intent(Intent.ACTION_SEND)
-              i.type = "text/plain"
-              i.putExtra(Intent.EXTRA_SUBJECT, "Status Saver")
-              var sAux = "\nLet me recommend you this application\n\n"
-              sAux = """
+            val i = Intent(Intent.ACTION_SEND)
+            i.type = "text/plain"
+            i.putExtra(Intent.EXTRA_SUBJECT, "Status Saver")
+            var sAux = "\nLet me recommend you this application\n\n"
+            sAux = """
                   ${sAux}https://play.google.com/store/apps/details?id=com.risetech.status.downloader.saver.story
                   """.trimIndent()
-              i.putExtra(Intent.EXTRA_TEXT, sAux)
-              startActivity(Intent.createChooser(i, "choose one"))
+            i.putExtra(Intent.EXTRA_TEXT, sAux)
+            startActivity(Intent.createChooser(i, "choose one"))
         }
 
         navGuideApp.setOnClickListener {
@@ -515,7 +531,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                     GuideAppDiaLog(this@MainActivity)
                 }
             }.start()
-
 
 
         }
@@ -539,7 +554,12 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 override fun onTick(l: Long) {}
                 override fun onFinish() {
                     try {
-                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://weberrorfinder.com/risetech-privacy-policy.html")))
+                        startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://weberrorfinder.com/risetech-privacy-policy.html")
+                            )
+                        )
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
@@ -606,7 +626,27 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     override fun onClickBuy() {
-        Utils.showToast(this, "Click buy Button")
+        //Utils.showToast(this, "Click buy Button")
+
+        if (bp.isConnected) {
+
+            if (!bp.isPurchased(Constants.inAppKey)) {
+
+                if (BuildConfig.DEBUG) {
+                    Log.e("myTag", "DEBUG")
+                    bp.purchase(Constants.inAppKeyTest)
+                } else {
+                    bp.purchase(Constants.inAppKey)
+                }
+
+            } else {
+                Utils.showToast(this, "Already Purchased")
+            }
+
+        } else {
+            Utils.showToast(this, "BILLING UNAVAILABLE")
+        }
+
     }
 
     override fun itemSelectLong(filePath: ItemModel) {
@@ -704,6 +744,10 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     override fun onResume() {
         super.onResume()
 
+        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+            adLayout?.visibility = View.GONE
+        }
+
         if (Constants.fileStatus) {
             Constants.fileStatus = false
             Constants.scopeIO.launch {
@@ -785,6 +829,62 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
     override fun onAdClose() {
         AdManger.loadInterstial(this, this)
+    }
+
+    override fun onBillingInitialized() {
+
+        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+            adLayout?.visibility = View.GONE
+            Constants.inAppPrices = "Already Purchased"
+        } else {
+            adLayout?.visibility = View.VISIBLE
+            loadBanner()
+            AdManger.loadInterstial(this@MainActivity, this)
+        }
+
+        if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
+
+            try {
+
+                val abc = ArrayList<String>()
+                abc.add(Constants.inAppKey)
+
+                bp.getInAppSkuDetails(abc) { error: Int?, skuList: List<SkuDetails>? ->
+
+                    if (skuList != null && skuList.isNotEmpty()) {
+                        Constants.inAppPrices = skuList[0].price
+                    } else {
+                        Log.e("error", error.toString())
+                    }
+
+                }
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+    }
+
+    override fun onPurchased(purchase: Purchase) {
+        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+            adLayout?.visibility = View.GONE
+        }
+    }
+
+    override fun onBillingServiceDisconnected() {
+
+    }
+
+    override fun onBillingError(errorCode: Int) {
+
+        if (GoogleBilling.ResponseCodes.BILLING_UNAVAILABLE == errorCode) {
+            Log.e("myTag", "${errorCode}-- calling Banner")
+            adLayout?.visibility = View.VISIBLE
+            loadBanner()
+            AdManger.loadInterstial(this@MainActivity, this)
+        }
+
     }
 
 }
