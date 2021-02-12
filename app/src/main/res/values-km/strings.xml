@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ធាតុរក្សាស្ថានភាព </string>
+    <string name="loading_ads">កំពុងផ្ទុកការផ្សព្វផ្សាយ</string>
+    <string name="share_file">ការចែកឯកសារ</string>
+    <string name="images">រូបភាព</string>
+    <string name="videos">វីដេអូ</string>
+    <string name="saved">បានរក្សាទុក</string>
+    <string name="hello_blank_fragment">ជំរាបសួរបំណែកទទេ</string>
+    <string name="do_yor_love_our_app">តើអ្នកស្រឡាញ់កម្មវិធីរបស់យើងទេ?</string>
+    <string name="give_us_a_quick_rating">ផ្តល់ឱ្យយើងនូវការផ្តល់ចំណាត់ថ្នាក់រហ័សដូច្នេះយើងដឹងថាតើអ្នកចូលចិត្តវាដែរឬទេ</string>
+    <string name="done">ធ្វើរួច</string>
+    <string name="about">អំពី</string>
+    <string name="guide">មគ្គុទ្ទេស</string>
+    <string name="preview">ការមើលជាមុន</string>
+    <string name="how_to_use">របៀបប្រើ?</string>
+    <string name="about_app">អំពីកម្មវិធី</string>
+    <string name="share_app">ចែករំលែកកម្មវិធី</string>
+    <string name="give_feedback">ផ្តល់ឱ្យមតិប្រតិកម្ម</string>
+    <string name="rate_us">វាយតម្លៃយើង</string>
+    <string name="upgrade_to_pro"> ធ្វើឱ្យប្រសើរឡើងទៅគាំទ្រ</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">ការអនុញ្ញាតរបស់អ្នកប្រើបដិសេធការយើងមិនអាចរក្សាទុកស្ថានភាពនៅក្នុងការផ្ទុករបស់អ្នក។</string>
+    <string name="refresh">ធ្វើឱ្យស្រស់</string>
+    <string name="version">កំណែ</string>
+    <string name="_2021_2030">២០២១-២០៣០</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">តើអ្នកប្រាកដទេថាអ្នកចង់បិទកម្មវិធីនេះ?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">អរគុណដែលបានប្រើកម្មវិធីទាញយកស្ថានភាព WhatsApp ។</string>
+    <string name="yes">បាទ</string>
+    <string name="no">ទេ</string>
+    <string name="step_1">ជំហាន ១</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">ចុចដើម្បីបើករូបតំណាង WhatsApp</string>
+    <string name="step_2">ជំហាន ២</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">ដំបូងអ្នកត្រូវមើលស្ថានភាពពី WhatsApp ។</string>
+    <string name="step_3">ជំហានទី ៣</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> នៅពេលដែលអ្នកឃើញស្ថានភាពនៅក្នុង whatsapp បន្ទាប់មកបើកកម្មវិធីសន្សំស្ថានភាពស្ថានភាពរបស់អ្នកនឹងមាននៅទីនេះក្នុងកម្មវិធីនេះ។ ឥឡូវនេះអ្នកអាចទាញយក Repost និងចែករំលែក។</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">សម្រាប់ពេលទិញតូចមួយអ្នកនឹងទទួលបាន</string>
+    <string name="upgrade_to_pro_status_saver"> ធ្វើឱ្យប្រសើរឡើងទៅនឹងស្ថានភាពធាតុរក្សាគាំទ្</string>
+    <string name="ads_free_experience_for_lifetime"> បទពិសោធន៍ការផ្សាយពាណិជ្ជកម្មឥតគិតថ្លៃសម្រាប់ជីវិត។</string>
+    <string name="dedicated_support"> ការគាំទ្រឧទ្ទិស។</string>
+    <string name="in_just_1_buy_now"> គ្រាន់តែទិញ ១ ដុល្លារឥឡូវ</string>
+
+</resources>

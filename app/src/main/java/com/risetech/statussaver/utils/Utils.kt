@@ -36,7 +36,8 @@ object Utils {
 
         // val aExtDcimDir = File(aDirArray[0], Environment.DIRECTORY_DCIM)
 
-        val newFolder = File(activity.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString())
+        val newFolder =
+            File(activity.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString())
 
         if (!newFolder.exists()) {
             newFolder.mkdir()
@@ -47,10 +48,10 @@ object Utils {
         //val root = mContext.getExternalFilesDir(null)!!.absolutePath
         //val fileDownloadPath = File(mContext.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "/WhatsStatus/")
         // val fileDownloadPath = File(mContext.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "/")
-       /* File(
-            activity.getExternalFilesDir(Environment.DIRECTORY_DCIM),
-            "/WhatsStatus"
-        )*/
+        /* File(
+             activity.getExternalFilesDir(Environment.DIRECTORY_DCIM),
+             "/WhatsStatus"
+         )*/
         return newFolder
     }
 
@@ -382,7 +383,7 @@ object Utils {
                     fileuri = if (Build.VERSION.SDK_INT >= 24) {
                         FileProvider.getUriForFile(
                             context,
-                            view.context.resources.getString(R.string.file_provider),
+                            Constants.file_provider,
                             newFile
                         )
                     } else {

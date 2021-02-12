@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Статус хэмнэгч</string>
+    <string name="loading_ads">Зарыг ачаалж байна ..</string>
+    <string name="share_file">Хуваалцах файл</string>
+    <string name="images">Зураг</string>
+    <string name="videos">Видеонууд</string>
+    <string name="saved">Хадгалсан</string>
+    <string name="hello_blank_fragment">Сайн уу хоосон хэсэг</string>
+    <string name="do_yor_love_our_app">Та манай Апп-т дуртай юу?</string>
+    <string name="give_us_a_quick_rating">Бидэнд хурдан үнэлгээ өгч, танд таалагдаж байгаа эсэхийг бид мэднэ үү </string>
+    <string name="done"> дууссаныхаа </string>
+    <string name="about">тухай</string>
+    <string name="guide">Хөтөч</string>
+    <string name="preview">Урьдчилан харах</string>
+    <string name="how_to_use">Хэрхэн ашиглах вэ? </string>
+    <string name="about_app">Аппын тухай</string>
+    <string name="share_app">Апп хуваалцах</string>
+    <string name="give_feedback">Санал хүсэлт өгөх </string>
+    <string name="rate_us">Биднийг дүгнэнэ үү</string>
+    <string name="upgrade_to_pro">Pro руу шинэчлэх</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Хэрэглэгчийн зөвшөөрлийг үгүйсгэлээ. Бид таны хадгалах санд статус хадгалах боломжгүй.</string>
+    <string name="refresh"> сэргээх </string>
+    <string name="version"> Хувилбар </string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Та энэ програмыг хаахдаа итгэлтэй байна уу? </string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> WhatsApp статус татагч ашиглаж байгаад баярлалаа.</string>
+    <string name="yes"> ТИЙМ </string>
+    <string name="no"> ҮГҮЙ </string>
+    <string name="step_1"> 1-р алхам </string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> WhatsApp дүрсийг нээхийн тулд товшино уу </string>
+    <string name="step_2"> 2-р алхам </string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Эхлээд та WhatsApp дээрх статусыг харах хэрэгтэй. </string>
+    <string name="step_3">3-р алхам </string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Та WhatsApp дээр статусаа харсны дараа Status Saver Application-ийг нээгээд таны харсан байдал энэ аппликейшнд байх болно. Одоо Татаж авах, Repost хийх, Share хийх боломжтой.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Багахан хугацаанд худалдан авалт хийх боломжтой болно</string>
+    <string name="upgrade_to_pro_status_saver"> Pro Статус Хадгалагч руу шинэчлэх</string>
+    <string name="ads_free_experience_for_lifetime"> Зар үнэгүй насан туршдаа туршлага</string>
+    <string name="dedicated_support"> Зориулалтын дэмжлэг.</string>
+    <string name="in_just_1_buy_now"> Зөвхөн $ 1-д худалдаж аваарай</string>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> ಸ್ಥಿತಿ ಸೇವರ್</string>
+    <string name="loading_ads"> ಜಾಹೀರಾತನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ ..</string>
+    <string name="share_file"> ಫೈಲ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="images"> ಚಿತ್ರಗಳು</string>
+    <string name="videos"> ವೀಡಿಯೊಗಳು</string>
+    <string name="saved"> ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="hello_blank_fragment"> ಹಲೋ ಖಾಲಿ ತುಣುಕು</string>
+    <string name="do_yor_love_our_app"> ನೀವು ನಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಪ್ರೀತಿಸುತ್ತೀರಾ?</string>
+    <string name="give_us_a_quick_rating"> ನಮಗೆ ತ್ವರಿತ ರೇಟಿಂಗ್ ನೀಡಿ ಆದ್ದರಿಂದ ನೀವು ಇಷ್ಟಪಟ್ಟರೆ ನಮಗೆ ತಿಳಿಯುತ್ತದೆ</string>
+    <string name="done"> ಮುಗಿದಿದೆ</string>
+    <string name="about"> ಬಗ್ಗೆ</string>
+    <string name="guide"> ಮಾರ್ಗದರ್ಶಕ</string>
+    <string name="preview"> ಪೂರ್ವವೀಕ್ಷಣೆ</string>
+    <string name="how_to_use"> ಹೇಗೆ ಬಳಸುವುದು?</string>
+    <string name="about_app"> ಅಪ್ಲಿಕೇಶನ್ ಬಗ್ಗೆ</string>
+    <string name="share_app"> ಹಂಚಿಕೊಳ್ಳಿ ಅಪ್ಲಿಕೇಶನ್</string>
+    <string name="give_feedback"> ಪ್ರತಿಕ್ರಿಯೆ ನೀಡಿ</string>
+    <string name="rate_us"> ನಮಗೆ ರೇಟ್</string>
+    <string name="upgrade_to_pro"> ಪ್ರೊಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> ಬಳಕೆದಾರರ ಅನುಮತಿ ನಿರಾಕರಿಸಲಾಗಿದೆ ನಿಮ್ಮ ಸಂಗ್ರಹಣೆಯಲ್ಲಿ ನಾವು ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="refresh"> ರಿಫ್ರೆಶ್</string>
+    <string name="version"> ಆವೃತ್ತಿ</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> ಈ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮುಚ್ಚಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> ವಾಟ್ಸಾಪ್ ಸ್ಥಿತಿ ಡೌನ್ಲೋಡರ್ ಅನ್ನು ಬಳಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು..</string>
+    <string name="yes"> ಹೌದು</string>
+    <string name="no"> ಇಲ್ಲ</string>
+    <string name="step_1"> ಹಂತ 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> ವಾಟ್ಸಾಪ್ ಐಕಾನ್ ತೆರೆಯಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
+    <string name="step_2"> ಹಂತ 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> ಮೊದಲು ನೀವು WhatsApp ನಿಂದ ಸ್ಥಿತಿಯನ್ನು ನೋಡಬೇಕು.</string>
+    <string name="step_3"> ಹಂತ 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> ಒಮ್ಮೆ ನೀವು ವಾಟ್ಸಾಪ್ನಲ್ಲಿ ಸ್ಥಿತಿಯನ್ನು ನೋಡಿದ ನಂತರ ಸ್ಟೇಟಸ್ ಸೇವರ್ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ತೆರೆದರೆ, ನೀವು ನೋಡಿದ ಸ್ಥಿತಿ ಈ ಅಪ್ಲಿಕೇಶನ್ನಲ್ಲಿರುತ್ತದೆ.ಈಗ ನೀವು ಡೌನ್ಲೋಡ್ ಮಾಡಬಹುದು, ರಿಪೋಸ್ಟ್ ಮಾಡಬಹುದು ಮತ್ತು ಹಂಚಿಕೊಳ್ಳಬಹುದು.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> ಒಂದು ಸಣ್ಣ ಖರೀದಿಗೆ ನೀವು ಪಡೆಯುತ್ತೀರಿ</string>
+    <string name="upgrade_to_pro_status_saver"> ಪ್ರೊ ಸ್ಟೇಟಸ್ ಸೇವರ್ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ</string>
+    <string name="ads_free_experience_for_lifetime"> ಜೀವಿತಾವಧಿಯಲ್ಲಿ ಜಾಹೀರಾತುಗಳು ಉಚಿತ ಅನುಭವ.</string>
+    <string name="dedicated_support"> ಮೀಸಲಾದ ಬೆಂಬಲ.</string>
+    <string name="in_just_1_buy_now"> ಕೇವಲ $ 1 ರಲ್ಲಿ ಈಗ ಖರೀದಿಸಿ</string>
+
+</resources>

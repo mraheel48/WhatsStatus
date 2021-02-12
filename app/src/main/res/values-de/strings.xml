@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Status Sparer </string>
+    <string name="loading_ads">Anzeige laden ..</string>
+    <string name="share_file">Datei Freigeben</string>
+    <string name="images">Images </string>
+    <string name="videos">Videos</string>
+    <string name="saved">Gespeichert</string>
+    <string name="hello_blank_fragment">Hallo leeres Fragment </string>
+    <string name="do_yor_love_our_app">Lieben Sie unsere App? </string>
+    <string name="give_us_a_quick_rating"> Geben Sie uns eine schnelle Bewertung, damit wir wissen, ob es Ihnen gefällt</string>
+    <string name="done">Fertig </string>
+    <string name="about"> Über</string>
+    <string name="guide">Anleitung </string>
+    <string name="preview">Vorschau</string>
+    <string name="how_to_use">Verwendung?</string>
+    <string name="about_app">Über App</string>
+    <string name="share_app">Aktie App</string>
+    <string name="give_feedback">Feedback Geben</string>
+    <string name="rate_us">Bewerten Sie uns</string>
+    <string name="upgrade_to_pro">Upgrade auf Pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Benutzerberechtigung wird verweigert Wir können den Status nicht in Ihrem Speicher Speichern. </string>
+    <string name="refresh">Aktualisieren</string>
+    <string name="version">Version</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Sind Sie sicher, dass Sie diese App schließen möchten? </string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Vielen Dank, dass Sie den WhatsApp-Status-Downloader verwenden.</string>
+    <string name="yes">JA </string>
+    <string name="no">Nein</string>
+    <string name="step_1">Schritt 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Tippen Sie auf Klicken, um das WhatsApp-Symbol</string>
+    <string name="step_2">Schritt 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Zuerst muss der Status von WhatsApp angezeigt werden.</string>
+    <string name="step_3"> Schritt 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Sobald Sie Status in whatsapp dann status saver Application öffnen, Wird Ihr gesehener Status hier in dieser Anwendung sein. Jetzt können Sie herunterladen, reposten und teilen.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">Für eine kleine einmalige Kauf erhalten Sie </string>
+    <string name="upgrade_to_pro_status_saver"> Upgrade auf Pro Status Saver</string>
+    <string name="ads_free_experience_for_lifetime">Anzeigen kostenlose Erfahrung für das Leben.</string>
+    <string name="dedicated_support"> Dedizierter Support.</string>
+    <string name="in_just_1_buy_now"> In nur 1 $ Jetzt kaufen </string>
+    <string name="policy"> Datenschutz-Bestimmungen</string>
+
+</resources>

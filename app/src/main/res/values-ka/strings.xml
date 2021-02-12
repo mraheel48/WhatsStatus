@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">სტატუსის შემნახველი</string>
+    <string name="loading_ads">იტვირთება განცხადებები ..</string>
+    <string name="share_file">წილი ფაილი</string>
+    <string name="images">სურათები</string>
+    <string name="videos">ვიდეოები</string>
+    <string name="saved">შენახული</string>
+    <string name="hello_blank_fragment">გაუმარჯოს ცარიელი ფრაგმენტი</string>
+    <string name="do_yor_love_our_app">გიყვართ ჩვენი აპლიკაცია?</string>
+    <string name="give_us_a_quick_rating">მოგვცეს სწრაფი რეიტინგი ამიტომ ჩვენ ვიცით, თუ გნებავთ ეს</string>
+    <string name="done">შესრულებულია</string>
+    <string name="about">შესახებ</string>
+    <string name="guide">გზამკვლევი</string>
+    <string name="preview">ხედი</string>
+    <string name="how_to_use">როგორ გამოვიყენოთ?</string>
+    <string name="about_app">აპის შესახებ</string>
+    <string name="share_app">გააზიარეთ აპი</string>
+    <string name="give_feedback">მიეცით უკუკავშირი</string>
+    <string name="rate_us">Შეგვაფასეთ</string>
+    <string name="upgrade_to_pro">განახლება -კენ პრო</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">მომხმარებლის ნებართვა უარყოფილია. ჩვენ ვერ შევინახავთ სტატუსს თქვენს მეხსიერებაში.</string>
+    <string name="refresh"> განახლება </string>
+    <string name="version">ვერსია</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">დარწმუნებული ხართ, რომ გსურთ ამ აპის დახურვა?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">მადლობა WhatsApp სტატუსის ჩამომტვირთათისთვის.</string>
+    <string name="yes">დიახ</string>
+    <string name="no">არა</string>
+    <string name="step_1">ნაბიჯი 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> დააჭირეთ WhatsApp ხატულას გასახსნელად </string>
+    <string name="step_2">ნაბიჯი 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">პირველ რიგში თქვენ უნდა ნახოთ სტატუსი WhatsApp- დან.</string>
+    <string name="step_3">ნაბიჯი 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> ერთხელ Whatsapp- ში დაინახეთ სტატუსი, შემდეგ გახსენით სტატუსის დამცავი პროგრამა, თქვენი სტატუსი აქ იქნება ამ პროგრამაში. ახლა თქვენ შეგიძლიათ გადმოწეროთ, განაახლოთ და გააზიაროთ</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> მცირე ერთჯერადი შესყიდვისთვის თქვენ მიიღებთ</string>
+    <string name="upgrade_to_pro_status_saver"> განაახლეთ Pro სტატუსის დამზოგველად</string>
+    <string name="ads_free_experience_for_lifetime"> განცხადებები უფასო გამოცდილება ცხოვრების განმავლობაში.</string>
+    <string name="dedicated_support"> თავდადებული მხარდაჭერა..</string>
+    <string name="in_just_1_buy_now"> სულ რაღაც 1 დოლარად შეიძინეთ ახლა</string>
+    <string name="policy">კონფიდენციალურობის პოლიტიკა</string>
+</resources>

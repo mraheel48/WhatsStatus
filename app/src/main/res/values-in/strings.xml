@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Penghemat Status </string>
+    <string name="loading_ads"> Memuat Iklan ..</string>
+    <string name="share_file"> Bagikan Berkas </string>
+    <string name="images"> Gambar </string>
+    <string name="videos"> Video </string>
+    <string name="saved"> Diselamatkan </string>
+    <string name="hello_blank_fragment"> Halo fragmen kosong </string>
+    <string name="do_yor_love_our_app"> Apakah Anda Suka Aplikasi kami?</string>
+    <string name="give_us_a_quick_rating"> Beri kami peringkat cepat agar kami tahu jika Anda menyukainya </string>
+    <string name="done"> Dilakukan </string>
+    <string name="about"> Tentang </string>
+    <string name="guide"> Panduan </string>
+    <string name="preview"> Pratinjau </string>
+    <string name="how_to_use"> Cara Penggunaan ?</string>
+    <string name="about_app"> Tentang Aplikasi </string>
+    <string name="share_app"> Bagikan Aplikasi </string>
+    <string name="give_feedback"> Berikan umpan balik </string>
+    <string name="rate_us"> Beri Nilai Kami </string>
+    <string name="upgrade_to_pro"> Tingkatkan ke pro </string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> Izin Pengguna Ditolak Kami tidak dapat menyimpan Status di Penyimpanan Anda.</string>
+    <string name="refresh"> Menyegarkan </string>
+    <string name="version"> Versi </string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Apakah Anda yakin ingin menutup aplikasi ini?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> Terima kasih telah menggunakan pengunduh status WhatsApp. </string>
+    <string name="yes"> IYA </string>
+    <string name="no"> TIDAK </string>
+    <string name="step_1"> Langkah 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Klik untuk membuka ikon WhatsApp </string>
+    <string name="step_2"> Langkah 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Pertama, Anda harus melihat Status dari WhatsApp.</string>
+    <string name="step_3"> LANGKAH 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Setelah Anda melihat status di whatsapp lalu buka Aplikasi penghemat status, status Anda yang terlihat akan ada di sini di aplikasi ini.Sekarang Anda dapat Unduh, Repost dan Bagikan.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Untuk pembelian satu kali kecil Anda akan mendapatkan </string>
+    <string name="upgrade_to_pro_status_saver"> Tingkatkan ke Penghemat Status Pro </string>
+    <string name="ads_free_experience_for_lifetime"> Iklan Pengalaman Gratis untuk Seumur Hidup.</string>
+    <string name="dedicated_support"> Dukungan Khusus.</string>
+    <string name="in_just_1_buy_now"> Hanya dengan $ 1 Beli Sekarang </string>
+    <string name="policy">Kebijakan privasi</string>
+</resources>
