@@ -166,6 +166,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         downloadBtn.setOnClickListener {
             downloadBtn.isClickable = false
+            Constants.showAds = true
+
+            Utils.showToast(this, "download Click")
             copyFileBG()
         }
 
@@ -288,6 +291,18 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         }
     }
 
+    private fun showAds() {
+        if (BuildConfig.DEBUG) {
+            if (bp.isConnected && !bp.isPurchased(Constants.inAppKeyTest)) {
+                AdManager.showInterstial(this, this)
+            }
+        } else {
+            if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
+                AdManager.showInterstial(this, this)
+            }
+        }
+    }
+
     fun updateFragmentUI() {
 
         pathListSelect.clear()
@@ -306,6 +321,11 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         downloadBtn.isClickable = true
         reFreshData.isClickable = true
+
+        if (Constants.showAds) {
+            Constants.showAds = !Constants.showAds
+            showAds()
+        }
     }
 
     suspend fun copyFileResult(fileNumber: Int): Int {
@@ -447,14 +467,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                     override fun onFinish() {
                         Log.e(TAG, "dialog dismiss")
                         dialog.dismiss()
-
                         homeF.updateTabPosition(Constants.fragmentVisible)
-
-                        /*if (AdManger.isInterstialLoaded(this@MainActivity)) {
-                            AdManger.showInterstial(this@MainActivity)
-                        } else {
-                            AdManger.loadInterstial(this@MainActivity,this@MainActivity)
-                        }*/
                     }
 
                 }.start()
@@ -886,6 +899,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 loadBanner()
                 AdManager.loadInterstial(this@MainActivity, this)
             }
+
             if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
 
                 try {

@@ -35,10 +35,14 @@ object Constants {
     val inAppKeyTest = "android.test.purchased"
     //val base64Key  = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYaoyKnm/TdymYfDhIRU+6vOVLC10dJtatzwjMWBF2g5poO09yEK315Ow7zJcur77rcdeW+1Tpu69Ym1GOKqkVTPBMKxt1KIUaR/4JTdbgtS1ANxYnO0pUrlnCD2PG+maHD1b837G6daBsBkea3SfjcOdiUU1g6tgShwFPXTcVaJCGPt5LVaNAGL0vrRxS/9AYmFb+PCkOLVU9sCvt8E1tbo7Wq0s+/qlzbgJtb6A1YYTcGaZSBQBuh+TNSei7+Oi7/FaDHbUdpxJecn1qGr2bhn85pCjRkt5yIzyBhvz0UDOvxmruXSP8qKduP5Jk00eqg8KlV/jVchBvbxWmTbrQIDAQAB"
 
-
     var inAppPrices: String = ""
 
     @Suppress("DEPRECATION")
+
+    var showAds: Boolean = false
+
+    val file_provider = "com.risetech.whatsstatus.fileProvider"
+
     val filePathWhatApp =
         File(Environment.getExternalStorageDirectory().absoluteFile, "/WhatsApp/Media/.Statuses")
 

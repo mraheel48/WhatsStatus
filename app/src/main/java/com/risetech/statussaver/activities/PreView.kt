@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.view.Window
 import android.widget.ImageView
@@ -21,7 +22,11 @@ import androidx.core.content.FileProvider
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
+import com.android.billingclient.api.Purchase
+import com.risetech.statussaver.BuildConfig
 import com.risetech.statussaver.R
+import com.risetech.statussaver.ads.AdManager
+import com.risetech.statussaver.billing.GoogleBilling
 import com.risetech.statussaver.dataModel.ItemModel
 import com.risetech.statussaver.fragments.PreViewFragment
 import com.risetech.statussaver.utils.Constants
@@ -30,7 +35,8 @@ import java.io.File
 import kotlin.system.measureTimeMillis
 
 
-class PreView : AppCompatActivity() {
+class PreView : AppCompatActivity(), AdManager.CallbackInterstial,
+    GoogleBilling.GoogleBillingHandler {
 
     var passList: ArrayList<ItemModel> = ArrayList()
 
@@ -52,7 +58,8 @@ class PreView : AppCompatActivity() {
 
     var deleted: Boolean = false
 
-    lateinit var btnBack:ImageView
+    lateinit var btnBack: ImageView
+    lateinit var bp: GoogleBilling
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +69,10 @@ class PreView : AppCompatActivity() {
             position = intent.getStringExtra("itemPosition")
             Constants.itemPreviewPosition = position!!.toInt()
         }
+
+        //Billing init
+        bp = GoogleBilling(this@PreView, this@PreView, this)
+        bpInit()
 
         btnBack = findViewById(R.id.imageView261)
         pagerViewRoot = findViewById(R.id.pagerViewRoot)
@@ -77,7 +88,7 @@ class PreView : AppCompatActivity() {
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setCancelable(false)
 
-        if (Constants.fragmentVisible == 2){
+        if (Constants.fragmentVisible == 2) {
             btnDelete.visibility = View.VISIBLE
             btnDownload.visibility = View.GONE
         }
@@ -188,6 +199,12 @@ class PreView : AppCompatActivity() {
             finish()
         }
 
+    }
+
+    private fun bpInit() {
+        if (!bp.isConnected) {
+            bp.startConnection()
+        }
     }
 
     fun rePostWhatsApp() {
@@ -303,14 +320,90 @@ class PreView : AppCompatActivity() {
                     override fun onFinish() {
                         dialog.dismiss()
                         fileCopyTime = 500
-                       // Utils.showToast(this@PreView, "file is download")
+                        // Utils.showToast(this@PreView, "file is download")
                         Constants.fileStatus = true
+
+                        showAds()
                     }
 
                 }.start()
 
             }
 
+        }
+    }
+
+    private fun showAds() {
+        if (BuildConfig.DEBUG) {
+            if (bp.isConnected && !bp.isPurchased(Constants.inAppKeyTest)) {
+                AdManager.showInterstial(this, this)
+            }
+        } else {
+            if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
+                AdManager.showInterstial(this, this)
+            }
+        }
+    }
+
+    override fun onAdLoaded() {
+
+    }
+
+    override fun onAdFailedToLoad(errorCode: Int) {
+
+    }
+
+    override fun onAdOpened() {
+
+    }
+
+    override fun onAdClicked() {
+
+    }
+
+    override fun onAdLeftApplication() {
+
+    }
+
+    override fun onAdClosed() {
+
+    }
+
+    override fun onBillingInitialized() {
+
+        if (BuildConfig.DEBUG) {
+
+            if (bp.isConnected && bp.isPurchased(Constants.inAppKeyTest)) {
+                Log.e("myTag", "in App buy")
+
+            } else {
+                AdManager.loadInterstial(this, this)
+            }
+
+        } else {
+
+            if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+                Log.e("myTag", "in App buy")
+            } else {
+                AdManager.loadInterstial(this, this)
+            }
+
+        }
+
+    }
+
+    override fun onPurchased(purchase: Purchase) {
+
+    }
+
+    override fun onBillingServiceDisconnected() {
+
+    }
+
+    override fun onBillingError(errorCode: Int) {
+        if (GoogleBilling.ResponseCodes.BILLING_UNAVAILABLE == errorCode) {
+            Log.e("myTag", "${errorCode}-- calling Banner")
+            AdManager.loadInterstial(this, this)
         }
     }
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> حافظ الحالة </string>
+    <string name="loading_ads"> جار التحميل ميلادي</string>
+    <string name="share_file"> مشاركة الملفات </string>
+    <string name="images"> الصور </string>
+    <string name="videos"> أشرطة فيديو </string>
+    <string name="saved"> تم الحفظ </string>
+    <string name="hello_blank_fragment"> مرحباً جزء فارغ </string>
+    <string name="do_yor_love_our_app"> هل تحب تطبيقنا؟</string>
+    <string name="give_us_a_quick_rating">أعطنا تقييمًا سريعًا حتى نعرف ما إذا كنت ترغب في ذلك</string>
+    <string name="done">منجز</string>
+    <string name="about">حول</string>
+    <string name="guide">يرشد</string>
+    <string name="preview">معاينة</string>
+    <string name="how_to_use">كيفية استخدام ؟</string>
+    <string name="about_app">حول التطبيق</string>
+    <string name="share_app">شارك التطبيق</string>
+    <string name="give_feedback">إعطاء ردود الفعل</string>
+    <string name="rate_us">معدل لنا</string>
+    <string name="upgrade_to_pro">الترقية إلى برو</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">تم رفض إذن المستخدم لا يمكننا حفظ الحالة في مساحة التخزين الخاصة بك.</string>
+    <string name="refresh">اعادة تنشيط</string>
+    <string name="version">الإصدار</string>
+    <string name="_2021_2030">٢٠٢١-٢٠٣٠</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">هل أنت متأكد أنك تريد إغلاق هذا التطبيق؟</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">شكرا لاستخدام داونلودر حالة ال واتس اب.</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="step_1">الخطوة ١</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">انقر لفتح أيقونة وتساب</string>
+    <string name="step_2">الخطوة ٢</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">أولاً ، يجب أن ترى الحالة من وتساب.</string>
+    <string name="step_3">الخطوه ٣</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">بمجرد أن ترى الحالة في وتساب ثم افتح تطبيق حفظ الحالة ، ستكون حالتك المرئية هنا في هذا التطبيق. الآن يمكنك التنزيل وإعادة النشر والمشاركة.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">لفترة شراء صغيرة لمرة واحدة ستحصل عليها</string>
+    <string name="upgrade_to_pro_status_saver">قم بالترقية إلى وضع التوقف الاحترافي</string>
+    <string name="ads_free_experience_for_lifetime">تجربة إعلانات مجانية مدى الحياة.</string>
+    <string name="dedicated_support">دعم مخصص.</string>
+    <string name="in_just_1_buy_now">في دولار واحد فقط اشترِ الآن</string>
+</resources>
