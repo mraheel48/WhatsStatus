@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">స్థితి సేవర్ </string>
+    <string name="loading_ads"> ప్రకటనను లోడ్ చేస్తోంది ..</string>
+    <string name="share_file">ఫైల్ను భాగస్వామ్యం చేయండి</string>
+    <string name="images">చిత్రాలు</string>
+    <string name="videos"> వీడియోలు</string>
+    <string name="saved">సేవ్ చేయబడింది</string>
+    <string name="hello_blank_fragment">హలో ఖాళీ భాగం </string>
+    <string name="do_yor_love_our_app">మీరు మా అనువర్తనాన్ని ఇష్టపడుతున్నారా?</string>
+    <string name="give_us_a_quick_rating">మాకు శీఘ్ర రేటింగ్ ఇవ్వండి, తద్వారా మీకు నచ్చితే మాకు తెలుస్తుంది</string>
+    <string name="done">పూర్తయింది</string>
+    <string name="about">గురించి</string>
+    <string name="guide"> గైడ్</string>
+    <string name="preview"> ప్రివ్యూ</string>
+    <string name="how_to_use"> ఎలా ఉపయోగించాలి?</string>
+    <string name="about_app">అనువర్తనం గురించి</string>
+    <string name="share_app">అనువర్తనాన్ని భాగస్వామ్యం చేయండి</string>
+    <string name="give_feedback">అభిప్రాయాన్ని ఇవ్వండి</string>
+    <string name="rate_us">మమ్మల్ని రేట్ చేయండి</string>
+    <string name="upgrade_to_pro"> ప్రోకు అప్గ్రేడ్ చేయండి</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">వినియోగదారు అనుమతి నిరాకరించబడింది మేము మీ నిల్వలో స్థితిని సేవ్ చేయలేము.</string>
+    <string name="refresh">రిఫ్రెష్</string>
+    <string name="version">వెర్షన్</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">మీరు ఖచ్చితంగా ఈ అనువర్తనాన్ని మూసివేయాలనుకుంటున్నారా?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">వాట్సాప్ స్థితి డౌన్లోడ్ను ఉపయోగించినందుకు ధన్యవాదాలు.</string>
+    <string name="yes">అవును</string>
+    <string name="no">లేదు</string>
+    <string name="step_1">దశ 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">వాట్సాప్ చిహ్నాన్ని తెరవడానికి క్లిక్ చేయండి నొక్కండి</string>
+    <string name="step_2">దశ 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">మొదట మీరు WhatsApp నుండి స్థితిని చూడాలి.</string>
+    <string name="step_3">దశ 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">మీరు వాట్సాప్లో స్థితిని చూసిన తర్వాత స్టేటస్ సేవర్ అప్లికేషన్ను తెరిచిన తర్వాత, మీరు చూసిన స్థితి ఈ అప్లికేషన్లో ఉంటుంది.ఇప్పుడు మీరు డౌన్లోడ్, రీపోస్ట్ మరియు షేర్ చేయవచ్చు.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">చిన్న వన్ టైమ్ కొనుగోలు కోసం మీరు పొందుతారు</string>
+    <string name="upgrade_to_pro_status_saver">ప్రో స్టేటస్ సేవర్కి అప్గ్రేడ్ చేయండి</string>
+    <string name="ads_free_experience_for_lifetime">జీవితకాలం ప్రకటనలు ఉచిత అనుభవం.</string>
+    <string name="dedicated_support">అంకితమైన మద్దతు.</string>
+    <string name="in_just_1_buy_now">కేవలం $1 ఇప్పుడు కొనుగోలు చేయండి</string>
+    <string name="policy">గోప్యతా విధానం</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Státusz Megmentő</string>
+    <string name="loading_ads">Hirdetések betöltése … </string>
+    <string name="share_file">Fájl megosztása </string>
+    <string name="images">Képek</string>
+    <string name="videos">Videók</string>
+    <string name="saved">Mentett</string>
+    <string name="hello_blank_fragment">Helló üres töredék</string>
+    <string name="do_yor_love_our_app">Szereted az alkalmazásunkat?</string>
+    <string name="give_us_a_quick_rating">Adj nekünk egy gyors értékelés, így tudjuk, ha tetszik</string>
+    <string name="done">Kész</string>
+    <string name="about">Névjegy</string>
+    <string name="guide">Útmutató</string>
+    <string name="preview">Előnézet</string>
+    <string name="how_to_use">Hogyan kell használni?</string>
+    <string name="about_app">Az alkalmazásról</string>
+    <string name="share_app">Alkalmazás megosztása</string>
+    <string name="give_feedback">Visszajelzés adni </string>
+    <string name="rate_us">Értékeljen minket</string>
+    <string name="upgrade_to_pro">Frissítés Pro-ra</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">A felhasználói engedély megtagadva: Az Állapot nem menthető a tárhelyen.</string>
+    <string name="refresh">Frissítés</string>
+    <string name="version">Verzió</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Biztosan bezárja ezt az alkalmazást?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Köszönjük, hogy a WhatsApp állapotát letöltőt használja.</string>
+    <string name="yes">IGEN</string>
+    <string name="no">NEM </string>
+    <string name="step_1">1. lépés</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Kattintson a WhatsApp ikon megnyitásához</string>
+    <string name="step_2">2. lépés</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Először látnia kell a WhatsApp állapotát. </string>
+    <string name="step_3">3. lépés</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Miután meglátta a WhatsApp állapotát, majd nyissa meg az állapotvédő alkalmazást, a látott állapota itt lesz ebben az alkalmazásban. Most letöltheti, újból közzéteheti és megoszthatja.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">Kicsi egyszeri vásárláshoz jut </string>
+    <string name="upgrade_to_pro_status_saver">Frissítés a profi státusz Megmentő </string>
+    <string name="ads_free_experience_for_lifetime">Hirdetésmentes élmény az élettartamra</string>
+    <string name="dedicated_support"> Dedikált támogatás.</string>
+    <string name="in_just_1_buy_now">Mindössze $1 Vásárlás most </string>
+    <string name="policy">Tietosuojakäytäntö</string>
+</resources>

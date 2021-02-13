@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ذخیره کننده وضعیت</string>
+    <string name="loading_ads">بارگیری آگهی .. </string>
+    <string name="share_file">اشتراک فایل </string>
+    <string name="images">تصاویر</string>
+    <string name="videos">ویدئو</string>
+    <string name="saved"> ذخیره شده </string>
+    <string name="hello_blank_fragment"> سلام قطعه خالی</string>
+    <string name="do_yor_love_our_app"> آیا برنامه ما را دوست دارید؟</string>
+    <string name="give_us_a_quick_rating">به ما سریع رتبه دهید تا بدانیم آیا آن را دوست دارید </string>
+    <string name="done"> انجام شد </string>
+    <string name="about"> درباره</string>
+    <string name="guide"> راهنمای</string>
+    <string name="preview"> پیش نمایش </string>
+    <string name="how_to_use"> نحوه استفاده؟ </string>
+    <string name="about_app"> درباره برنامه </string>
+    <string name="share_app"> اشتراک برنامه </string>
+    <string name="give_feedback">بازخورد دادن </string>
+    <string name="rate_us"> به ما امتیاز دهید </string>
+    <string name="upgrade_to_pro">ارتقاء به حرفه ای</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> مجوز کاربر رد شده است ما نمی توانیم وضعیت را در فضای ذخیره سازی خود ذخیره کنیم. </string>
+    <string name="refresh"> تازه سازی</string>
+    <string name="version"> نسخه</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> مطمئن هستيد كه مي خواهيد اين برنامه را ببنديد؟ </string>
+    <string name="thanks_for_using_whatsapp_status_downloader">با تشکر برای استفاده از واتساپ دانلود وضعیت.</string>
+    <string name="yes"> بله</string>
+    <string name="no"> نه</string>
+    <string name="step_1">مرحله 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">شیر بر روی کلیک کنید برای باز کردن آیکون  واتساپ</string>
+    <string name="step_2"> مرحله 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">ابتدا باید وضعیت را از واتساپ ببینید.</string>
+    <string name="step_3">مرحله 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">هنگامی که وضعیت را در  واتساپ مشاهده کردید ، سپس برنامه محافظ وضعیت را باز کنید ، وضعیت دیده شده شما در این برنامه وجود خواهد داشت. اکنون می توانید بارگیری ، ارسال مجدد و اشتراک گذاری کنید.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">برای یک بار خرید کوچک دریافت خواهید کرد</string>
+    <string name="upgrade_to_pro_status_saver">ارتقاء به طرفدار محافظ وضعیت</string>
+    <string name="ads_free_experience_for_lifetime">تبلیغات تجربه رایگان برای طول عمر.</string>
+    <string name="dedicated_support">پشتیبانی اختصاصی</string>
+    <string name="in_just_1_buy_now">فقط در $1 خرید در حال حاضر</string>
+    <string name="policy">سیاست حفظ حریم خصوصی</string>
+</resources>

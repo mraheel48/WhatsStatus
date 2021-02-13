@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Spořič stavu </string>
+    <string name="loading_ads"> Načítání reklam… </string>
+    <string name="share_file"> Sdílet soubor </string>
+    <string name="images"> Obrázky </string>
+    <string name="videos"> Videa </string>
+    <string name="saved"> Uloženo </string>
+    <string name="hello_blank_fragment"> Dobrý den, prázdný úlomek </string>
+    <string name="do_yor_love_our_app"> Máte rádi naši aplikaci? </string>
+    <string name="give_us_a_quick_rating"> Dejte nám rychlé hodnocení, abychom věděli, jestli se vám to líbí </string>
+    <string name="done"> Hotovo </string>
+    <string name="about"> Oko </string>
+    <string name="guide"> Průvodce </string>
+    <string name="preview"> Náhled </string>
+    <string name="how_to_use"> Jak používat? </string>
+    <string name="about_app"> O aplikaci </string>
+    <string name="share_app"> Sdílet aplikaci </string>
+    <string name="give_feedback"> Dát Zpětnou vazbu </string>
+    <string name="rate_us"> Ohodnoťte nás </string>
+    <string name="upgrade_to_pro"> Upgradovat na Pro </string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> Oprávnění uživatele bylo odepřeno. Stav nemůžeme uložit do vašeho úložiště </string>
+    <string name="refresh"> Obnovit </string>
+    <string name="version"> Verze </string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Opravdu chcete tuto aplikaci zavřít? </string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> Děkujeme vám za použití WhatsApp stav stahovač </string>
+    <string name="yes"> ANO </string>
+    <string name="no"> NE </string>
+    <string name="step_1"> Krok 1 </string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Kliknutím otevřete ikonu whatsapp </string>
+    <string name="step_2"> Krok 2 </string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Nejprve musíte vidět stav z WhatsApp. </string>
+    <string name="step_3"> Krok 3 </string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Jakmile jste viděli stav v WhatsApp pak otevřete stav spořič aplikace, váš status vidět bude zde v této aplikaci. Nyní si můžete stáhnout, Repost a sdílet. </string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Za malém jednorázovém nákupu získáte </string>
+    <string name="upgrade_to_pro_status_saver"> upgradovat do Pro stav spořič </string>
+    <string name="ads_free_experience_for_lifetime"> inzeráty volný celoživotní zážitek. </string>
+    <string name="dedicated_support"> Vyhrazená podpora. </string>
+    <string name="in_just_1_buy_now"> V pouhých $ 1 Koupit teď </string>
+    <string name="policy"> Zásady ochrany osobních údajů</string>
+</resources>

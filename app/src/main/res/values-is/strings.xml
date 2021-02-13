@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stöðusparnaður</string>
+    <string name="loading_ads">Hleður auglýsingu ..</string>
+    <string name="share_file">Deila skrá</string>
+    <string name="images">Myndir</string>
+    <string name="videos">Myndbönd</string>
+    <string name="saved">Vistað</string>
+    <string name="hello_blank_fragment">Halló autt brot</string>
+    <string name="do_yor_love_our_app">Elskarðu appið okkar?</string>
+    <string name="give_us_a_quick_rating">Gefðu okkur snögga einkunn svo við vitum hvort þér líkar það</string>
+    <string name="done">Lokið</string>
+    <string name="about">Um</string>
+    <string name="guide">leiðarvísir</string>
+    <string name="preview">Forskoðun</string>
+    <string name="how_to_use">Hvernig á að nota?</string>
+    <string name="about_app">Um forrit</string>
+    <string name="share_app">Deila forriti</string>
+    <string name="give_feedback">Gefðu álit</string>
+    <string name="rate_us">Gefðu okkur einkunn</string>
+    <string name="upgrade_to_pro">Uppfærðu í Pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Leyfi notanda er hafnað. Við getum ekki vistað stöðu í geymslu þinni.</string>
+    <string name="refresh">Endurnýja</string>
+    <string name="version">Útgáfa</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Ertu viss um að þú viljir loka þessu forriti?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Takk fyrir að nota WhatsApp stöðu niðurhalari.</string>
+    <string name="yes">JÁ</string>
+    <string name="no">NEI</string>
+    <string name="step_1">Skref 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Pikkaðu á Smelltu til að opna WhatsApp táknið</string>
+    <string name="step_2">Skref 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Fyrst þarftu að sjá Stöðuna frá WhatsApp.</string>
+    <string name="step_3">Skref 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Þegar þú hefur séð stöðu í whatsapp þá opnarðu stöðusparnað Umsókn, sá staða sem þú hefur séð verður hér í þessu forriti. Nú geturðu hlaðið niður, endurpóstað og deilt.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">Fyrir lítið eitt skipti Kaup sem þú munt fá</string>
+    <string name="upgrade_to_pro_status_saver">Uppfærðu í Pro stöðusparnað</string>
+    <string name="ads_free_experience_for_lifetime">Ókeypis upplifun auglýsinga alla ævi.</string>
+    <string name="dedicated_support">Hollur stuðningur.</string>
+    <string name="in_just_1_buy_now">Í aðeins $ 1 Kauptu núna</string>
+    <string name="policy">Persónuverndarstefna</string>
+</resources>

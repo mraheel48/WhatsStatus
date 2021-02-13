@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Estalvi destat</string>
+    <string name="loading_ads">Sestà carregant lanunci ..</string>
+    <string name="share_file">Comparteix fitxer</string>
+    <string name="images">Imatges</string>
+    <string name="videos">Vídeos</string>
+    <string name="saved">Desat</string>
+    <string name="hello_blank_fragment">Hola fragment en blanc</string>
+    <string name="do_yor_love_our_app">Tencanta la nostra aplicació?</string>
+    <string name="give_us_a_quick_rating">Feu-nos una valoració ràpida perquè sabem si us agrada</string>
+    <string name="done">Fet</string>
+    <string name="about">Quant a</string>
+    <string name="guide">Guia</string>
+    <string name="preview">Previsualitza</string>
+    <string name="how_to_use">Com sutilitza?</string>
+    <string name="about_app">Quant a laplicació</string>
+    <string name="share_app">Comparteix laplicació</string>
+    <string name="give_feedback">Dóna comentaris</string>
+    <string name="rate_us">Valora’ns</string>
+    <string name="upgrade_to_pro">Actualitza a pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Es denega el permís de lusuari No podem desar lestat al vostre emmagatzematge.</string>
+    <string name="refresh">Actualitza</string>
+    <string name="version">Versió</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Confirmeu que voleu tancar aquesta aplicació?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Gràcies per utilitzar el programa de descàrrega destat de WhatsApp.</string>
+    <string name="yes">SÍ</string>
+    <string name="no">NO</string>
+    <string name="step_1">Pas 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Toqueu Feu clic per obrir la icona de WhatsApp</string>
+    <string name="step_2">Pas 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Primer heu de veure lestat de WhatsApp.</string>
+    <string name="step_3">Pas 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Quan hàgiu vist lestat a WhatsApp, obriu laplicació destalvi destat, el vostre estat vist estarà aquí en aquesta aplicació. Ara podeu descarregar, tornar a publicar i compartir.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">Per a una petita compra duna sola vegada vostè rebrà</string>
+    <string name="upgrade_to_pro_status_saver">Actualitzeu a lestalvi destat Pro</string>
+    <string name="ads_free_experience_for_lifetime">Experiència gratuïta danuncis per a tota la vida.</string>
+    <string name="dedicated_support">Assistència dedicada.</string>
+    <string name="in_just_1_buy_now">En només 1 $ Comprar ara</string>
+    <string name="policy">Política de privadesa</string>
+</resources>

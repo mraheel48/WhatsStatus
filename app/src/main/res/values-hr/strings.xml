@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Status Saver</string>
+    <string name="loading_ads"> Učitavanje oglasa .. </string>
+    <string name="share_file"> Podijeli datoteku </string>
+    <string name="images"> Slike </string>
+    <string name="videos"> Videozapisi </string>
+    <string name="saved"> Spremljeno </string>
+    <string name="hello_blank_fragment"> Zdravo prazan fragmentu </string>
+    <string name="do_yor_love_our_app"> Volite li našu aplikaciju? </string>
+    <string name="give_us_a_quick_rating"> Dajte nam brzu ocjenu kako bismo znali sviđa li vam se </string>
+    <string name="done"> Gotovo </string>
+    <string name="about"> o tome </string>
+    <string name="guide"> Vodič </string>
+    <string name="preview"> Pregled </string>
+    <string name="how_to_use"> Kako koristiti? </string>
+    <string name="about_app"> O aplikaciji </string>
+    <string name="share_app"> Dijeli aplikaciju </string>
+    <string name="give_feedback"> Dajte povratne informacije </string>
+    <string name="rate_us"> Ocijenite nas </string>
+    <string name="upgrade_to_pro"> Nadogradite na Pro </string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> Korisničko dopuštenje je odbijeno. Ne možemo spremiti status u vašu pohranu. </string>
+    <string name="refresh"> Osvježi </string>
+    <string name="version"> Verzija </string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Jeste li sigurni da želite zatvoriti ovu aplikaciju? </string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> Hvala što koristite program za preuzimanje statusa WhatsApp. </string>
+    <string name="yes"> DA </string>
+    <string name="no"> NE </string>
+    <string name="step_1"> 1. korak </string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Kliknite da biste otvorili ikonu WhatsAppa </string>
+    <string name="step_2"> Korak 2 </string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Prvo morate vidjeti status iz WhatsAppa. </string>
+    <string name="step_3"> Korak 3 </string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Nakon što ste vidjeli status u WhatsAppu, a zatim otvorite aplikaciju za uštedu statusa, vaš viđeni status bit će ovdje u ovoj aplikaciji. Sada možete preuzeti, ponovno objavio i dijeliti. </string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Za malu jednokratnu Kupnju dobit ćete </string>
+    <string name="upgrade_to_pro_status_saver"> Nadogradi na Pro Status Saver </string>
+    <string name="ads_free_experience_for_lifetime"> Iskustvo besplatnih oglasa za čitavo vrijeme. </string>
+    <string name="dedicated_support"> Namjenska podrška. </string>
+    <string name="in_just_1_buy_now"> U samo $1 Kupi sada </string>
+    <string name="policy"> Pravila o privatnosti</string>
+</resources>

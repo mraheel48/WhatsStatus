@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">προφύλαξη κατάστασης</string>
+    <string name="loading_ads">φόρτωση διαφημίσεων…</string>
+    <string name="share_file">μοιραστείτε Αρχείο</string>
+    <string name="images">Εικόνες</string>
+    <string name="videos">Βίντοες</string>
+    <string name="saved">Αποθηκευμένο</string>
+    <string name="hello_blank_fragment">Γεια σας κενό θραύσμα </string>
+    <string name="do_yor_love_our_app">Αγαπάτε την εφαρμογή μας; </string>
+    <string name="give_us_a_quick_rating">Δώστε μας μια γρήγορη βαθμολογία, ώστε να γνωρίζουμε αν σας αρέσει</string>
+    <string name="done">Γίνει</string>
+    <string name="about">Σχετικά με το</string>
+    <string name="guide">Οδηγός</string>
+    <string name="preview">Προεπισκόπηση</string>
+    <string name="how_to_use">Πώς να χρησιμοποιήσετε;</string>
+    <string name="about_app">Σχετικά με την εφαρμογή</string>
+    <string name="share_app">μοιραστείτε εφαρμογή</string>
+    <string name="give_feedback">Δώστε σχόλια</string>
+    <string name="rate_us">Αξιολογήστε μας </string>
+    <string name="upgrade_to_pro">Αναβάθμιση σε pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">την άδεια του χρήστη αρνήθηκε Δεν μπορούμε να αποθηκεύσουμε την κατάσταση στον αποθηκευτικό χώρο σας.0020</string>
+    <string name="refresh">Ανανέωση </string>
+    <string name="version"> Έκδοση </string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Είστε βέβαιοι ότι θέλετε να κλείσετε αυτήν την εφαρμογή; </string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Σας ευχαριστούμε που χρησιμοποιείτε το πρόγραμμα λήψης κατάστασης WhatsApp. </string>
+    <string name="yes">ΝΑΙ </string>
+    <string name="no">ΟΧΙ</string>
+    <string name="step_1">Βήμα 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Κάντε κλικ για να ανοίξετε το εικονίδιο WhatsApp </string>
+    <string name="step_2"> Βήμα 2 </string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Πρώτα πρέπει να δείτε την κατάσταση από το WhatsApp. </string>
+    <string name="step_3"> Βήμα 3 </string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Μόλις δείτε την κατάσταση στο whatsapp και, στη συνέχεια, ανοίξτε την εφαρμογή "Εξοικονόμηση κατάστασης", η κατάσταση που βλέπετε θα είναι εδώ σε αυτήν την εφαρμογή. Τώρα μπορείτε να πραγματοποιήσετε λήψη, αναδημοσίευση και κοινή χρήση.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Για μια μικρή αγορά χρόνου θα πάρετε</string>
+    <string name="upgrade_to_pro_status_saver"> Αναβάθμιση σε Pro Status Saver</string>
+    <string name="ads_free_experience_for_lifetime">Ads Free Experience for Lifetime.</string>
+    <string name="dedicated_support"> Αφιερωμένη υποστήριξη. </string>
+    <string name="in_just_1_buy_now"> Σε μόλις $ 1 Αγορά τώρα </string>
+    <string name="policy"> Πολιτική απορρήτου</string>
+</resources>

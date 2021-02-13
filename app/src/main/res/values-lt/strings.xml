@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">būsenos užsklanda
+</string>
+    <string name="loading_ads">Įkeliamas skelbimas ..</string>
+    <string name="share_file">Bendrinti failą</string>
+    <string name="images">Vaizdai</string>
+    <string name="videos">Vaizdo įrašai</string>
+    <string name="saved">Išsaugota</string>
+    <string name="hello_blank_fragment">Sveiki tuščias fragmentas</string>
+    <string name="do_yor_love_our_app">Ar jums patinka mūsų programa?</string>
+    <string name="give_us_a_quick_rating">Pateikite mums greitą įvertinimą, kad žinotume, ar jums tai patinka</string>
+    <string name="done"> Atlikta</string>
+    <string name="about">Apie</string>
+    <string name="guide">Vadovas</string>
+    <string name="preview">Peržiūra</string>
+    <string name="how_to_use">Kaip naudoti?</string>
+    <string name="about_app">Apie programą</string>
+    <string name="share_app"> Bendrinti programą</string>
+    <string name="give_feedback">duoti grįž"ąjį ryšį</string>
+    <string name="rate_us"> Įvertink mus</string>
+    <string name="upgrade_to_pro">Atnaujinkite į „Pro“</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> Vartotojas Permission denied mes negalime Išsaugoti statusas jūsų saugojimas</string>
+    <string name="refresh">Atnaujinti</string>
+    <string name="version">Versija</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Ar tikrai norite uždaryti šią programą?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Dėkojame, kad naudojatės „WhatsApp“ būsenos atsisiuntimo programa.</string>
+    <string name="yes">TAIP</string>
+    <string name="no">NE</string>
+    <string name="step_1">1 veiksmas</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Bakstelėkite Spustelėkite, kad atidarytumėte „WhatsApp“ piktogramą</string>
+    <string name="step_2">2 veiksmas</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Pirmiausia jums reikia pamatyti WhatsApp statusą.</string>
+    <string name="step_3">3 veiksmas</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Kai pamatysite būseną „WhatsApp“, tada atidarykite būsenos užsklandos programą, matoma būsena bus čia šioje programoje. Dabar galite atsisiųsti, paskelbti ir bendrinti.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> gausite nedidelį vienkartinį pirkti</string>
+    <string name="upgrade_to_pro_status_saver">Atnaujinkite į „Pro“ būsenos užsklandą</string>
+    <string name="ads_free_experience_for_lifetime">Nemokama skelbimų patirtis visą gyvenimą.</string>
+    <string name="dedicated_support">Skirta parama.</string>
+    <string name="in_just_1_buy_now"> Tik už 1 USD pirkti dabar</string>
+    <string name="policy">Privatumo politika</string>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">நிலை சேமிப்பான்</string>
+    <string name="loading_ads">விளம்பரத்தை ஏற்றுகிறது ..</string>
+    <string name="share_file"> பகிர் கோப்பு</string>
+    <string name="images">படங்கள் </string>
+    <string name="videos">வீடியோக்கள்</string>
+    <string name="saved">சேமிக்கப்பட்ட</string>
+    <string name="hello_blank_fragment">ஹலோ வெற்று துண்டு </string>
+    <string name="do_yor_love_our_app">எங்கள் பயன்பாட்டை விரும்புகிறீர்களா?</string>
+    <string name="give_us_a_quick_rating">எங்களுக்கு விரைவான மதிப்பீட்டைக் கொடுங்கள், எனவே நீங்கள் விரும்பினால் எங்களுக்குத் தெரியும்</string>
+    <string name="done">முடிந்தது</string>
+    <string name="about"> பற்றி</string>
+    <string name="guide"> வழிகாட்டி</string>
+    <string name="preview">முன்னோட்டம்</string>
+    <string name="how_to_use">எவ்வாறு பயன்படுத்துவது?</string>
+    <string name="about_app">பயன்பாட்டைப் பற்றி</string>
+    <string name="share_app">பகிர் பயன்பாடு</string>
+    <string name="give_feedback"> கிவ் கருத்துக்களை</string>
+    <string name="rate_us">எங்களை மதிப்பிடுங்கள்</string>
+    <string name="upgrade_to_pro">புரோவுக்கு மேம்படுத்தவும்</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">பயனர் அனுமதி மறுக்கப்பட்டது உங்கள் சேமிப்பகத்தில் எங்களால் நிலையைச் சேமிக்க முடியாது.</string>
+    <string name="refresh">புதுப்பிப்பு</string>
+    <string name="version">பதிப்பு </string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">இந்த பயன்பாட்டை மூட விரும்புகிறீர்கள் என்று உறுதியாக நம்புகிறீர்களா?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">வாட்ஸ்அப் நிலை பதிவிறக்கத்தைப் பயன்படுத்தியதற்கு நன்றி.</string>
+    <string name="yes">ஆம்</string>
+    <string name="no">இல்லை</string>
+    <string name="step_1">படி 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">வாட்ஸ்அப் ஐகானைத் திறக்க கிளிக் செய்யவும்</string>
+    <string name="step_2">படி 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">முதலில் நீங்கள் வாட்ஸ்அப்பில் இருந்து நிலையைப் பார்க்க வேண்டும்.</string>
+    <string name="step_3">படி 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">நீங்கள் வாட்ஸ்அப்பில் ஸ்டேட்டஸைக் கண்டதும், ஸ்டேட்டஸ் சேவர் அப்ளிகேஷனைத் திறந்ததும், நீங்கள் பார்த்த ஸ்டேட்டஸ் இந்த பயன்பாட்டில் இங்கே இருக்கும்.இப்போது நீங்கள் பதிவிறக்கம் செய்யலாம், மறுபதிவு செய்யலாம் மற்றும் பகிரலாம்.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">ஒரு சிறிய ஒரு முறை கொள்முதல் நீங்கள் பெறுவீர்கள்</string>
+    <string name="upgrade_to_pro_status_saver">புரோ ஸ்டேட்டஸ் சேவருக்கு மேம்படுத்தவும்</string>
+    <string name="ads_free_experience_for_lifetime">வாழ்நாள் முழுவதும் விளம்பரங்கள் இலவச அனுபவம்.</string>
+    <string name="dedicated_support"> அர்ப்பணிக்கப்பட்ட ஆதரவு.</string>
+    <string name="in_just_1_buy_now">இப்போது $ 1 இல் வாங்கவும்</string>
+    <string name="policy">தனியுரிமைக் கொள்கை</string>
+</resources>

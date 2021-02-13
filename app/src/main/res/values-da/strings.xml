@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Statusbesparende</string>
+    <string name="loading_ads">Indlæser annonce ..</string>
+    <string name="share_file">Del fil</string>
+    <string name="images">Billeder</string>
+    <string name="videos">Videoer</string>
+    <string name="saved">Gemt</string>
+    <string name="hello_blank_fragment">Hej tomt fragment</string>
+    <string name="do_yor_love_our_app">Elsker du vores app?</string>
+    <string name="give_us_a_quick_rating">Giv os en hurtig bedømmelse, så vi ved, om du kan lide det</string>
+    <string name="done">Udført</string>
+    <string name="about">Om</string>
+    <string name="guide">Vejledning</string>
+    <string name="preview">Preview</string>
+    <string name="how_to_use">Sådan bruges?</string>
+    <string name="about_app">Om app</string>
+    <string name="share_app">Del app</string>
+    <string name="give_feedback">Giv feedback</string>
+    <string name="rate_us">Bedøm os</string>
+    <string name="upgrade_to_pro">Opgrader til Pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Brugertilladelse nægtes. Vi kan ikke gemme status på din lagerplads.</string>
+    <string name="refresh">Opdater</string>
+    <string name="version">Version</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Er du sikker på, at du vil lukke denne app?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Tak fordi du bruger WhatsApp status downloader.</string>
+    <string name="yes">JA</string>
+    <string name="no">NEJ</string>
+    <string name="step_1">Trin 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Tryk på Klik for at åbne WhatsApp-ikonet</string>
+    <string name="step_2">Trin 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Først kan du se status fra WhatsApp.</string>
+    <string name="step_3">Trin 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Når du har set status i whatsapp, skal du åbne statusbesparelsesapplikation, din viste status vil være her i denne applikation. Nu kan du downloade, genpostere og dele.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">For en lille engangs-køb vil du få</string>
+    <string name="upgrade_to_pro_status_saver">Opgrader til Pro-statusbesparende</string>
+    <string name="ads_free_experience_for_lifetime">Annoncefri livstidserfaring.</string>
+    <string name="dedicated_support">Dedikeret support.</string>
+    <string name="in_just_1_buy_now">På kun $ 1 Køb nu</string>
+    <string name="policy">Privatlivspolitik</string>
+</resources>

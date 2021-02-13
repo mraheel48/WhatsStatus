@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ເຄື່ອງປະຫຍັດສະຖານະພາບ</string>
+    <string name="loading_ads">ກຳ ລັງໂຫລດໂຄສະນາ ..</string>
+    <string name="share_file">ແບ່ງປັນເອກະສານ</string>
+    <string name="images">ຮູບພາບຕ່າງໆ</string>
+    <string name="videos">ວິດີໂອ</string>
+    <string name="saved">ບັນທືກໄວ້</string>
+    <string name="hello_blank_fragment">ສະບາຍດີສິ້ນເປົ່າ</string>
+    <string name="do_yor_love_our_app">ທ່ານຮັກ App ຂອງພວກເຮົາບໍ?</string>
+    <string name="give_us_a_quick_rating">ໃຫ້ພວກເຮົາຈັດອັນດັບໃຫ້ພວກເຮົາໄວເພື່ອໃຫ້ພວກເຮົາຮູ້ວ່າທ່ານຕ້ອງການມັນຫລືບໍ່?</string>
+    <string name="done">ເຮັດແລ້ວ</string>
+    <string name="about">ກ່ຽວກັບ</string>
+    <string name="guide">Ուղեցույց</string>
+    <string name="preview">ເບິ່ງຕົວຢ່າງເບື້ອງຕົ້ນ</string>
+    <string name="how_to_use">ວິທີການ ນຳ ໃຊ້?</string>
+    <string name="about_app">ກ່ຽວກັບແອັບ</string>
+    <string name="share_app">ແບ່ງປັນແອັບ</string>
+    <string name="give_feedback">ໃຫ້ ຄຳ ຕິຊົມ</string>
+    <string name="rate_us">ໃຫ້ຄະແນນພວກເຮົາ</string>
+    <string name="upgrade_to_pro">ຍົກລະດັບເປັນ Pro </string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">ການອະນຸຍາດຂອງຜູ້ໃຊ້ຖືກປະຕິເສດພວກເຮົາບໍ່ສາມາດບັນທຶກສະຖານະພາບໃນບ່ອນຈັດເກັບຂໍ້ມູນຂອງທ່ານໄດ້.</string>
+    <string name="refresh">ສົດຊື່ນ</string>
+    <string name="version">ຮຸ່ນ</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">ທ່ານແນ່ໃຈບໍ່ວ່າທ່ານຕ້ອງການປິດແອັບນີ້ບໍ?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">ຂອບໃຈທີ່ໃຊ້ໂປແກຼມດາວໂລດສະຖານະພາບ WhatsApp.</string>
+    <string name="yes">ແມ່ນແລ້ວ</string>
+    <string name="no">ບໍ່</string>
+    <string name="step_1">ຂັ້ນຕອນທີ 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">ກົດເພື່ອເປີດໄອຄອນ WhatsApp</string>
+    <string name="step_2">ຂັ້ນຕອນທີ 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">ທຳ ອິດທ່ານຕ້ອງໄດ້ເບິ່ງສະຖານະພາບຈາກ WhatsApp.</string>
+    <string name="step_3">ຂັ້ນຕອນທີ 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">ເມື່ອທ່ານເຫັນສະຖານະພາບໃນ whatsapp ຫຼັງຈາກນັ້ນຄໍາຮ້ອງສະຫມັກ saver ສະຖານະເປີດສະຖານະພາບເຫັນຂອງທ່ານຈະຢູ່ທີ່ນີ້ໃນ application.Now ນີ້ທ່ານສາມາດດາວນ໌ໂຫລດ, Repost ແລະ Share.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">ສຳ ລັບການຊື້ຄັ້ງດຽວທ່ານຈະໄດ້ຮັບ</string>
+    <string name="upgrade_to_pro_status_saver">ຍົກລະດັບເປັນໂປຼແກຼມປະຢັດສະຖານະພາບ Pro</string>
+    <string name="ads_free_experience_for_lifetime">ໂຄສະນາປະສົບການໂດຍບໍ່ເສຍຄ່າຕະຫຼອດຊີວິດ.</string>
+    <string name="dedicated_support">ສະຫນັບສະຫນູນການອຸທິດ.</string>
+    <string name="in_just_1_buy_now">ໃນພຽງແຕ່ $ 1 ຊື້ດຽວນີ້ແລ້ວ</string>
+    <string name="policy">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</string>
+</resources>

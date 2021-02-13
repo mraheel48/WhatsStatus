@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ステータスセーバー</string>
+    <string name="loading_ads">広告を読み込んでいます。</string>
+    <string name="share_file">ファイルを共有する</string>
+    <string name="images">画像</string>
+    <string name="videos">動画</string>
+    <string name="saved">保存済み</string>
+    <string name="hello_blank_fragment">こんにちは空白のフラグメント</string>
+    <string name="do_yor_love_our_app">あなたは私たちのアプリが好きですか？</string>
+    <string name="give_us_a_quick_rating">あなたがそれを好きかどうか私たちが知るように私たちに簡単な評価を与えてください</string>
+    <string name="done">完了</string>
+    <string name="about">について</string>
+    <string name="guide">ガイド</string>
+    <string name="preview">プレビュー</string>
+    <string name="how_to_use">使用方法？</string>
+    <string name="about_app">アプリについて</string>
+    <string name="share_app">アプリを共有する</string>
+    <string name="give_feedback">フィードバックを与える</string>
+    <string name="rate_us">私たちを評価する</string>
+    <string name="upgrade_to_pro">プロにアップグレード</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">ユーザー権限が拒否されましたステータスをストレージに保存できません。</string>
+    <string name="refresh">更新</string>
+    <string name="version">バージョン</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">このアプリを閉じてもよろしいですか？</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">WhatsAppステータスダウンローダーをご利用いただきありがとうございます。</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="step_1">ステップ1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">クリックをタップしてWhatsAppアイコンを開きます</string>
+    <string name="step_2">ステップ2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">まず、WhatsAppからステータスを確認する必要があります。</string>
+    <string name="step_3">ステップ3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> whatsappでステータスを見て、その後、ステータスセーバーアプリケーションを開くと、あなたの見たステータスは、このアプリケーションでここに表示されます。これで、ダウンロード、再投稿、共有ができます。</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">あなたが得る小さな時間の購入のために</string>
+    <string name="upgrade_to_pro_status_saver">プロステータスセーバーにアップグレード</string>
+    <string name="ads_free_experience_for_lifetime">広告 無料 経験 にとって 寿命</string>
+    <string name="dedicated_support">専用サポート。</string>
+    <string name="in_just_1_buy_now">たったの$ 1で今すぐ購入</string>
+    <string name="policy">個人情報保護方針</string>
+</resources>

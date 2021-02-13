@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Isilondolozi sesimo</string>
+    <string name="loading_ads"> Kulayishwa isikhangiso ..</string>
+    <string name="share_file"> Yabelana ngefayela</string>
+    <string name="images"> Izithombe</string>
+    <string name="videos"> Amavidiyo</string>
+    <string name="saved"> Kulondoloziwe</string>
+    <string name="hello_blank_fragment"> Sawubona isinqamu ezingenalutho</string>
+    <string name="do_yor_love_our_app"> Uyaluthanda uhlelo lwethu lokusebenza?</string>
+    <string name="give_us_a_quick_rating"> Sinikeze isilinganiso esisheshayo ukuze sazi ukuthi uyayithanda yini</string>
+    <string name="done"> Kwenziwe</string>
+    <string name="about"> Mayelana</string>
+    <string name="guide"> Umhlahlandlela</string>
+    <string name="preview"> Buka kuqala</string>
+    <string name="how_to_use"> Isetshenziswa Kanjani?</string>
+    <string name="about_app"> Mayelana nohlelo lokusebenza</string>
+    <string name="share_app"> Yabelana ngohlelo lokusebenza</string>
+    <string name="give_feedback"> Nikeza Impendulo</string>
+    <string name="rate_us"> Linganisa nathi</string>
+    <string name="upgrade_to_pro"> Thuthukela ku-Pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> Umsebenzisi Imvume inqatshelwe asikwazi ukulondoloza Isimo ukuze Isitoreji yakho.</string>
+    <string name="refresh"> Vuselela</string>
+    <string name="version"> Inguqulo</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Uqinisekile ukuthi ufuna ukuvala lolu hlelo lokusebenza?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> Siyabonga ngokusebenzisa isilandi sesimo se-WhatsApp.</string>
+    <string name="yes"> YEBO</string>
+    <string name="no"> CHA</string>
+    <string name="step_1"> Isinyathelo 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Chofoza isithonjana se-WhatsApp esivulekile</string>
+    <string name="step_2"> Isinyathelo 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Okokuqala kufanele ubone Isimo kusuka ku-WhatsApp.</string>
+    <string name="step_3"> Isinyathelo 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Uma usubonile isimo ku-whatsapp bese uvula uhlelo lokusebenza lokulondoloza isimo, isimo sakho esibonwayo sizobe silapha kulolu hlelo lokusebenza.Manje ungalanda, uphinde uthumele futhi wabelane.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Okwesikhathi esincane Ukuthengwa uzothola</string>
+    <string name="upgrade_to_pro_status_saver"> Thuthukisa uku pro Isilondolozi sesimo</string>
+    <string name="ads_free_experience_for_lifetime"> Mahhala Ad Experience konke ukuphila.</string>
+    <string name="dedicated_support"> Ukusekelwa Okuzinikezele.</string>
+    <string name="in_just_1_buy_now"> Ngo- $ 1 Thenga Manje</string>
+    <string name="policy">Inqubomgomo Yobumfihlo</string>
+</resources>

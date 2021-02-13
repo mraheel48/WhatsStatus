@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Կարգավիճակի խնայարար</string>
+    <string name="loading_ads">Բեռնվում Ad ..</string>
+    <string name="share_file">Համօգտագործել ֆայլը</string>
+    <string name="images">Պատկերներ</string>
+    <string name="videos">Տեսանյութեր</string>
+    <string name="saved">պահված</string>
+    <string name="hello_blank_fragment">բարեւ դատարկ կտոր</string>
+    <string name="do_yor_love_our_app">Սիրու՞մ եք մեր հավելվածը:</string>
+    <string name="give_us_a_quick_rating">Արագ գնահատական տուր մեզ, որպեսզի իմանանք, թե դա քեզ դուր է գալիս</string>
+    <string name="done">Կատարված է</string>
+    <string name="about">մասին</string>
+    <string name="guide">Ուղեցույց</string>
+    <string name="preview">նախադիտում</string>
+    <string name="how_to_use">Ինչպե՞ս օգտագործել:</string>
+    <string name="about_app">Appրագրի մասին</string>
+    <string name="share_app">Համօգտագործել հավելվածը</string>
+    <string name="give_feedback">հետադարձ կապ</string>
+    <string name="rate_us">Գնահատեք մեզ</string>
+    <string name="upgrade_to_pro">թարմացում դեպի pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Օգտատիրոջ թույլտվությունը մերժվում է: Մենք չենք կարող կարգավիճակ պահպանել ձեր հիշողության մեջ:</string>
+    <string name="refresh">Թարմացնել</string>
+    <string name="version">Տարբերակ</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Վստա՞հ եք, որ ցանկանում եք փակել այս ծրագիրը:</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Շնորհակալություն WhatsApp կարգավիճակի ներբեռնիչն օգտագործելու համար:</string>
+    <string name="yes">ԱՅՈ</string>
+    <string name="no">ՈՉ</string>
+    <string name="step_1">Քայլ 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Հպեք կտտոցին ՝ WhatsApp պատկերակը բացելու համար</string>
+    <string name="step_2">Քայլ 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Նախ պետք է WhatsApp- ից տեսնել կարգավիճակը:</string>
+    <string name="step_3">Քայլ 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Մեկ անգամ եք տեսել կարգավիճակ WhatsApp ապա բաց կարգավիճակ խնայարար Դիմում, ձեր երեւում կարգավիճակը այստեղ է լինելու այս application.Now դուք կարող եք բեռնել, Մինսկի խմբում and Share:</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">Փոքր մեկ անգամ գնման համար Դուք կստանաք</string>
+    <string name="upgrade_to_pro_status_saver">Նորացնել Pro կարգավիճակի խնայարար</string>
+    <string name="ads_free_experience_for_lifetime">Գովազդի անվճար փորձ ամբողջ կյանքի համար:</string>
+    <string name="dedicated_support">Նվիրված աջակցություն:</string>
+    <string name="in_just_1_buy_now">ընդամենը $ 1-ում Գնել հիմա</string>"
+    <string name="policy">Գաղտնիության քաղաքականություն</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">โปรแกรมรักษาสถานะ</string>
+    <string name="loading_ads">กำลังโหลดโฆษณา ..</string>
+    <string name="share_file">แชร์ไฟล์</string>
+    <string name="images">รูปภาพ</string>
+    <string name="videos">วิดีโอ</string>
+    <string name="saved">บันทึกแล้ว</string>
+    <string name="hello_blank_fragment">สวัสดีส่วนย่อยว่าง</string>
+    <string name="do_yor_love_our_app">คุณรักแอปของเราไหม</string>
+    <string name="give_us_a_quick_rating">ให้คะแนนอย่างรวดเร็วเพื่อให้เรารู้ว่าคุณชอบมันหรือไม่</string>
+    <string name="done">เสร็จสิ้น</string>
+    <string name="about">เกี่ยวกับ</string>
+    <string name="guide">ไกด์</string>
+    <string name="preview">ดูตัวอย่าง</string>
+    <string name="how_to_use">วิธีใช้</string>
+    <string name="about_app">เกี่ยวกับแอป</string>
+    <string name="share_app">แชร์แอป</string>
+    <string name="give_feedback">ให้คําติชม</string>
+    <string name="rate_us">ให้คะแนนเรา</string>
+    <string name="upgrade_to_pro">อัพเกรดเป็นโปร</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">สิทธิ์ของผู้ใช้ถูกปฏิเสธเราไม่สามารถบันทึกสถานะในที่เก็บข้อมูลของคุณได้</string>
+    <string name="refresh">รีเฟรช</string>
+    <string name="version">เวอร์ชัน</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">สิทธิ์ของผู้ใช้คุณแน่ใจหรือไม่ว่าต้องการปิดแอปนี้</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">ขอบคุณที่ใช้โปรแกรมดาวน์โหลดสถานะ WhatsApp</string>
+    <string name="yes">ใช่</string>
+    <string name="no">ไม่</string>
+    <string name="step_1">ขั้นตอนที่ 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">แตะที่คลิกเพื่อเปิดไอคอน WhatsAp</string>
+    <string name="step_2">ขั้นตอนที่ 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">ก่อนอื่นคุณต้องดูสถานะจาก WhatsApp</string>
+    <string name="step_3">ขั้นตอนที่ 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">เมื่อคุณเห็นสถานะใน whatsapp แล้วให้เปิดแอปพลิเคชันโปรแกรมรักษาสถานะสถานะที่คุณเห็นจะอยู่ที่นี่ในแอปพลิเคชันนี้ตอนนี้คุณสามารถดาวน์โหลดโพสต์ใหม่และแบ่งปัน</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">สําหรับการซื้อเวลาขนาดเล็กคุณจะได้รับ</string>
+    <string name="upgrade_to_pro_status_saver">ปรับรุ่นเป็นโปรแกรมรักษาสถานะโปร</string>
+    <string name="ads_free_experience_for_lifetime">โฆษณาประสบการณ์ฟรีตลอดชีวิต </string>
+    <string name="dedicated_support">การสนับสนุนเฉพาะ</string>
+    <string name="in_just_1_buy_now">ในเวลาเพียง $ 1 ซื้อในตอนนี้</string>
+    <string name="policy">นโยบายความเป็นส่วนตัว</string>
+</resources>

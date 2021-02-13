@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Status Qoruyucu</string>
+    <string name="loading_ads">Reklam yüklənir ..</string>
+    <string name="share_file">Fayl paylaş</string>
+    <string name="images">Şəkillər</string>
+    <string name="videos">Videolar</string>
+    <string name="saved">Yadda saxlanıldı</string>
+    <string name="hello_blank_fragment">Salam boş fraqmenti</string>
+    <string name="do_yor_love_our_app">Tətbiqimizi sevirsən?</string>
+    <string name="give_us_a_quick_rating">Bizə sürətli bir reytinq verin, bəyəndiyinizi bilək</string>
+    <string name="done">görülən</string>
+    <string name="about">haqqında</string>
+    <string name="guide">Bələdçi</string>
+    <string name="preview">Önizləmə</string>
+    <string name="how_to_use">Necə istifadə etməli ?</string>
+    <string name="about_app">Tətbiq haqqında</string>
+    <string name="share_app">Tətbiqi paylaşın</string>
+    <string name="give_feedback">Rəy ver</string>
+    <string name="rate_us">Bizi qiymətləndirin</string>
+    <string name="upgrade_to_pro">Pro-ya yüksəldin</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">İstifadəçi İcazə Biz Sizin Saxlama Status saxlaya bilməz təkzib edir.</string>
+    <string name="refresh">təzələmək</string>
+    <string name="version">Versiya</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Bu tətbiqi bağlamaq istədiyinizə əminsiniz?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">WhatsApp status yükləyicisini istifadə etdiyiniz üçün təşəkkür edirik.</string>
+    <string name="yes">Bəli</string>
+    <string name="no">YOX</string>
+    <string name="step_1">Addım 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">WhatsApp ikonasını açmaq üçün vurun</string>
+    <string name="step_2">Addım 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Əvvəlcə WhatsApp-da Statusu görməlisiniz.</string>
+    <string name="step_3">Addım 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Status whatsapp da gördükdən sonra Status qoruyucu Tətbiqi açın, göründüğünüz status bu tətbiqdə olacaq. İndi yükləyə, yenidən yerləşdirə və paylaşa bilərsiniz.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">Kiçik bir dəfəlik satınalma əldə edəcəksiniz</string>
+    <string name="upgrade_to_pro_status_saver">Pro Status Qoruyucu-a yüksəldin</string>
+    <string name="ads_free_experience_for_lifetime">Ömür boyu reklamsız təcrübə.</string>
+    <string name="dedicated_support">Həsr olunmuşdur dəstək.</string>
+    <string name="in_just_1_buy_now">Yalnız $ 1-də İndi Alın</string>
+    <string name="policy">Məxfilik Siyasəti</string>
+</resources>

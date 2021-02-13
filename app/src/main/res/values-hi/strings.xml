@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">स्टेटस सेवर</string>
+    <string name="loading_ads">लोड हो रहा है विज्ञापन ..</string>
+    <string name="share_file">शेयर फ़ाइल</string>
+    <string name="images">इमेजिस</string>
+    <string name="videos">वीडियो</string>
+    <string name="saved">सहेजा गया</string>
+    <string name="hello_blank_fragment">हैलो खाली टुकड़ा</string>
+    <string name="do_yor_love_our_app">क्या आप हमारे ऐप से प्यार करते हैं?</string>
+    <string name="give_us_a_quick_rating">हमें एक त्वरित रेटिंग दें ताकि हमें पता चले कि आपको यह पसंद है</string>
+    <string name="done">हो गया</string>
+    <string name="about">के बारे में</string>
+    <string name="guide">मार्गदर्शक</string>
+    <string name="preview">पूर्वावलोकन</string>
+    <string name="how_to_use">कैसे उपयोग करें?</string>
+    <string name="about_app">ऐप के बारे में</string>
+    <string name="share_app">शेयर ऐप</string>
+    <string name="give_feedback">फीडबैक दें</string>
+    <string name="rate_us">हमें रेट करें</string>
+    <string name="upgrade_to_pro">प्रो में अपग्रेड करें</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">उपयोगकर्ता अनुमति अस्वीकृत है हम आपके संग्रहण में स्थिति नहीं बचा सकते।</string>
+    <string name="refresh">ताज़ा करें</string>
+    <string name="version"> संस्करण </string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">क्या आप सुनिश्चित हैं कि आप इस ऐप को बंद करना चाहते हैं?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">स्टेटस डाउनलोडर का उपयोग करने के लिए धन्यवाद।</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="step_1">स्टेप 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> WhatsApp आइकन खोलने के लिए क्लिक करें </string>
+    <string name="step_2"> स्टेप 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> सबसे पहले आपको व्हाट्सएप से स्टेटस देखना होगा।</string>
+    <string name="step_3"> स्टेप 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> एक बार जब आप व्हाट्सएप में स्टेटस देख लेते हैं तो स्टेटस सेवर एप्लिकेशन ओपन करें, इस एप्लीकेशन में आपका देखा हुआ स्टेटस यहां होगा। अब आप डाउनलोड, रिपॉजिट और शेयर कर सकते हैं।</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> एक छोटे से एक बार खरीद के लिए आप मिल जाएगा</string>
+    <string name="upgrade_to_pro_status_saver"> प्रो स्थिति सेवर में अपग्रेड करें</string>
+    <string name="ads_free_experience_for_lifetime"> लाइफटाइम के लिए विज्ञापन मुक्त अनुभव।</string>
+    <string name="dedicated_support"> समर्पित समर्थन।</string>
+    <string name="in_just_1_buy_now"> केवल $ 1 में अब खरीदें</string>
+    <string name="policy">गोपनीयता नीति</string>
+</resources>

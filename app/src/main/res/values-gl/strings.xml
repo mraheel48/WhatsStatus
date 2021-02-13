@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    "
+    <string name="app_name"> Aforro de estado </string>
+    <string name="loading_ads"> Cargando anuncio .. </string>
+    <string name="share_file"> Compartir ficheiro </string>
+    <string name="images"> Imaxes </string>
+    <string name="videos"> Vídeos </string>
+    <string name="saved"> Gardado </string>
+    <string name="hello_blank_fragment"> Ola fragmento en branco </string>
+    <string name="do_yor_love_our_app"> ¿Encántache a nosa aplicación? </string>
+    <string name="give_us_a_quick_rating"> Dános unha valoración rápida para que saibamos se che gusta </string>
+    <string name="done"> Feito </string>
+    <string name="about"> Acerca de </string>
+    <string name="guide"> Guía </string>
+    <string name="preview"> Previsualizar </string>
+    <string name="how_to_use"> Como usar? </string>
+    <string name="about_app"> Acerca da aplicación </string>
+    <string name="share_app"> Compartir aplicación </string>
+    <string name="give_feedback"> Dar comentarios </string>
+    <string name="rate_us"> Valóranos </string>
+    <string name="upgrade_to_pro"> Actualizar a Pro </string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> Denégase o permiso do usuario Non podemos gardar o estado no seu almacenamento. </string>
+    <string name="refresh"> Actualizar </string>
+    <string name="version"> Versión </string>
+    <string name="_2021_2030"> 2021–2030 </string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Está seguro de que quere pechar esta aplicación? </string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> Grazas por usar o descargador de estado de WhatsApp. </string>
+    <string name="yes"> SI </string>
+    <string name="no"> NON </string>
+    <string name="step_1"> Paso 1 </string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Fai clic para abrir a icona de WhatsApp </string>
+    <string name="step_2"> Paso 2 </string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Primeiro tes que ver o estado de WhatsApp. </string>
+    <string name="step_3"> Paso 3 </string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">
+    Unha vez que vexa o estado no whatsapp, podes abrir o estado de recuperación.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Por unha pequena compra obterás </string>
+    <string name="upgrade_to_pro_status_saver"> Actualizar a Protector de estado Pro </string>
+    <string name="ads_free_experience_for_lifetime"> Experiencia gratuíta de anuncios para toda a vida. </string>
+    <string name="dedicated_support"> Asistencia dedicada. </string>
+    <string name="in_just_1_buy_now"> En só $ 1 Compra agora </string>
+    <string name="policy">Política de privacidade</string>
+
+</resources>

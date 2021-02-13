@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">스테이터스 보호기</string>
+    <string name="loading_ads">광고로드 중 ..</string>
+    <string name="share_file">파일 공유할</string>
+    <string name="images">이미지</string>
+    <string name="videos"> 동영상</string>
+    <string name="saved">저장 됨 </string>
+    <string name="hello_blank_fragment">안녕하세요 빈 조각</string>
+    <string name="do_yor_love_our_app">당신은 우리의 응용 프로그램을 사랑합니까?</string>
+    <string name="give_us_a_quick_rating">당신이 그것을 좋아하는 경우에 우리는 알 수 있도록 우리에게 빠른 평가를 제공</string>
+    <string name="done">완료 </string>
+    <string name="about">대해 </string>
+    <string name="guide">가이드</string>
+    <string name="preview">미리보기 </string>
+    <string name="how_to_use">사용 방법</string>
+    <string name="about_app">대해앱</string>
+    <string name="share_app"> 앱 공유</string>
+    <string name="give_feedback">피드백 주고</string>
+    <string name="rate_us"> 비율 저희</string>
+    <string name="upgrade_to_pro"> 프로로 업그레이드</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">유저 권한 거부됨 우리는 할 수 없습니다 저장 상태 받는 사람 너의 스토리지</string>
+    <string name="refresh">새로 고침</string>
+    <string name="version">버전</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">정말로이 앱을 닫으시겠습니까? </string>
+    <string name="thanks_for_using_whatsapp_status_downloader">WhatsApp 상태 다운로더를 사용해 주셔서 감사합니다.</string>
+    <string name="yes"> 예</string>
+    <string name="no">아니요</string>
+    <string name="step_1">1 단계</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">클릭하여 WhatsApp 아이콘 열기 </string>
+    <string name="step_2">2 단계</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">먼저 WhatsApp의 상태를 확인해야합니다..</string>
+    <string name="step_3">3 단계</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> 에서 상태를 Whatsapp 확인한  다음 상태 보호기 응용 프로그램을 열면 본 상태가 이 응용 프로그램에 표시됩니다. 이제 다운로드, 다시 게시 및 공유할 수 있습니다.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">작은 시간 구입을 위해 당신은 얻을 것이다</string>
+    <string name="upgrade_to_pro_status_saver">프로 상태 보호기로 업그레이드</string>
+    <string name="ads_free_experience_for_lifetime">광고 무료 평생 경험.</string>
+    <string name="dedicated_support">전용 지원.</string>
+    <string name="in_just_1_buy_now">단지 $ 1로 지금 구매</string>
+    <string name="policy">개인 정보 정책</string>
+</resources>

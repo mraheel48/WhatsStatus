@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">статус Saver</string>
+    <string name="loading_ads">Загрузка абявы ..</string>
+    <string name="share_file">падзяліцца файлам</string>
+    <string name="images">Выявы</string>
+    <string name="videos">Відэа</string>
+    <string name="saved">Захавана</string>
+    <string name="hello_blank_fragment">прывітанне Пусты фрагмент</string>
+    <string name="do_yor_love_our_app">Ці любіце вы наша дадатак?</string>
+    <string name="give_us_a_quick_rating">Дайце нам хуткі рэйтынг, каб мы ведалі, калі вам гэта падабаецца</string>
+    <string name="done">зроблена</string>
+    <string name="about">Аб</string>
+    <string name="guide">Кіраўніцтва</string>
+    <string name="preview">Папярэдні прагляд</string>
+    <string name="how_to_use">Як выкарыстоўваць?</string>
+    <string name="about_app">Аб дадатку</string>
+    <string name="share_app">доля прыкладанне</string>
+    <string name="give_feedback">Даць зваротную сувязь</string>
+    <string name="rate_us">Ацаніце нас</string>
+    <string name="upgrade_to_pro">Абнавіць да Pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">У дазволе карыстальніка адмоўлена. Мы не можам захаваць статус у вашым сховішчы.</string>
+    <string name="refresh">асвяжыць</string>
+    <string name="version">Версія</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Вы ўпэўнены, што хочаце закрыць гэта дадатак?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Дзякуй за выкарыстанне загрузніка статусу WhatsApp.</string>
+    <string name="yes">ды</string>
+    <string name="no">Не</string>
+    <string name="step_1">Крок 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Націсніце, каб адкрыць значок WhatsApp</string>
+    <string name="step_2">Крок 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Спачатку вы павінны ўбачыць статус з WhatsApp.</string>
+    <string name="step_3">Крок 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Як толькі вы ўбачыце статус у WhatsApp, а потым адкрыеце прыкладанне, каб захаваць статус, ваш статус, які вы бачылі, будзе знаходзіцца ў гэтым дадатку. Цяпер вы можаце спампаваць, рабіць рэпост і долі.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Для невялікага адзін раз куплі вы атрымаеце </string>
+    <string name="upgrade_to_pro_status_saver"> Абнавіць да Pro статус Saver </string>
+    <string name="ads_free_experience_for_lifetime"> Абявы бясплатна вопыт для ўсяго жыцця. </string>
+    <string name="dedicated_support"> Выдзеленая падтрымка. </string>
+    <string name="in_just_1_buy_now"> Усяго за $ 1 Купіць зараз </string>
+    <string name="policy">Палітыка прыватнасці</string>
+</resources>

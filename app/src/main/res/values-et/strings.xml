@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Olekusäästja</string>
+    <string name="loading_ads">Reklaami laadimine ..</string>
+    <string name="share_file">Jaga faili</string>
+    <string name="images">Pildid</string>
+    <string name="videos">Videod</string>
+    <string name="saved">Salvestatud</string>
+    <string name="hello_blank_fragment">Tere tühi snippet</string>
+    <string name="do_yor_love_our_app">Kas teile meeldib meie rakendus?</string>
+    <string name="give_us_a_quick_rating">Anna meile kiire hinnang nii et me teame, kui sulle meeldib see</string>
+    <string name="done">Valmis</string>
+    <string name="about">umbes</string>
+    <string name="guide">Juhend</string>
+    <string name="preview">Eelvaade</string>
+    <string name="how_to_use">Kuidas kasutada?</string>
+    <string name="about_app">Umbes rakenduse kohta</string>
+    <string name="share_app">Jaga rakendust</string>
+    <string name="give_feedback">Anna tagasisidet</string>
+    <string name="rate_us">Hinnake meid</string>
+    <string name="upgrade_to_pro">Täienda pro-ks</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Kasutaja luba on keelatud. Me ei saa olekut teie salvestusruumi salvestada.</string>
+    <string name="refresh">Värskenda</string>
+    <string name="version">Versioon</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">Kas olete kindel, et soovite selle rakenduse sulgeda?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">Täname WhatsAppi oleku allalaadija kasutamise eest.</string>
+    <string name="yes">JAH</string>
+    <string name="no">EI</string>
+    <string name="step_1">1. toiming</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">Puudutage, et avada WhatsApp ikoon</string>
+    <string name="step_2">2. toiming</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">Kõigepealt pead näha staatus WhatsApp.</string>
+    <string name="step_3">3. toiming</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Kui olete WhatsAppis olekut näinud, avage olekusäästja rakendus, kuvatakse teie olek selles rakenduses siin. Nüüd saate alla laadida, uuesti postitada ja jagada.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">väikese ühekordse ostu eest saate </string>
+    <string name="upgrade_to_pro_status_saver">Uuenda pro staatus saver</string>
+    <string name="ads_free_experience_for_lifetime">Reklaamid Tasuta Kogemused Eluaegne.</string>
+    <string name="dedicated_support">Pühendatud tugi.</string>
+    <string name="in_just_1_buy_now">Ainult 1 dollariga ostke kohe</string>
+    <string name="policy">Privaatsuseeskirjad</string>
+</resources>
