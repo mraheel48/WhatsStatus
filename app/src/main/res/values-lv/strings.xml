@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Statusa saudzētājs</string>
+    <string name="loading_ads">Notiek reklāmas ielāde ..</string>
+    <string name="share_file">Koplietot failu</string>
+    <string name="images">Attēli</string>
+    <string name="videos">Videoklipi</string>
+    <string name="saved">Saglabāts</string>
+    <string name="hello_blank_fragment">Sveiks, tukšs fragments</string>
+    <string name="do_yor_love_our_app">Vai jums patīk mūsu lietotne?</string>
+    <string name="give_us_a_quick_rating">Sniedziet mums ātru vērtējumu, lai mēs zinām, vai jums tas patīk</string>
+    <string name="done">izdarīts</string>
+    <string name="about">Par</string>
+    <string name="guide">Ceļvedis</string>
+    <string name="preview">Priekšskatījums</string>
+    <string name="how_to_use">Kā lietot?</string>
+    <string name="about_app">Par lietotni</string>
+    <string name="share_app">Kopīgot lietotni</string>
+    <string name="give_feedback">Dot atsauksmes</string>
+    <string name="rate_us">Novērtējiet mūs</string>
+    <string name="upgrade_to_pro">Jaunināt uz Pro</string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Lietotāja atļauja ir liegta. Mēs nevaram saglabāt statusu jūsu krātuvē.</string>
+    <string name="refresh">Atsvaidzināt</string>
+    <string name="version">Versija</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Vai tiešām vēlaties aizvērt šo lietotni?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> Paldies, ka izmantojat WhatsApp statusa lejupielādētāju.</string>
+    <string name="yes"> JĀ</string>
+    <string name="no"> NĒ</string>
+    <string name="step_1"> 1. darbība</string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Noklikšķiniet, lai atvērtu WhatsApp ikonu</string>
+    <string name="step_2"> 2. darbība</string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Vispirms jums ir jāredz statuss no WhatsApp.</string>
+    <string name="step_3"> 3. darbība</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share"> Kad tu esi redzējis statusu WhatsApp tad atvērts statusa taupīšanas pieteikumu, jūsu redzams statuss būs šeit šajā application.Now jūs varat lejupielādēt, Izlikt atkārtoti un Share.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Par nelielu nelielu pirkumu jūs saņemsiet</string>
+    <string name="upgrade_to_pro_status_saver"> Jauniniet uz Pro Statusa saudzētājs</string>
+    <string name="ads_free_experience_for_lifetime"> Reklāmu bezmaksas pieredze visu mūžu.</string>
+    <string name="dedicated_support"> Veltīts Atbalsts.</string>
+    <string name="in_just_1_buy_now"> Tikai 1 USD nopērciet tūlīt</string>
+    <string name="policy">Privātuma politika</string>
+
+</resources>

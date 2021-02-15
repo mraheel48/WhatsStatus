@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">স্ট্যাটাস সেভার</string>
+    <string name="loading_ads">বিজ্ঞাপন লোড হচ্ছে ..</string>
+    <string name="share_file"> ফাইল ভাগ করুন</string>
+    <string name="images">চিত্রসমূহ</string>
+    <string name="videos"> ভিডিওত</string>
+    <string name="saved">সংরক্ষিত</string>
+    <string name="hello_blank_fragment">হ্যালো খালি খণ্ড</string>
+    <string name="do_yor_love_our_app"> আপনি কি আমাদের অ্যাপ পছন্দ করেন?</string>
+    <string name="give_us_a_quick_rating">আমাদের দ্রুত রেটিং দিন যাতে আপনার পছন্দ হয় কিনা তা আমরা জানতে পারি</string>
+    <string name="done">হয়ে গেছে</string>
+    <string name="about">সম্পর্কে</string>
+    <string name="guide">গাইড </string>
+    <string name="preview">পূর্বরূপ</string>
+    <string name="how_to_use">কীভাবে ব্যবহার করবেন?</string>
+    <string name="about_app">অ্যাপ সম্পর্কে</string>
+    <string name="share_app">শেয়ার অ্যাপ</string>
+    <string name="give_feedback">প্রতিক্রিয়া দিন</string>
+    <string name="rate_us">আমাদের রেট দিন</string>
+    <string name="upgrade_to_pro">প্রোতে আপগ্রেড করুন </string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">ব্যবহারকারীর অনুমতি অস্বীকার করা হয়েছে আমরা আপনার স্টোরেজে স্ট্যাটাসটি সংরক্ষণ করতে পারি না</string>
+    <string name="refresh">রিফ্রেশ</string>
+    <string name="version">সংস্করণ</string>
+    <string name="_2021_2030">2021–2030</string>
+    <string name="are_you_sure_that_you_want_to_close_this_app">আপনি কি নিশ্চিত যে আপনি এই অ্যাপটি বন্ধ করতে চান?</string>
+    <string name="thanks_for_using_whatsapp_status_downloader">হোয়াটসঅ্যাপ স্ট্যাটাস ডাউনলোডার ব্যবহার করার জন্য ধন্যবাদ</string>
+    <string name="yes">হ্যাঁ </string>
+    <string name="no">না</string>
+    <string name="step_1">পদক্ষেপ 1</string>
+    <string name="tap_on_click_to_open_whatsapp_icon">হোয়াটসঅ্যাপ আইকন খোলার জন্য ক্লিক করুন</string>
+    <string name="step_2">পদক্ষেপ 2</string>
+    <string name="first_you_have_to_see_status_from_whatsapp">প্রথমে আপনাকে হোয়াটসঅ্যাপ থেকে স্ট্যাটাসটি দেখতে হবে</string>
+    <string name="step_3">পদক্ষেপ 3</string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">একবার আপনি হোয়াটসঅ্যাপে স্থিতিটি দেখে তারপরে স্থিতি সংরক্ষণকারীর অ্যাপ্লিকেশনটি খুলুন, আপনার দেখা স্থিতিটি এই অ্যাপ্লিকেশনটিতে আসবে ow এখন আপনি ডাউনলোড, পুনরায় পোস্ট এবং ভাগ করতে পারেন।</string>
+    <string name="for_a_small_one_time_purchase_you_will_get">একটি ছোট এক সময় ক্রয়ের জন্য আপনি পাবেন</string>
+    <string name="upgrade_to_pro_status_saver">প্রো স্ট্যাটাস সেভারে আপগ্রেড করুন</string>
+    <string name="ads_free_experience_for_lifetime">লাইফটাইমের জন্য বিজ্ঞাপনগুলি বিনামূল্যে অভিজ্ঞতা</string>
+    <string name="dedicated_support">উত্সর্গীকৃত সমর্থন।</string>
+    <string name="in_just_1_buy_now">মাত্র $ 1 এর মধ্যে এখনই কিনুন</string>
+
+    <string name="policy">গোপনীয়তা নীতি</string>
+</resources>

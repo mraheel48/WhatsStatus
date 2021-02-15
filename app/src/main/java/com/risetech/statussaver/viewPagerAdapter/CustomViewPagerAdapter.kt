@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.risetech.statussaver.fragments.CategoryFragment.Companion.newInstance
+import com.risetech.statussaver.utils.Constants
 
 class CustomViewPagerAdapter(fragmentManager: FragmentManager?) : FragmentStatePagerAdapter(fragmentManager!!) {
 
@@ -20,7 +21,7 @@ class CustomViewPagerAdapter(fragmentManager: FragmentManager?) : FragmentStateP
     }
 
     override fun getPageTitle(position: Int): CharSequence {
-        return fragmentArray[position]
+        return Constants.tabTitle[position]
     }
 
     fun updateUi(position: Int){

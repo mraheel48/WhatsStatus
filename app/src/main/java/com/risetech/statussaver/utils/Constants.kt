@@ -1,7 +1,9 @@
 package com.risetech.statussaver.utils
 
 import android.os.Environment
+import com.risetech.statussaver.R
 import com.risetech.statussaver.dataModel.ItemModel
+import com.risetech.statussaver.utils.App.context
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import java.io.File
@@ -33,7 +35,6 @@ object Constants {
 
     val inAppKey = "status_saver"
     val inAppKeyTest = "android.test.purchased"
-    //val base64Key  = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYaoyKnm/TdymYfDhIRU+6vOVLC10dJtatzwjMWBF2g5poO09yEK315Ow7zJcur77rcdeW+1Tpu69Ym1GOKqkVTPBMKxt1KIUaR/4JTdbgtS1ANxYnO0pUrlnCD2PG+maHD1b837G6daBsBkea3SfjcOdiUU1g6tgShwFPXTcVaJCGPt5LVaNAGL0vrRxS/9AYmFb+PCkOLVU9sCvt8E1tbo7Wq0s+/qlzbgJtb6A1YYTcGaZSBQBuh+TNSei7+Oi7/FaDHbUdpxJecn1qGr2bhn85pCjRkt5yIzyBhvz0UDOvxmruXSP8qKduP5Jk00eqg8KlV/jVchBvbxWmTbrQIDAQAB"
 
     var inAppPrices: String = ""
 
@@ -49,6 +50,11 @@ object Constants {
     @Suppress("DEPRECATION")
     val fileDownloadPath =
         File(Environment.getExternalStorageDirectory().absolutePath + "/StatusSaver/")
+
+    val tabTitle = arrayOf(
+        context.getString(R.string.images), context.getString(R.string.videos),
+        context.getString(R.string.saved)
+    )
 
     val scopeIO: CoroutineScope = CoroutineScope(Dispatchers.IO)
     val scopeMain: CoroutineScope = CoroutineScope(Dispatchers.Main)

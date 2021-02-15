@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Абалды үнөмдөгүч</string>
+<string name="loading_ads">Жарнама жүктөлүүдө ..</string>
+<string name="share_file">Файлды бөлүшүү</string>
+<string name="images">сүрөттөр</string>
+<string name="videos">Видеолор</string>
+<string name="saved">Сакталды</string>
+<string name="hello_blank_fragment">Салам бош фрагмент</string>
+<string name="do_yor_love_our_app">Сиз биздин Колдонмобузду сүйөсүзбү?</string>
+<string name="give_us_a_quick_rating">бизге тез баа берип, биз сизге жагарын билебиз</string>
+<string name="done">Бүттү</string>
+<string name="about">жөнүндө</string>
+<string name="guide">Жетекчи</string>
+<string name="preview">Алдын ала көрүү</string>
+<string name="how_to_use">Кантип колдонуу керек?</string>
+<string name="about_app">Колдонмо жөнүндө</string>
+<string name="share_app">Колдонмону бөлүшүү</string>
+<string name="give_feedback">Пикир билдирүү</string>
+<string name="rate_us">Бизге баа бер</string>
+<string name="upgrade_to_pro">Pro чейин жаңыртуу</string>
+<string name="user_permission_is_denied_we_can_t_save_status_in_your_storage">Колдонуучунун Уруксаты Четке кагылд. Абалыңызды Сактагычта сактай албайбыз.</string>
+<string name="refresh">Жаңылоо</string>
+<string name="version">Нускасы</string>
+<string name="_2021_2030">2021–2030</string>
+<string name="are_you_sure_that_you_want_to_close_this_app">Бул колдонмону чын эле жаап салгыңыз келеби?</string>
+<string name="thanks_for_using_whatsapp_status_downloader">WhatsApp Status жүктөгүчүн колдонгонуңуз үчүн рахмат.</string>
+<string name="yes">Ооба</string>
+<string name="no">ЖОК</string>
+<string name="step_1">1-кадам</string>
+<string name="tap_on_click_to_open_whatsapp_icon">WhatsApp сүрөтчөсүн ачуу үчүн чыкылдатыңыз</string>
+<string name="step_2">2-кадам</string>
+<string name="first_you_have_to_see_status_from_whatsapp">First you have to see Status from WhatsApp.</string>
+<string name="step_3">3-кадам</string>
+<string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Ватсаптагы статусту көрүп, андан соң статусту сактагычтын тиркемесин ачсаңыз, анда сиздин көргөн статусуңуз ушул жерде болот, эми жүктөп, кайра жайгаштырып, бөлүшө аласыз.</string>
+<string name="for_a_small_one_time_purchase_you_will_get">кичинекей бир жолку сатып алуу үчүн сиз ала турган болосуз</string>
+<string name="upgrade_to_pro_status_saver">Про статусун үнөмдөгүчкө жаңыртыңыз</string>
+<string name="ads_free_experience_for_lifetime">Өмүр бою жарнамасыз пайдалануу.</string>
+<string name="dedicated_support">Атайын колдоо.</string>
+<string name="in_just_1_buy_now">Болгону $ 1 сатып алгыла</string>
+<string name="policy">Купуялык саясаты</string>
+</resources>

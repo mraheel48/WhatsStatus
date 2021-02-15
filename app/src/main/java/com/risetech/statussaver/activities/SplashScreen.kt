@@ -15,8 +15,6 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        //AdManger.init(this@SplashScreen)
-
         object : CountDownTimer(500, 1000) {
             override fun onTick(l: Long) {}
             override fun onFinish() {

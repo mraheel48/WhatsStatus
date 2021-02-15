@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".utils.App"
         android:allowBackup="true"
         android:icon="@mipmap/launcher_new"
         android:label="@string/app_name"
@@ -19,19 +20,16 @@
         android:supportsRtl="false"
         android:theme="@style/splashScreenTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
-        tools:replace="android:supportsRtl"
-        android:name=".utils.App">
-
-        <activity android:name="com.risetech.statussaver.activities.PreView" />
-
+        tools:replace="android:supportsRtl">
+        <activity android:name=".activities.ProScreen"></activity>
         <activity
-            android:name="com.risetech.statussaver.activities.SplashScreen"
-            android:screenOrientation="portrait">
-
-        </activity>
-
+            android:name=".activities.PreView"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.risetech.statussaver.activities.MainActivity"
+            android:name=".activities.SplashScreen"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,11 +55,9 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5448910982838601~1488575409" />
-
     </application>
 
 </manifest>

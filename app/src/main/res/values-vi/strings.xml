@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Trình tiết kiệm trạng thái</string>
+    <string name="loading_ads"> Đang tải Quảng cáo .. </string>
+    <string name="share_file"> Chia sẻ tệp </string>
+    <string name="images"> Hình ảnh </string>
+    <string name="videos"> Video </string>
+    <string name="saved"> Đã lưu </string>
+    <string name="hello_blank_fragment"> Xin chào phân đoạn trống </string>
+    <string name="do_yor_love_our_app"> Bạn có thích ứng dụng của chúng tôi không? </string>
+    <string name="give_us_a_quick_rating"> Hãy nhanh chóng đánh giá chúng tôi để chúng tôi biết bạn có thích nó không </string>
+    <string name="done"> xong </string>
+    <string name="about"> Giới thiệu </string>
+    <string name="guide"> Hướng dẫn </string>
+    <string name="preview"> Xem trước </string>
+    <string name="how_to_use"> Làm thế nào để sử dụng nó? </string>
+    <string name="about_app"> Giới thiệu về ứng dụng </string>
+    <string name="share_app"> Chia sẻ ứng dụng </string>
+    <string name="give_feedback"> Đưa ra phản hồi </string>
+    <string name="rate_us"> Đánh giá chúng tôi </string>
+    <string name="upgrade_to_pro"> Nâng cấp lên Pro </string>
+    <string name="user_permission_is_denied_we_can_t_save_status_in_your_storage"> Quyền của Người dùng bị Từ chối Chúng tôi không thể lưu Trạng thái trong Bộ nhớ của bạn. </string>
+    <string name="refresh"> Làm mới </string>
+    <string name="version"> Phiên bản </string>
+    <string name="_2021_2030"> 2021–2030 </string>
+    <string name="are_you_sure_that_you_want_to_close_this_app"> Bạn có chắc chắn muốn đóng ứng dụng này không? </string>
+    <string name="thanks_for_using_whatsapp_status_downloader"> Cảm ơn bạn đã sử dụng trình tải xuống trạng thái WhatsApp. </string>
+    <string name="yes"> Có </string>
+    <string name="no"> Không </string>
+    <string name="step_1"> Bước 1 </string>
+    <string name="tap_on_click_to_open_whatsapp_icon"> Nhấp để mở biểu tượng WhatsApp </string>
+    <string name="step_2"> Bước 2 </string>
+    <string name="first_you_have_to_see_status_from_whatsapp"> Trước tiên, bạn phải xem Trạng thái từ WhatsApp. </string>
+    <string name="step_3"> Bước 3 </string>
+    <string name="once_you_seen_status_in_whatsapp_then_open_status_saver_application_your_seen_status_will_be_here_in_this_application_now_you_can_download_repost_and_share">Sau khi bạn thấy trạng thái trong whatsapp, hãy mở Ứng dụng Trình tiết kiệm trạng thái, trạng thái đã thấy của bạn sẽ ở đây trong ứng dụng này. Bây giờ bạn có thể Tải xuống, Đăng lại và Chia sẻ.</string>
+    <string name="for_a_small_one_time_purchase_you_will_get"> Bạn sẽ nhận được một lần mua nhỏ </string>
+    <string name="upgrade_to_pro_status_saver"> Nâng cấp lên Trình tiết kiệm trạng thái chuyên nghiệp </string>
+    <string name="ads_free_experience_for_lifetime"> Trải nghiệm quảng cáo miễn phí trọn đời. </string>
+    <string name="dedicated_support"> Hỗ trợ Chuyên dụng. </string>
+    <string name="in_just_1_buy_now"> Với $ 1 Mua ngay </string>
+    <string name="policy"> Chính sách Bảo mật</string>
+
+</resources>
