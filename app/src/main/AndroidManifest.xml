@@ -21,19 +21,23 @@
         android:theme="@style/splashScreenTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
         tools:replace="android:supportsRtl">
-        <activity android:name=".activities.ProScreen"></activity>
+
+        <activity android:name=".activities.ProScreen"
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".activities.PreView"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".activities.SplashScreen"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

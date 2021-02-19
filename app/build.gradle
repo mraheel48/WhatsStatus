@@ -16,8 +16,8 @@ android {
         minSdkVersion 21
         //noinspection OldTargetApi
         targetSdkVersion 29
-        versionCode 6
-        versionName "2.6"
+        versionCode 8
+        versionName "2.8"
 
         multiDexEnabled true
         aaptOptions { cruncherEnabled = false }
@@ -99,13 +99,8 @@ dependencies {
     // Lifecycles only (without ViewModel or LiveData)
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
+    //noinspection GradleDependency
     implementation 'com.google.android.gms:play-services-ads:19.3.0'
-    //implementation 'com.google.android.gms:play-services-ads:19.7.0'
-    /*implementation 'com.google.android.gms:play-services-basement:17.1.1'
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'*/
-
-    //coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
 
     implementation 'com.android.billingclient:billing-ktx:3.0.2'
 

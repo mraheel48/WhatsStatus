@@ -34,7 +34,7 @@ object Constants {
     val interstitialTestId = "ca-app-pub-3940256099942544/1033173712"
 
     val inAppKey = "status_saver"
-    val inAppKeyTest = "android.test.purchased"
+    //val inAppKeyTest = "android.test.purchased"
 
     var inAppPrices: String = ""
 

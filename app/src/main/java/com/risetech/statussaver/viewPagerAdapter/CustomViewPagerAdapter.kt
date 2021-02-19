@@ -26,7 +26,6 @@ class CustomViewPagerAdapter(fragmentManager: FragmentManager?) : FragmentStateP
 
     fun updateUi(position: Int){
         getItem(position)
-
     }
 
 }

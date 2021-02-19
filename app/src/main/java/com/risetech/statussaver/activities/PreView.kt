@@ -30,6 +30,7 @@ import com.risetech.statussaver.billing.GoogleBilling
 import com.risetech.statussaver.dataModel.ItemModel
 import com.risetech.statussaver.fragments.PreViewFragment
 import com.risetech.statussaver.utils.Constants
+import com.risetech.statussaver.utils.Utils
 import kotlinx.coroutines.*
 import java.io.File
 import kotlin.system.measureTimeMillis
@@ -334,12 +335,10 @@ class PreView : AppCompatActivity(), AdManager.CallbackInterstial,
     }
 
     private fun showAds() {
-        if (BuildConfig.DEBUG) {
-            if (bp.isConnected && !bp.isPurchased(Constants.inAppKeyTest)) {
-                AdManager.showInterstial(this, this)
-            }
+        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+            Log.e("myTag", "Pro usre")
         } else {
-            if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
+            if (Utils.isNetworkAvailable(this)) {
                 AdManager.showInterstial(this, this)
             }
         }
@@ -366,29 +365,31 @@ class PreView : AppCompatActivity(), AdManager.CallbackInterstial,
     }
 
     override fun onAdClosed() {
-
+        if (Utils.isNetworkAvailable(this)) {
+            AdManager.loadInterstial(this, this)
+        }
     }
 
     override fun onBillingInitialized() {
 
-        if (BuildConfig.DEBUG) {
+        /* if (BuildConfig.DEBUG) {
 
-            if (bp.isConnected && bp.isPurchased(Constants.inAppKeyTest)) {
-                Log.e("myTag", "in App buy")
+             if (bp.isConnected && bp.isPurchased(Constants.inAppKeyTest)) {
+                 Log.e("myTag", "in App buy")
 
-            } else {
-                AdManager.loadInterstial(this, this)
-            }
+             } else {
+                 AdManager.loadInterstial(this, this)
+             }
 
-        } else {
+         } else {
 
-            if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
-                Log.e("myTag", "in App buy")
-            } else {
-                AdManager.loadInterstial(this, this)
-            }
+             if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+                 Log.e("myTag", "in App buy")
+             } else {
+                 AdManager.loadInterstial(this, this)
+             }
 
-        }
+         }*/
 
     }
 
@@ -403,7 +404,9 @@ class PreView : AppCompatActivity(), AdManager.CallbackInterstial,
     override fun onBillingError(errorCode: Int) {
         if (GoogleBilling.ResponseCodes.BILLING_UNAVAILABLE == errorCode) {
             Log.e("myTag", "${errorCode}-- calling Banner")
-            AdManager.loadInterstial(this, this)
+            if (Utils.isNetworkAvailable(this)) {
+                AdManager.loadInterstial(this, this)
+            }
         }
     }
 

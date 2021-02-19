@@ -16,7 +16,7 @@
         android:layout_height="0dp"
         android:background="#FAFCFF"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toTopOf="@+id/adLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -66,44 +66,33 @@
         android:layout_height="0dp"
         android:background="#FAFCFF"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toTopOf="@+id/adLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+    <FrameLayout
+        android:id="@+id/adLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_62sdp"
+        android:background="@color/colorPrimary"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <FrameLayout
-            android:id="@+id/adLayout"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_62sdp"
-            android:background="@color/colorPrimary"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="@string/loading_ads"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/poppins_semibold"
-                android:gravity="center"
-                android:text="@string/loading_ads"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_20sdp" />
-
-        </FrameLayout>
-
-    </androidx.cardview.widget.CardView>
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

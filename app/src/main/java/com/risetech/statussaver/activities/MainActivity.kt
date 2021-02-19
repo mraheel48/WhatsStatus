@@ -14,7 +14,6 @@ import android.os.CountDownTimer
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
-import android.view.ViewTreeObserver
 import android.view.Window
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -27,7 +26,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
 import com.android.billingclient.api.Purchase
-import com.android.billingclient.api.SkuDetails
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -119,8 +117,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         setTheme(R.style.AppTheme)
         setContentView(R.layout.activity_main)
 
-        //AdManager.init(this@MainActivity)
-
         //init Id Layout
         navBtn = findViewById(R.id.nav_btn)
         drawer = findViewById(R.id.drawer_layout)
@@ -154,21 +150,16 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         fragmentManager = supportFragmentManager
         fragmentTransaction = fragmentManager.beginTransaction()
 
-        /*try {
-         navDrawMethod()
-        } catch (ex: Exception) {
-            ex.printStackTrace()
-        }*/
-
         navBtn.setOnClickListener { openCloseNavigationView() }
 
         btnRefreshPer.setOnClickListener { openHomeFragment() }
 
         downloadBtn.setOnClickListener {
+
             downloadBtn.isClickable = false
             Constants.showAds = true
 
-            Utils.showToast(this, "download Click")
+           // Utils.showToast(this, "download Click")
             copyFileBG()
         }
 
@@ -188,20 +179,18 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
                     if (bp.isConnected) {
 
-                        bp.consumePurchase(Constants.inAppKeyTest) { error: Int?, _: String? ->
-
+                        bp.consumePurchase(Constants.inAppKey) { error: Int?, _: String? ->
                             if (error == null) {
                                 it.isClickable = true
-                                Utils.showToast(this, "Billing Prossor is consume")
+                                Utils.showToast(this@MainActivity, "Billing Prossor is consume")
 
                             } else {
-
                                 Log.e("myTag", "Error not billing Consume")
                             }
                         }
 
                     } else {
-                        Utils.showToast(this, "Billing Prossor is not conntect")
+                        Utils.showToast(this@MainActivity, "Billing Prossor is not conntect")
                         it.isClickable = true
 
                     }
@@ -292,15 +281,13 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     private fun showAds() {
-        if (BuildConfig.DEBUG) {
-            if (bp.isConnected && !bp.isPurchased(Constants.inAppKeyTest)) {
-                AdManager.showInterstial(this, this)
-            }
-        } else {
-            if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
-                AdManager.showInterstial(this, this)
-            }
+
+        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)){
+            Log.e("myTag","User Pro")
+        }else{
+            AdManager.showInterstial(this, this)
         }
+
     }
 
     fun updateFragmentUI() {
@@ -536,7 +523,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             object : CountDownTimer(300, 300) {
                 override fun onTick(l: Long) {}
                 override fun onFinish() {
-                    ProDialog(this@MainActivity, this@MainActivity)
+                   // ProDialog(this@MainActivity, this@MainActivity)
+                    val i = Intent(applicationContext, ProScreen::class.java)
+                    startActivity(i)
                 }
             }.start()
         }
@@ -669,33 +658,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     override fun onClickBuy() {
-        //Utils.showToast(this, "Click buy Button")
-
-        if (bp.isConnected) {
-
-            if (BuildConfig.DEBUG) {
-
-                if (!bp.isPurchased(Constants.inAppKeyTest)) {
-                    Log.e("myTag", "DEBUG")
-                    bp.purchase(Constants.inAppKeyTest)
-                } else {
-                    Utils.showToast(this, "Already Purchased")
-                }
-
-            } else {
-
-                if (!bp.isPurchased(Constants.inAppKey)) {
-                    Log.e("myTag", "DEBUG")
-                    bp.purchase(Constants.inAppKey)
-                } else {
-                    Utils.showToast(this, "Already Purchased")
-                }
-            }
-
-        } else {
-            Utils.showToast(this, "BILLING UNAVAILABLE")
-        }
-
+        Utils.showToast(this, "Click buy Button")
     }
 
     override fun itemSelectLong(filePath: ItemModel) {
@@ -780,9 +743,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     override fun reFreshList() {
-
         lifecycleScope.launch {
-
             Constants.scopeIO.launch {
                 updateFragmentUI()
             }
@@ -795,6 +756,14 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
         if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
             adLayout?.visibility = View.GONE
+        } else {
+            adLayout?.visibility = View.VISIBLE
+
+            if (Utils.isNetworkAvailable(this)){
+                adLayout?.visibility = View.VISIBLE
+                adLayout?.post { loadBanner() }
+                AdManager.loadInterstial(this@MainActivity, this)
+            }
         }
 
         if (Constants.fileStatus) {
@@ -803,36 +772,42 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 updateFragmentUI()
             }
         }
+    }
+
+    override fun onBillingInitialized() {
+
+
+        if (bp.isPurchased(Constants.inAppKey)) {
+            adLayout?.visibility = View.GONE
+            Constants.inAppPrices = "Already Purchased"
+        } else {
+
+            if (Utils.isNetworkAvailable(this)){
+                adLayout?.visibility = View.VISIBLE
+                adLayout?.post { loadBanner() }
+                AdManager.loadInterstial(this@MainActivity, this)
+            }
+
+        }
 
     }
 
-    /**************************************Banner Ads **********************************************/
-    fun bannerAds() {
+    override fun onPurchased(purchase: Purchase) {
 
-        if (adLayout?.visibility == View.GONE) {
-            adLayout?.visibility = View.VISIBLE
-        }
+    }
 
-        adLayout?.let {
+    override fun onBillingServiceDisconnected() {
+    }
 
-            val viewTreeObserver = it.viewTreeObserver
+    override fun onBillingError(errorCode: Int) {
 
-            if (viewTreeObserver.isAlive) {
-
-                viewTreeObserver.addOnGlobalLayoutListener(object :
-                    ViewTreeObserver.OnGlobalLayoutListener {
-
-                    override fun onGlobalLayout() {
-                        it.viewTreeObserver.removeOnGlobalLayoutListener(this)
-
-                        if (Utils.isNetworkAvailable(this@MainActivity)) {
-                            loadBanner()
-                        }
-
-                    }
-                })
+        if (GoogleBilling.ResponseCodes.BILLING_UNAVAILABLE == errorCode) {
+            Log.e("myTag", "${errorCode}-- calling Banner")
+            if (Utils.isNetworkAvailable(this)){
+                adLayout?.visibility = View.VISIBLE
+                adLayout?.post { loadBanner() }
+                AdManager.loadInterstial(this@MainActivity, this)
             }
-
         }
 
     }
@@ -842,15 +817,17 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         adView = AdView(this)
 
         if (BuildConfig.DEBUG) {
-            adView!!.adUnitId = Constants.bannerTestId
+            adView?.adUnitId = Constants.bannerTestId
         } else {
-            adView!!.adUnitId = Constants.bannerId
+            adView?.adUnitId = Constants.bannerId
         }
 
         val adSize = adSize
         adView!!.adSize = adSize
+        adLayout!!.removeAllViews()
         adLayout!!.addView(adView)
         val adRequest = AdRequest.Builder().build()
+        // Start loading the ad in the background.
         try {
             adView!!.loadAd(adRequest)
         } catch (ex: Exception) {
@@ -876,85 +853,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             return AdSize.getCurrentOrientationBannerAdSizeWithWidth(this, adWidth)
         }
 
-    override fun onBillingInitialized() {
-
-        if (BuildConfig.DEBUG) {
-
-            if (bp.isConnected && bp.isPurchased(Constants.inAppKeyTest)) {
-                adLayout?.visibility = View.GONE
-                Constants.inAppPrices = "Already Purchased"
-            } else {
-                adLayout?.visibility = View.VISIBLE
-                loadBanner()
-                AdManager.loadInterstial(this@MainActivity, this)
-            }
-
-        } else {
-
-            if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
-                adLayout?.visibility = View.GONE
-                Constants.inAppPrices = "Already Purchased"
-            } else {
-                adLayout?.visibility = View.VISIBLE
-                loadBanner()
-                AdManager.loadInterstial(this@MainActivity, this)
-            }
-
-            if (bp.isConnected && !bp.isPurchased(Constants.inAppKey)) {
-
-                try {
-
-                    val abc = ArrayList<String>()
-                    abc.add(Constants.inAppKey)
-
-                    bp.getInAppSkuDetails(abc) { error: Int?, skuList: List<SkuDetails>? ->
-
-                        if (skuList != null && skuList.isNotEmpty()) {
-                            Constants.inAppPrices = skuList[0].price
-                        } else {
-                            Log.e("error", error.toString())
-                        }
-
-                    }
-
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
-
-        }
-
-    }
-
-    override fun onPurchased(purchase: Purchase) {
-
-        if (BuildConfig.DEBUG) {
-            if (bp.isConnected && bp.isPurchased(Constants.inAppKeyTest)) {
-                adLayout?.visibility = View.GONE
-
-            }
-        } else {
-            if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
-                adLayout?.visibility = View.GONE
-            }
-        }
-
-    }
-
-    override fun onBillingServiceDisconnected() {
-
-    }
-
-    override fun onBillingError(errorCode: Int) {
-
-        if (GoogleBilling.ResponseCodes.BILLING_UNAVAILABLE == errorCode) {
-            Log.e("myTag", "${errorCode}-- calling Banner")
-            adLayout?.visibility = View.VISIBLE
-            loadBanner()
-            AdManager.loadInterstial(this@MainActivity, this)
-        }
-
-    }
 
     override fun onAdLoaded() {
 

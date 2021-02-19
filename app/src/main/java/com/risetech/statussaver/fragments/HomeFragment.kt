@@ -20,7 +20,7 @@ class HomeFragment : Fragment() {
 
     var fragmentArray = arrayOf("images", "videos", "saved")
 
-    lateinit var customViewPagerAdapter:CustomViewPagerAdapter
+    lateinit var customViewPagerAdapter: CustomViewPagerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
     }
 
 
-    fun updateTabPosition(position:Int){
+    fun updateTabPosition(position: Int) {
         viewPager.adapter = null
         viewPager.adapter = customViewPagerAdapter
         customViewPagerAdapter.notifyDataSetChanged()

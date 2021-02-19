@@ -111,6 +111,7 @@ object AdManager {
     fun showInterstial(context: Context, adCallback: CallbackInterstial) {
 
         if (mIntersital != null) {
+
             if (mIntersital!!.isLoaded) {
                 adCallbackInterstisial = adCallback
                 mIntersital?.show()

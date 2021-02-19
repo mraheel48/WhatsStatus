@@ -3,12 +3,15 @@ package com.risetech.statussaver.dialogs
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.widget.RatingBar
 import android.widget.RatingBar.OnRatingBarChangeListener
 import android.widget.TextView
 import com.risetech.statussaver.R
 import com.risetech.statussaver.utils.Utils
+import java.lang.Exception
 import java.util.*
 
 @Suppress("UNNECESSARY_SAFE_CALL")
@@ -30,22 +33,38 @@ class CustomRatingDialog(private val activity: Activity) {
         ratingBar.onRatingBarChangeListener =
             OnRatingBarChangeListener { _: RatingBar?, rating: Float, _: Boolean ->
 
-                if (rating > 3) {
+                if (rating >= 1) {
 
-                    Utils.showToast(activity, "Working rating Dialog")
                     customDialog.dismiss()
-                    /*customDialog.dismiss()
+                    try {
+                        activity.startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW, Uri
+                                    .parse("market://details?id=" + "com.risetech.status.downloader.saver.story")
+                            )
+                        )
+                    } catch (ex: Exception) {
+                        ex.printStackTrace()
+                    }
 
-                    val it = Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("market://details?id=" + mContext.packageName)
-                    )
-
-                    mContext.startActivity(it)
-                    */
-                } else customDialog.dismiss()
+                } else {
+                    customDialog.dismiss()
+                }
             }
-        btnCancel.setOnClickListener { customDialog.dismiss() }
+
+        btnCancel.setOnClickListener {
+            customDialog.dismiss()
+            try {
+                activity.startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW, Uri
+                            .parse("market://details?id=" + "com.risetech.status.downloader.saver.story")
+                    )
+                )
+            } catch (ex: Exception) {
+                ex.printStackTrace()
+            }
+        }
         customDialog.show()
         // customDialog.setCancelable(false)
     }
