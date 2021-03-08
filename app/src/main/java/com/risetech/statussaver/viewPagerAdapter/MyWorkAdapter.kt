@@ -17,8 +17,7 @@ import com.risetech.statussaver.utils.Constants
 import java.io.File
 import java.util.*
 
-class MyWorkAdapter(val path: ArrayList<ItemModel>) :
-    RecyclerView.Adapter<MyWorkAdapter.ViewHolder>() {
+class MyWorkAdapter(val path: ArrayList<ItemModel>) : RecyclerView.Adapter<MyWorkAdapter.ViewHolder>() {
 
     var mContext: Context? = null
     var fileUri: Uri? = null
@@ -76,7 +75,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
                 if (Constants.fragmentVisible == 2) {
 
                     //Toast.makeText(mContext, "calling save", Toast.LENGTH_SHORT).show()
-                    onClickItem.itemClick(path[adapterPosition],adapterPosition)
+                    onClickItem.itemClick(path[adapterPosition], adapterPosition)
 
                 } else {
 
@@ -94,7 +93,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
                     } else {
 
                         //Toast.makeText(mContext, "Simple Click", Toast.LENGTH_SHORT).show()
-                        onClickItem.itemClick(path[adapterPosition],adapterPosition)
+                        onClickItem.itemClick(path[adapterPosition], adapterPosition)
                     }
 
                 }
@@ -108,7 +107,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
                 if (Constants.fragmentVisible == 2) {
 
                     //Toast.makeText(mContext, "calling save", Toast.LENGTH_SHORT).show()
-                    onClickItem.itemClick(path[adapterPosition],adapterPosition)
+                    onClickItem.itemClick(path[adapterPosition], adapterPosition)
 
                 } else {
 
@@ -133,7 +132,7 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) :
 
     interface ItemClick {
         fun itemSelectLong(filePath: ItemModel)
-        fun itemClick(filePath: ItemModel,position:Int)
+        fun itemClick(filePath: ItemModel, position: Int)
     }
 
 }

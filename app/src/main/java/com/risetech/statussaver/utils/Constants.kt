@@ -20,7 +20,6 @@ object Constants {
     var passList: ArrayList<ItemModel> = ArrayList()
 
     var itemPositionSelect: Int = -1
-
     var itemPreviewPosition: Int = 0
 
     var fileStatus = false
@@ -34,7 +33,6 @@ object Constants {
     val interstitialTestId = "ca-app-pub-3940256099942544/1033173712"
 
     val inAppKey = "status_saver"
-    //val inAppKeyTest = "android.test.purchased"
 
     var inAppPrices: String = ""
 
@@ -44,6 +42,7 @@ object Constants {
 
     val file_provider = "com.risetech.whatsstatus.fileProvider"
 
+    @Suppress("DEPRECATION")
     val filePathWhatApp =
         File(Environment.getExternalStorageDirectory().absoluteFile, "/WhatsApp/Media/.Statuses")
 

@@ -11,56 +11,6 @@
     tools:showIn="@layout/main_layout_views">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/permissionRoot"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#FAFCFF"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/adLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="@dimen/_250sdp"
-            android:layout_height="@dimen/_300sdp"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/access_denied"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center"
-            android:text="@string/user_permission_is_denied_we_can_t_save_status_in_your_storage"
-            android:textAlignment="center"
-            android:textSize="@dimen/_15sdp"
-            app:layout_constraintBottom_toTopOf="@+id/btnRefresh"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-        <Button
-            android:id="@+id/btnRefresh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/refresh"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fragmentRoot"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -1,14 +1,22 @@
 package com.risetech.statussaver.fragments
 
+import android.Manifest
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionDeniedResponse
+import com.karumi.dexter.listener.PermissionGrantedResponse
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.single.PermissionListener
 import com.risetech.statussaver.R
-import com.risetech.statussaver.activities.MainActivity
 import com.risetech.statussaver.dataModel.ItemModel
 import com.risetech.statussaver.utils.Constants
 import com.risetech.statussaver.utils.Utils
@@ -32,6 +40,8 @@ class CategoryFragment : Fragment() {
     var myWorkAdapter: MyWorkAdapter? = null
 
     lateinit var localDownloadPath: File
+    lateinit var permissionRoot: ConstraintLayout
+    lateinit var btnRefreshPer: Button
 
 
     override fun onCreateView(
@@ -41,20 +51,27 @@ class CategoryFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_category, container, false)
-        recyclerView = view.findViewById(R.id.recyclerView)
-
-        recyclerView.setHasFixedSize(true)
 
         mContext = container!!.context
 
+        recyclerView = view.findViewById(R.id.recyclerView)
+        permissionRoot = view.findViewById(R.id.permissionRoot)
+        btnRefreshPer = view.findViewById(R.id.btnRefresh)
+
+        recyclerView.setHasFixedSize(true)
         localDownloadPath = Constants.fileDownloadPath
-        //localDownloadPath = Utils.fileDownloadPath(mContext)
 
         val extras = arguments
         categoryName = extras!!.getString("cate_name")
-        //Log.e("myTag","${categoryName}")
 
-        if (categoryName == "images") {
+        readLocalData()
+
+        btnRefreshPer.setOnClickListener {
+            //readLocalData()
+            Utils.showToast(mContext,"calling Prmissoin")
+        }
+
+        /*if (categoryName == "images") {
             myWorkAdapter = MyWorkAdapter((mContext as MainActivity).imgPathWhatApp)
             recyclerView.adapter = myWorkAdapter
         }
@@ -67,10 +84,33 @@ class CategoryFragment : Fragment() {
         if (categoryName == "saved") {
             myWorkAdapter = MyWorkAdapter((mContext as MainActivity).savedPathWhatApp)
             recyclerView.adapter = myWorkAdapter
-        }
-
+        }*/
 
         return view
+    }
+
+
+    fun readLocalData() {
+
+        Dexter.withContext(mContext)
+            .withPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .withListener(object : PermissionListener {
+                override fun onPermissionGranted(response: PermissionGrantedResponse?) {
+                    permissionRoot.visibility = View.GONE
+                }
+
+                override fun onPermissionDenied(response: PermissionDeniedResponse?) {
+                    permissionRoot.visibility = View.VISIBLE
+                }
+
+                override fun onPermissionRationaleShouldBeShown(
+                    permission: PermissionRequest?,
+                    token: PermissionToken?
+                ) {
+                    token?.continuePermissionRequest()
+                }
+
+            }).check()
     }
 
 
@@ -84,7 +124,6 @@ class CategoryFragment : Fragment() {
             return fragment
         }
     }
-
 
     val imgFromSdcard: Unit
         get() {

@@ -18,7 +18,6 @@ import android.view.Window
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.drawerlayout.widget.DrawerLayout
@@ -61,7 +60,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     lateinit var navBtn: ImageView
     lateinit var drawer: DrawerLayout
     lateinit var homeRoot: ConstraintLayout
-    lateinit var permissionRoot: ConstraintLayout
 
     //nav_Root
     lateinit var slidingRootNav: SlidingRootNav
@@ -73,11 +71,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     lateinit var navPrivacyPolicy: ConstraintLayout
     lateinit var navAbout: ConstraintLayout
 
-    lateinit var homeF: HomeFragment
+    var homeF = HomeFragment()
     private lateinit var fragmentManager: FragmentManager
     private lateinit var fragmentTransaction: FragmentTransaction
-
-    lateinit var btnRefreshPer: View
 
     var pathListSelect: ArrayList<ItemModel> = ArrayList()
 
@@ -114,16 +110,12 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.AppTheme)
         setContentView(R.layout.activity_main)
 
         //init Id Layout
         navBtn = findViewById(R.id.nav_btn)
         drawer = findViewById(R.id.drawer_layout)
         homeRoot = findViewById(R.id.fragmentRoot)
-        btnRefreshPer = findViewById(R.id.btnRefresh)
-        permissionRoot = findViewById(R.id.permissionRoot)
-
         downloadBtn = findViewById(R.id.nav_btn2)
         reFreshData = findViewById(R.id.refresh_data)
         adLayout = findViewById(R.id.adLayout)
@@ -140,7 +132,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         dialog?.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog?.setCancelable(false)
 
-        //localDownloadPath = Utils.fileDownloadPath(this@MainActivity)
         localDownloadPath = Constants.fileDownloadPath
         Log.e(TAG, "${localDownloadPath}")
 
@@ -150,57 +141,60 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         fragmentManager = supportFragmentManager
         fragmentTransaction = fragmentManager.beginTransaction()
 
-        navBtn.setOnClickListener { openCloseNavigationView() }
-
-        btnRefreshPer.setOnClickListener { openHomeFragment() }
+        navBtn.setOnClickListener {
+            //openCloseNavigationView()
+        }
 
         downloadBtn.setOnClickListener {
 
-            downloadBtn.isClickable = false
-            Constants.showAds = true
+            /* downloadBtn.isClickable = false
+             Constants.showAds = true
 
-           // Utils.showToast(this, "download Click")
-            copyFileBG()
+            // Utils.showToast(this, "download Click")
+             copyFileBG()*/
         }
 
         reFreshData.setOnClickListener {
-            reFreshData.isClickable = false
-            updateFragmentUI()
+            /* reFreshData.isClickable = false
+             updateFragmentUI()*/
         }
 
-
-        if (BuildConfig.DEBUG) {
-
-            tvTitle?.let { it ->
-
-                it.setOnClickListener {
-
-                    it.isClickable = false
-
-                    if (bp.isConnected) {
-
-                        bp.consumePurchase(Constants.inAppKey) { error: Int?, _: String? ->
-                            if (error == null) {
-                                it.isClickable = true
-                                Utils.showToast(this@MainActivity, "Billing Prossor is consume")
-
-                            } else {
-                                Log.e("myTag", "Error not billing Consume")
-                            }
-                        }
-
-                    } else {
-                        Utils.showToast(this@MainActivity, "Billing Prossor is not conntect")
-                        it.isClickable = true
-
-                    }
-
-                }
-            }
-        }
+        fragmentTransaction
+            .replace(R.id.fragmentRoot, homeF)
+            .commit()
 
 
-        openHomeFragment()
+        /* if (BuildConfig.DEBUG) {
+
+             tvTitle?.let { it ->
+
+                 it.setOnClickListener {
+
+                     it.isClickable = false
+
+                     if (bp.isConnected) {
+
+                         bp.consumePurchase(Constants.inAppKey) { error: Int?, _: String? ->
+                             if (error == null) {
+                                 it.isClickable = true
+                                 Utils.showToast(this@MainActivity, "Billing Prossor is consume")
+
+                             } else {
+                                 Log.e("myTag", "Error not billing Consume")
+                             }
+                         }
+
+                     } else {
+                         Utils.showToast(this@MainActivity, "Billing Prossor is not conntect")
+                         it.isClickable = true
+
+                     }
+
+                 }
+             }
+         }*/
+
+        //openHomeFragment()
 
     }
 
@@ -247,47 +241,46 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         }
     }
 
+    //This method uner the dev...
     suspend fun updateHomeFragment(timeStay: Long) {
 
         withContext(Constants.mainDispatcher) {
+
+            // Log.e("myTag", "${Thread.currentThread()}")
 
             dialog.show()
 
             if (dialog.isShowing) {
 
                 object : CountDownTimer(timeStay, 1) {
-                    override fun onTick(l: Long) {
-                    }
+
+                    override fun onTick(l: Long) {}
 
                     override fun onFinish() {
+
                         Log.e(TAG, "dialog dismiss")
+
                         dialog.dismiss()
 
-                        homeF = HomeFragment()
-                        fragmentTransaction
-                            .replace(R.id.fragmentRoot, homeF)
-                            .commit()
-
                         homeRoot.visibility = View.VISIBLE
-                        permissionRoot.visibility = View.GONE
+
 
                     }
 
                 }.start()
 
             }
-
         }
+
+
     }
 
     private fun showAds() {
-
-        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)){
-            Log.e("myTag","User Pro")
-        }else{
+        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+            Log.e("myTag", "User Pro")
+        } else {
             AdManager.showInterstial(this, this)
         }
-
     }
 
     fun updateFragmentUI() {
@@ -393,7 +386,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 Arrays.sort(saveListFile!!, LastModifiedFileComparator.LASTMODIFIED_REVERSE)
 
                 for (value in saveListFile!!) {
-
                     savedPathWhatApp.add(ItemModel(value.absolutePath))
 
                 }
@@ -407,9 +399,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     fun readLocalEndData(boolean: Boolean) {
-
         lifecycleScope.launch {
-
             Constants.scopeIO.launch {
 
                 val executionTimeOut = measureTimeMillis {
@@ -436,7 +426,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
             }
         }
-
     }
 
     suspend fun updateHomeTagSaveWork(timeStay: Long) {
@@ -454,7 +443,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                     override fun onFinish() {
                         Log.e(TAG, "dialog dismiss")
                         dialog.dismiss()
-                        homeF.updateTabPosition(Constants.fragmentVisible)
+                        //homeF.updateTabPosition(Constants.fragmentVisible)
                     }
 
                 }.start()
@@ -470,29 +459,20 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             .withPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
             .withListener(object : PermissionListener {
                 override fun onPermissionGranted(response: PermissionGrantedResponse?) {
-                    readLocalEndData(true)
+                    homeF.updateData()
                 }
 
                 override fun onPermissionDenied(response: PermissionDeniedResponse?) {
-                    Toast.makeText(
-                        this@MainActivity,
-                        "Uses-permission is Denied",
-                        Toast.LENGTH_SHORT
-                    )
-                        .show()
 
-                    homeRoot.visibility = View.GONE
-                    permissionRoot.visibility = View.VISIBLE
                 }
 
-                override fun onPermissionRationaleShouldBeShown(
-                    permission: PermissionRequest?,
-                    token: PermissionToken?
-                ) {
+                override fun onPermissionRationaleShouldBeShown(permission: PermissionRequest?, token: PermissionToken?) {
                     token?.continuePermissionRequest()
                 }
+
             }).check()
     }
+
 
     fun navDrawMethod() {
 
@@ -523,7 +503,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             object : CountDownTimer(300, 300) {
                 override fun onTick(l: Long) {}
                 override fun onFinish() {
-                   // ProDialog(this@MainActivity, this@MainActivity)
+                    // ProDialog(this@MainActivity, this@MainActivity)
                     val i = Intent(applicationContext, ProScreen::class.java)
                     startActivity(i)
                 }
@@ -736,7 +716,6 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
                 Log.e(TAG, "This is a time Job complete $executionTimeOut ms..")
 
-
             }
         }
 
@@ -754,7 +733,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     override fun onResume() {
         super.onResume()
 
-        if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
+        /*if (bp.isConnected && bp.isPurchased(Constants.inAppKey)) {
             adLayout?.visibility = View.GONE
         } else {
             adLayout?.visibility = View.VISIBLE
@@ -771,13 +750,13 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             Constants.scopeIO.launch {
                 updateFragmentUI()
             }
-        }
+        }*/
+
     }
 
     override fun onBillingInitialized() {
 
-
-        if (bp.isPurchased(Constants.inAppKey)) {
+        /*if (bp.isPurchased(Constants.inAppKey)) {
             adLayout?.visibility = View.GONE
             Constants.inAppPrices = "Already Purchased"
         } else {
@@ -788,7 +767,7 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
                 AdManager.loadInterstial(this@MainActivity, this)
             }
 
-        }
+        }*/
 
     }
 
@@ -801,14 +780,14 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
 
     override fun onBillingError(errorCode: Int) {
 
-        if (GoogleBilling.ResponseCodes.BILLING_UNAVAILABLE == errorCode) {
-            Log.e("myTag", "${errorCode}-- calling Banner")
-            if (Utils.isNetworkAvailable(this)){
-                adLayout?.visibility = View.VISIBLE
-                adLayout?.post { loadBanner() }
-                AdManager.loadInterstial(this@MainActivity, this)
-            }
-        }
+        /* if (GoogleBilling.ResponseCodes.BILLING_UNAVAILABLE == errorCode) {
+             Log.e("myTag", "${errorCode}-- calling Banner")
+             if (Utils.isNetworkAvailable(this)){
+                 adLayout?.visibility = View.VISIBLE
+                 adLayout?.post { loadBanner() }
+                 AdManager.loadInterstial(this@MainActivity, this)
+             }
+         }*/
 
     }
 

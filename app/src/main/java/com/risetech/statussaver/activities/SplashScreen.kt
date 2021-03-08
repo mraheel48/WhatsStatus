@@ -5,29 +5,34 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
 import com.risetech.statussaver.R
-import java.util.*
+import java.lang.Exception
 
 class SplashScreen : AppCompatActivity() {
 
-    //lateinit var imgWelcome: ImageView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
 
-        object : CountDownTimer(500, 1000) {
-            override fun onTick(l: Long) {}
-            override fun onFinish() {
-                nextActivity()
-            }
+        try {
 
-        }.start()
+            setContentView(R.layout.activity_splash_screen)
+            object : CountDownTimer(500, 1) {
+                override fun onTick(l: Long) {}
+                override fun onFinish() {
+                    nextActivity()
+                }
+
+            }.start()
+
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+            nextActivity()
+        }
 
     }
 
 
     private fun nextActivity() {
-        startActivity(Intent(this@SplashScreen, MainActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 

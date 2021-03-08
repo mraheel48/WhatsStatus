@@ -57,8 +57,8 @@ object Utils {
 
     fun showToast(context: Context, message: String) {
         val activity = context as Activity
-        activity.runOnUiThread { //show your Toast here..
-            //Toast.makeText(context, "Connection Successful", Toast.LENGTH_LONG).show()
+        activity.runOnUiThread {
+            //show your Toast here..
             Toast.makeText(context.applicationContext, message, Toast.LENGTH_SHORT).show()
         }
     }

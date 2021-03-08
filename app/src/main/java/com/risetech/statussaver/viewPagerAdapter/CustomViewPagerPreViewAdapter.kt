@@ -8,11 +8,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import com.risetech.statussaver.fragments.PreViewFragmentItem.Companion.newInstance
 import com.risetech.statussaver.utils.Constants
 
-
 class CustomViewPagerPreViewAdapter(fragmentManager: FragmentManager?) : FragmentStatePagerAdapter(fragmentManager!!) {
-
-    //var fragmentArray = arrayOf("images",  "saved")
-    //var fragmentArray = Constants.passList as (Array<ItemModel>)
 
     override fun getItem(position: Int): Fragment {
         return newInstance(Constants.passList[position].text)

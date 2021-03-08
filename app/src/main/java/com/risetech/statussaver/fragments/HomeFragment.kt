@@ -22,21 +22,14 @@ class HomeFragment : Fragment() {
 
     lateinit var customViewPagerAdapter: CustomViewPagerAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         tabLayout = view.findViewById(R.id.tabs)
         viewPager = view.findViewById(R.id.view_pager)
 
         customViewPagerAdapter = CustomViewPagerAdapter(childFragmentManager)
-
         viewPager.adapter = customViewPagerAdapter
-
         tabLayout.setupWithViewPager(viewPager)
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -44,7 +37,6 @@ class HomeFragment : Fragment() {
                 Log.e("myTabSelect", "${fragmentArray[tab.position]}")
                 Constants.fragmentVisible = tab.position
             }
-
             override fun onTabUnselected(tab: TabLayout.Tab) {}
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
@@ -59,6 +51,11 @@ class HomeFragment : Fragment() {
         customViewPagerAdapter.notifyDataSetChanged()
         viewPager.invalidate()
         tabLayout.getTabAt(position)?.select()
+
+    }
+
+
+    fun updateData(){
 
     }
 
