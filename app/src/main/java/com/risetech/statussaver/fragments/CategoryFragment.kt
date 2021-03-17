@@ -3,6 +3,7 @@ package com.risetech.statussaver.fragments
 import android.Manifest
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +33,7 @@ class CategoryFragment : Fragment() {
     var categoryName: String? = ""
 
     var imgPath: ArrayList<ItemModel> = ArrayList()
+    var videoPath: ArrayList<ItemModel> = ArrayList()
 
     var savePathFile: ArrayList<ItemModel> = ArrayList()
 
@@ -64,12 +66,21 @@ class CategoryFragment : Fragment() {
         val extras = arguments
         categoryName = extras!!.getString("cate_name")
 
-        readLocalData()
+        if (categoryName == "images") {
+            Log.e("myTab", "${categoryName}")
+        } else if (categoryName == "videos") {
+
+        } else {
+
+        }
+
+
+        /*readLocalData()
 
         btnRefreshPer.setOnClickListener {
             //readLocalData()
             Utils.showToast(mContext,"calling Prmissoin")
-        }
+        }*/
 
         /*if (categoryName == "images") {
             myWorkAdapter = MyWorkAdapter((mContext as MainActivity).imgPathWhatApp)
@@ -112,7 +123,6 @@ class CategoryFragment : Fragment() {
 
             }).check()
     }
-
 
     companion object {
         @JvmStatic

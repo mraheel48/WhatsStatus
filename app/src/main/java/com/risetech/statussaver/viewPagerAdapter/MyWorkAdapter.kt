@@ -26,7 +26,6 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) : RecyclerView.Adapter<MyWor
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         mContext = parent.context
-
         val view = LayoutInflater.from(parent.context).inflate(R.layout.re_item_view, parent, false)
         return ViewHolder(view)
     }
@@ -73,7 +72,6 @@ class MyWorkAdapter(val path: ArrayList<ItemModel>) : RecyclerView.Adapter<MyWor
             itemView.setOnClickListener {
 
                 if (Constants.fragmentVisible == 2) {
-
                     //Toast.makeText(mContext, "calling save", Toast.LENGTH_SHORT).show()
                     onClickItem.itemClick(path[adapterPosition], adapterPosition)
 

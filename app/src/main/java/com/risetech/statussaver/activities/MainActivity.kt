@@ -17,17 +17,18 @@ import android.view.View
 import android.view.Window
 import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.TableLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
+import androidx.viewpager.widget.ViewPager
 import com.android.billingclient.api.Purchase
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.google.android.material.tabs.TabLayout
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
@@ -40,10 +41,10 @@ import com.risetech.statussaver.ads.AdManager
 import com.risetech.statussaver.billing.GoogleBilling
 import com.risetech.statussaver.dataModel.ItemModel
 import com.risetech.statussaver.dialogs.*
-import com.risetech.statussaver.fragments.HomeFragment
 import com.risetech.statussaver.utils.Constants
 import com.risetech.statussaver.utils.FeedbackUtils
 import com.risetech.statussaver.utils.Utils
+import com.risetech.statussaver.viewPagerAdapter.CustomViewPagerAdapter
 import com.risetech.statussaver.viewPagerAdapter.MyWorkAdapter
 import com.yarolegovich.slidingrootnav.SlidingRootNav
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
@@ -71,9 +72,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     lateinit var navPrivacyPolicy: ConstraintLayout
     lateinit var navAbout: ConstraintLayout
 
-    var homeF = HomeFragment()
-    private lateinit var fragmentManager: FragmentManager
-    private lateinit var fragmentTransaction: FragmentTransaction
+   // var homeF = HomeFragment()
+    /*private lateinit var fragmentManager: FragmentManager
+    private lateinit var fragmentTransaction: FragmentTransaction*/
 
     var pathListSelect: ArrayList<ItemModel> = ArrayList()
 
@@ -108,6 +109,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     lateinit var bp: GoogleBilling
     lateinit var tvTitle: TextView
 
+    lateinit var viewPager: ViewPager
+    lateinit var tabLayout: TabLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -120,6 +124,13 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         reFreshData = findViewById(R.id.refresh_data)
         adLayout = findViewById(R.id.adLayout)
         tvTitle = findViewById(R.id.title)
+
+        viewPager = findViewById(R.id.view_pager)
+        tabLayout = findViewById(R.id.tabs)
+
+        viewPager.offscreenPageLimit = 0
+        setupViewPager(viewPager)
+        tabLayout.setupWithViewPager(viewPager)
 
         //Billing init
         bp = GoogleBilling(this@MainActivity, this@MainActivity, this)
@@ -138,11 +149,11 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         //set nav_Draw
         navDrawMethod()
 
-        fragmentManager = supportFragmentManager
-        fragmentTransaction = fragmentManager.beginTransaction()
+       /* fragmentManager = supportFragmentManager
+        fragmentTransaction = fragmentManager.beginTransaction()*/
 
         navBtn.setOnClickListener {
-            //openCloseNavigationView()
+            openCloseNavigationView()
         }
 
         downloadBtn.setOnClickListener {
@@ -159,10 +170,9 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
              updateFragmentUI()*/
         }
 
-        fragmentTransaction
+       /* fragmentTransaction
             .replace(R.id.fragmentRoot, homeF)
-            .commit()
-
+            .commit()*/
 
         /* if (BuildConfig.DEBUG) {
 
@@ -197,6 +207,13 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
         //openHomeFragment()
 
     }
+
+    private fun setupViewPager(viewPager: ViewPager) {
+        val adapter = CustomViewPagerAdapter(supportFragmentManager)
+        viewPager.adapter = adapter
+        viewPager.currentItem = 0
+    }
+
 
     private fun bpInit() {
         if (!bp.isConnected) {
@@ -459,20 +476,22 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
             .withPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
             .withListener(object : PermissionListener {
                 override fun onPermissionGranted(response: PermissionGrantedResponse?) {
-                    homeF.updateData()
+                    //  homeF.updateData()
                 }
 
                 override fun onPermissionDenied(response: PermissionDeniedResponse?) {
 
                 }
 
-                override fun onPermissionRationaleShouldBeShown(permission: PermissionRequest?, token: PermissionToken?) {
+                override fun onPermissionRationaleShouldBeShown(
+                    permission: PermissionRequest?,
+                    token: PermissionToken?
+                ) {
                     token?.continuePermissionRequest()
                 }
 
             }).check()
     }
-
 
     fun navDrawMethod() {
 
@@ -594,13 +613,11 @@ class MainActivity : AppCompatActivity(), ProDialog.BuyClick, MyWorkAdapter.Item
     }
 
     fun openCloseNavigationView() {
-
         if (slidingRootNav.isMenuClosed) {
             slidingRootNav.openMenu()
         } else {
             slidingRootNav.closeMenu()
         }
-
     }
 
     override fun onBackPressed() {

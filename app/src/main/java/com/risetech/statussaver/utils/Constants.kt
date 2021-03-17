@@ -50,6 +50,15 @@ object Constants {
     val fileDownloadPath =
         File(Environment.getExternalStorageDirectory().absolutePath + "/StatusSaver/")
 
+    const val WhatsAppDirectoryPath = "/storage/emulated/0/WhatsApp/Media/.Statuses/"
+    const val WhatsAppSaveStatus = "/storage/emulated/0/StatusSaver/Media/WhatsApp/"
+
+    const val GBWhatsAppDirectoryPath = "/storage/emulated/0/GBWhatsApp/Media/.Statuses/"
+    const val GBWhatsAppSaveStatus = "/storage/emulated/0/StatusSaver/Media/GBWhatsApp/"
+
+    const val WhatsAppBusinessDirectoryPath = "/storage/emulated/0/WhatsApp Business/Media/.Statuses/"
+    const val WhatsAppBusinessSaveStatus = "/storage/emulated/0/StatusSaver/Media/WhatsAppBusiness/"
+
     val tabTitle = arrayOf(
         context.getString(R.string.images), context.getString(R.string.videos),
         context.getString(R.string.saved)
